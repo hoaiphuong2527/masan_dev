@@ -23,188 +23,153 @@
     <a class="homeSlider__image" href="{{ $banner->url }}">
       <div class="overplay">
         @if ($banner->code == 'BANNER-DESKTOP')
-        @if ($composer_locale == 'en')
         <div class="image" style="background-image:url('home-banner.jpg')">
           <div class="container">
-            <h3 class="aun_h1">The global leading integrated supplier<br />
-              of high-tech advanced materials</h3>
-            <span class="discovery-btn">Discovery <i class="fa fa-play" aria-hidden="true"></i></span>
+            <h3 class="aun_h1">{{ trans("home.CONTENT.banner_text1") }}<br />
+              {{ trans("home.CONTENT.banner_text2") }}</h3>
+            <span class="discovery-btn">{{ trans("home.CONTENT.banner_btn") }} <i class="fa fa-play"
+                aria-hidden="true"></i></span>
           </div>
-          @elseif ($composer_locale == 'vi')
-
+          @if ($composer_locale == 'en')
+          <picture>
+            <source type="image/webp" srcset="/upload/images/banner-mobile.webp">
+            <source type="image/jxr" srcset="/upload/images/banner-mobile.jxr">
+            <source type="/upload/images/banner-mobile.jp2">
+            <img src="{{ $banner->photo_translation }}" alt="">
+          </picture>
           @else
-          <div class="image" style="background-image:url('{{ $banner->photo_translation }}')">
-            @endif
-            @if ($composer_locale == 'en')
-            <picture>
-              <source type="image/webp" srcset="/upload/images/banner-mobile.webp">
-              <source type="image/jxr" srcset="/upload/images/banner-mobile.jxr">
-              <source type="/upload/images/banner-mobile.jp2">
-              <img src="{{ $banner->photo_translation }}" alt="">
-            </picture>
-            @else
-            <img src="{{ $banner->photo_translation }}" alt="">
-            @endif
-          </div>
-          @elseif($banner->code == 'BANNER-MOBILE')
-          <div class="imageFull" style="background-image:url('{{ $banner->photo_translation }}')">
-            @if($composer_locale == 'en')
-            <picture>
-              <source type="image/webp" srcset="/upload/images/banner-mobile.webp">
-              <source type="image/jxr" srcset="/upload/images/banner-mobile.jxr">
-              <source type="/upload/images/banner-mobile.jp2">
-              <img src="{{ $banner->photo_translation }}" alt="">
-            </picture>
-            @else
-            <img src="{{ $banner->photo_translation }}" alt="">
-            @endif
-          </div>
+          <img src="{{ $banner->photo_translation }}" alt="">
           @endif
         </div>
+        @elseif($banner->code == 'BANNER-MOBILE')
+        <div class="imageFull" style="background-image:url('{{ $banner->photo_translation }}')">
+          @if($composer_locale == 'en')
+          <picture>
+            <source type="image/webp" srcset="/upload/images/banner-mobile.webp">
+            <source type="image/jxr" srcset="/upload/images/banner-mobile.jxr">
+            <source type="/upload/images/banner-mobile.jp2">
+            <img src="{{ $banner->photo_translation }}" alt="">
+          </picture>
+          @else
+          <img src="{{ $banner->photo_translation }}" alt="">
+          @endif
+        </div>
+        @endif
+      </div>
     </a>
     <a class="homeSlider__image" href="{{ $banner->url }}">
       <div class="overplay">
         @if ($banner->code == 'BANNER-DESKTOP')
-        @if ($composer_locale == 'en')
         <div class="image" style="background-image:url('/assets/images/home-banner-2.png')">
           <div class="container">
-            <h3 class="aun_h1">The global leading integrated supplier<br />
-              of high-tech advanced materials</h3>
-            <span class="discovery-btn">Discovery <i class="fa fa-play" aria-hidden="true"></i></span>
+            <h3 class="aun_h1">{{ trans("home.CONTENT.banner_text1") }}<br />
+              {{ trans("home.CONTENT.banner_text2") }}</h3>
+            <span class="discovery-btn">{{ trans("home.CONTENT.banner_btn") }} <i class="fa fa-play"
+                aria-hidden="true"></i></span>
           </div>
-          @elseif ($composer_locale == 'vi')
-          <div class="image" style="background-image:url('/assets/images/home-banner-2.png')">
-            <div class="container">
-              <h3 class="aun_h1">The global leading integrated supplier<br />
-                of high-tech advanced materials</h3>
-              <span class="discovery-btn">Discovery <i class="fa fa-play" aria-hidden="true"></i></span>
-            </div>
-            @else
-            <div class="image" style="background-image:url('{{ $banner->photo_translation }}')">
-              @endif
-              @if ($composer_locale == 'en')
-              <picture>
-                <source type="image/webp" srcset="/upload/images/banner-mobile.webp">
-                <source type="image/jxr" srcset="/upload/images/banner-mobile.jxr">
-                <source type="/upload/images/banner-mobile.jp2">
-                <img src="{{ $banner->photo_translation }}" alt="">
-              </picture>
-              @else
-              <img src="{{ $banner->photo_translation }}" alt="">
-              @endif
-            </div>
-            @endif
-            @if ($banner->code == 'BANNER-MOBILE')
-            <div class="imageFull" style="background-image:url('{{ $banner->photo_translation }}')">
-              @if ($composer_locale == 'en')
-              <picture>
-                <source type="image/webp" srcset="/upload/images/banner-mobile.webp">
-                <source type="image/jxr" srcset="/upload/images/banner-mobile.jxr">
-                <source type="/upload/images/banner-mobile.jp2">
-                <img src="{{ $banner->photo_translation }}" alt="">
-              </picture>
-              @else
-              <img src="{{ $banner->photo_translation }}" alt="">
-              @endif
-            </div>
-            @endif
-          </div>
+          @if ($composer_locale == 'en')
+          <picture>
+            <source type="image/webp" srcset="/upload/images/banner-mobile.webp">
+            <source type="image/jxr" srcset="/upload/images/banner-mobile.jxr">
+            <source type="/upload/images/banner-mobile.jp2">
+            <img src="{{ $banner->photo_translation }}" alt="">
+          </picture>
+          @else
+          <img src="{{ $banner->photo_translation }}" alt="">
+          @endif
+        </div>
+        @endif
+        @if ($banner->code == 'BANNER-MOBILE')
+        <div class="imageFull" style="background-image:url('{{ $banner->photo_translation }}')">
+          @if ($composer_locale == 'en')
+          <picture>
+            <source type="image/webp" srcset="/upload/images/banner-mobile.webp">
+            <source type="image/jxr" srcset="/upload/images/banner-mobile.jxr">
+            <source type="/upload/images/banner-mobile.jp2">
+            <img src="{{ $banner->photo_translation }}" alt="">
+          </picture>
+          @else
+          <img src="{{ $banner->photo_translation }}" alt="">
+          @endif
+        </div>
+        @endif
+      </div>
     </a>
     <a class="homeSlider__image" href="{{ $banner->url }}">
       <div class="overplay">
         @if ($banner->code == 'BANNER-DESKTOP')
-        @if ($composer_locale == 'en')
         <div class="image" style="background-image:url('/assets/images/home-banner-3.png')">
           <div class="container">
-            <h3 class="aun_h1">The global leading integrated supplier<br />
-              of high-tech advanced materials</h3>
-            <span class="discovery-btn">Discovery <i class="fa fa-play" aria-hidden="true"></i></span>
+            <h3 class="aun_h1">{{ trans("home.CONTENT.banner_text1") }}<br />
+              {{ trans("home.CONTENT.banner_text2") }}</h3>
+            <span class="discovery-btn">{{ trans("home.CONTENT.banner_btn") }} <i class="fa fa-play"
+                aria-hidden="true"></i></span>
           </div>
-          @elseif ($composer_locale == 'vi')
-          <div class="image" style="background-image:url('/assets/images/home-banner-3.png')">
-            <div class="container">
-              <h3 class="aun_h1">The global leading integrated supplier<br />
-                of high-tech advanced materials</h3>
-              <span class="discovery-btn">Discovery <i class="fa fa-play" aria-hidden="true"></i></span>
-            </div>
-            @else
-            <div class="image" style="background-image:url('{{ $banner->photo_translation }}')">
-              @endif
-              @if ($composer_locale == 'en')
-              <picture>
-                <source type="image/webp" srcset="/upload/images/banner-mobile.webp">
-                <source type="image/jxr" srcset="/upload/images/banner-mobile.jxr">
-                <source type="/upload/images/banner-mobile.jp2">
-                <img src="{{ $banner->photo_translation }}" alt="">
-              </picture>
-              @else
-              <img src="{{ $banner->photo_translation }}" alt="">
-              @endif
-            </div>
-            @endif
-            @if ($banner->code == 'BANNER-MOBILE')
-            <div class="imageFull" style="background-image:url('{{ $banner->photo_translation }}')">
-              @if ($composer_locale == 'en')
-              <picture>
-                <source type="image/webp" srcset="/upload/images/banner-mobile.webp">
-                <source type="image/jxr" srcset="/upload/images/banner-mobile.jxr">
-                <source type="/upload/images/banner-mobile.jp2">
-                <img src="{{ $banner->photo_translation }}" alt="">
-              </picture>
-              @else
-              <img src="{{ $banner->photo_translation }}" alt="">
-              @endif
-            </div>
-            @endif
-          </div>
+          @if ($composer_locale == 'en')
+          <picture>
+            <source type="image/webp" srcset="/upload/images/banner-mobile.webp">
+            <source type="image/jxr" srcset="/upload/images/banner-mobile.jxr">
+            <source type="/upload/images/banner-mobile.jp2">
+            <img src="{{ $banner->photo_translation }}" alt="">
+          </picture>
+          @else
+          <img src="{{ $banner->photo_translation }}" alt="">
+          @endif
+        </div>
+        @endif
+        @if ($banner->code == 'BANNER-MOBILE')
+        <div class="imageFull" style="background-image:url('{{ $banner->photo_translation }}')">
+          @if ($composer_locale == 'en')
+          <picture>
+            <source type="image/webp" srcset="/upload/images/banner-mobile.webp">
+            <source type="image/jxr" srcset="/upload/images/banner-mobile.jxr">
+            <source type="/upload/images/banner-mobile.jp2">
+            <img src="{{ $banner->photo_translation }}" alt="">
+          </picture>
+          @else
+          <img src="{{ $banner->photo_translation }}" alt="">
+          @endif
+        </div>
+        @endif
+      </div>
     </a>
     <a class="homeSlider__image" href="{{ $banner->url }}">
       <div class="overplay">
         @if ($banner->code == 'BANNER-DESKTOP')
-        @if ($composer_locale == 'en')
         <div class="image" style="background-image:url('/assets/images/home-banner-4.png')">
           <div class="container">
-            <h3 class="aun_h1">The global leading integrated supplier<br />
-              of high-tech advanced materials</h3>
-            <span class="discovery-btn">Discovery <i class="fa fa-play" aria-hidden="true"></i></span>
+            <h3 class="aun_h1">{{ trans("home.CONTENT.banner_text1") }}<br />
+              {{ trans("home.CONTENT.banner_text2") }}</h3>
+            <span class="discovery-btn">{{ trans("home.CONTENT.banner_btn") }} <i class="fa fa-play"
+                aria-hidden="true"></i></span>
           </div>
-          @elseif ($composer_locale == 'vi')
-          <div class="image" style="background-image:url('/assets/images/home-banner-4.png')">
-            <div class="container">
-              <h3 class="aun_h1">The global leading integrated supplier<br />
-                of high-tech advanced materials</h3>
-              <span class="discovery-btn">Discovery <i class="fa fa-play" aria-hidden="true"></i></span>
-            </div>
-            @else
-            <div class="image" style="background-image:url('{{ $banner->photo_translation }}')">
-              @endif
-              @if ($composer_locale == 'en')
-              <picture>
-                <source type="image/webp" srcset="/upload/images/banner-mobile.webp">
-                <source type="image/jxr" srcset="/upload/images/banner-mobile.jxr">
-                <source type="/upload/images/banner-mobile.jp2">
-                <img src="{{ $banner->photo_translation }}" alt="">
-              </picture>
-              @else
-              <img src="{{ $banner->photo_translation }}" alt="">
-              @endif
-            </div>
-            @endif
-            @if ($banner->code == 'BANNER-MOBILE')
-            <div class="imageFull" style="background-image:url('{{ $banner->photo_translation }}')">
-              @if ($composer_locale == 'en')
-              <picture>
-                <source type="image/webp" srcset="/upload/images/banner-mobile.webp">
-                <source type="image/jxr" srcset="/upload/images/banner-mobile.jxr">
-                <source type="/upload/images/banner-mobile.jp2">
-                <img src="{{ $banner->photo_translation }}" alt="">
-              </picture>
-              @else
-              <img src="{{ $banner->photo_translation }}" alt="">
-              @endif
-            </div>
-            @endif
-          </div>
+          @if ($composer_locale == 'en')
+          <picture>
+            <source type="image/webp" srcset="/upload/images/banner-mobile.webp">
+            <source type="image/jxr" srcset="/upload/images/banner-mobile.jxr">
+            <source type="/upload/images/banner-mobile.jp2">
+            <img src="{{ $banner->photo_translation }}" alt="">
+          </picture>
+          @else
+          <img src="{{ $banner->photo_translation }}" alt="">
+          @endif
+        </div>
+        @endif
+        @if ($banner->code == 'BANNER-MOBILE')
+        <div class="imageFull" style="background-image:url('{{ $banner->photo_translation }}')">
+          @if ($composer_locale == 'en')
+          <picture>
+            <source type="image/webp" srcset="/upload/images/banner-mobile.webp">
+            <source type="image/jxr" srcset="/upload/images/banner-mobile.jxr">
+            <source type="/upload/images/banner-mobile.jp2">
+            <img src="{{ $banner->photo_translation }}" alt="">
+          </picture>
+          @else
+          <img src="{{ $banner->photo_translation }}" alt="">
+          @endif
+        </div>
+        @endif
+      </div>
     </a>
     @endif
   </div>

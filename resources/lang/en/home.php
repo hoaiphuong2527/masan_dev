@@ -23,6 +23,10 @@ return [
     'previous' => 'Previous',
     'next' => 'Next',
     'CONTENT' => [
+      'banner_text1' => 'The global leading integrated supplier',
+      'banner_text2' => 'of high-tech advanced materials',
+      'banner_btn' => 'Discovery',
+
       'ourStory' => 'Our Story',
       'subTitle_story_1' => 'FROM STRATEGIC RESOURCES',
       'subTitle_story_2' => 'TO GLOBAL HIGH-TECH MATERIALS',

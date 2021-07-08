@@ -23,6 +23,10 @@ return [
     'previous' => 'Previous',
     'next' => 'Next',
     'CONTENT' => [
+      'banner_text1' => 'Nhà cung cấp vật liệu tiên tiến',
+      'banner_text2' => 'công nghệ cao hàng đầu thế giới',
+      'banner_btn' => 'Khám phá',
+      
       'ourStory' => 'Câu chuyện của MHT',
       'subTitle_story_1' => 'TỪ TÀI NGUYÊN CHIẾN LƯỢT VIỆT NAM',
       'subTitle_story_2' => 'ĐẾN VẬT LIỆU CÔNG NGHỆ CAO TOÀN CẦU',
