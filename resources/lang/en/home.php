@@ -39,6 +39,22 @@ return [
       MHT to deliver a consistent and strong financial profile across
       business cycles.",
 
+      'history' => 'Corporate History',
+      '2011' => 'Promoting development of Nui Phao Project',
+      '2012' => '2/2012, Nui Phao Project’s basic mine design approved by MOIT',
+      '2013' => '8/2012, Received Investment Certificate No.41122000131',
+      '2014.1' => 'Commenced commercial production of Acid Grade Flourspar; Tungsten, Copper and Bismuth Conertrate',
+      '2014.2' => 'Established Nui Phao – H.C.Stack Tungsten Manufacturing LLC (NHTCM) in Vietnam',
+      '2015.1' => '9/2015, Company’s listing on Hanoi’s UPCOM exchange completed',
+      '2015.2' => 'Hosted the 28th ITIA anuual meeting',
+      '2016.1' => 'Ranked as premium on UPCOM',
+      '2016.2' => 'Completed the tender offer for the Company’s shares, increasing its ownership to 93.78%',
+      '2017' => 'MHT is recognized as a global brand.',
+      '2018' => 'H.C. Starck GmBH acauisition 49% and changed the name of Nui Phao - H.C. Stack Tungsten Manufacturing LLC to Masan Tungsten Limited Liability (MTC)',
+      '2019.1' => 'H.C. Starck GmbH acquisition 100%',
+      '2019.2' => 'MTC obtained the Certificate of High-Tech Enterprise',
+      '2020' => "6/2020, Company's name changed into Masan High Tech Materials",
+
       'product' => 'Product',
       'subTitle_product' => 'With the exceptional features, our products played an
       important role in the global heavy industry.',

@@ -302,111 +302,111 @@
     </div>
     <div class="titleHeading" data-waypoint="100%">{{ trans("home.CONTENT.product") }}
     </div>
-    <div class="titleHeadingDetail" data-waypoint="100%"> {{ trans("home.CONTENT.subTitle_product") }}
-    </div>
+    <!-- <div class="titleHeadingDetail" data-waypoint="100%"> {{ trans("home.CONTENT.subTitle_product") }} -->
+  </div>
 
-    <div class="listLease mediaEffect-2" data-waypoint="100%">
-      <div class="product-list-item row">
-        <div class="col-md-6 col-sm-6 col-xs-6">
-          <div class="image effectImg" style="background-image:url('/assets/images/tunsteng-product.png')"><a
-              href="#"><img class="img-responsive" src=""></a></div>
-        </div>
-        <div class="col-md-6 col-sm-7 col-md-6">
-          <div class="info">
-            <h3><a class="title" href="#">{{ trans("home.CONTENT.tungsten") }}</a></h3>
-            {{-- <ul>
-              <li>Filament in light bulbs</li>
-              <li>Material selection in emission gun design</li>
-              <li>IC (IC)</li>
-              <li>Smart window (window allows color change on Boeing plane) </li>
-            </ul> --}}
-            <p>
-              {{ trans("home.CONTENT.des_tungsten") }}
-
-            </p>
-            <a href="{{ route('page.show', ['slug' => 'our-products/tungsten']) }}" class="btn btn-gray btn-xs ">{{
-              trans("home.readmoreDOWN") }}</a>
-          </div>
-        </div>
+  <div class="listLease mediaEffect-2" data-waypoint="100%">
+    <div class="product-list-item row">
+      <div class="col-md-6 col-sm-6 col-xs-6">
+        <div class="image effectImg" style="background-image:url('/assets/images/tunsteng-product.png')"><a
+            href="#"><img class="img-responsive" src=""></a></div>
       </div>
-      <div class="product-list-item row">
-        <div class="col-md-6 col-sm-6 col-xs-6">
-          <div class="info">
-            <h3><a class="title" href="#">
-                {{ trans("home.CONTENT.fluorspar") }}</a></h3>
-            {{-- <ul>
-              <li>Used in manufacturing ceramics and glazed metal</li>
-              <li>Used in many industries such as glass production, silicon chips, chemicals, ...
-              </li>
-              <li>Perforce
-              </li>
-              <li>Anesthesia in medicine
-              </li>
-              <li>Fabrication of microscopic lenses, cameras, telescopes
-              </li>
-            </ul> --}}
-            <p>
+      <div class="col-md-6 col-sm-7 col-md-6">
+        <div class="info">
+          <h3><a class="title" href="#">{{ trans("home.CONTENT.tungsten") }}</a></h3>
+          {{-- <ul>
+            <li>Filament in light bulbs</li>
+            <li>Material selection in emission gun design</li>
+            <li>IC (IC)</li>
+            <li>Smart window (window allows color change on Boeing plane) </li>
+          </ul> --}}
+          <p>
+            {{ trans("home.CONTENT.des_tungsten") }}
 
-              {{ trans("home.CONTENT.des_fluorspar") }}
-
-            </p>
-            <a href="{{ route('page.show', ['slug' => 'our-products/flourspar']) }}" class="btn btn-gray btn-xs ">{{
-              trans("home.readmoreDOWN") }}</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-sm-7 col-md-6">
-          <div class="image effectImg" style="background-image:url('/assets/images/florite-product.png')"><a
-              href="#"><img class="img-responsive" src=""></a></div>
-
-        </div>
-      </div>
-      <div class="product-list-item row">
-        <div class="col-md-6 col-sm-6 col-xs-6">
-          <div class="image effectImg" style="background-image:url('/assets/images/copper-product.png')"><a
-              href="#"><img class="img-responsive" src=""></a></div>
-        </div>
-        <div class="col-md-6 col-sm-7 col-md-6">
-          <div class="info">
-            <h3><a class="title" href="#">{{ trans("home.CONTENT.copper") }}</a></h3>
-            {{-- <ul>
-              <li> Fabrication of cars, aircraft, train
-              </li>
-              <li>Fabrication of sea pipes, industrial water spraying systems
-              </li>
-              <li>Manufacturing semiconductors in computers, phones, television
-              </li>
-            </ul> --}}
-            <p>
-              {{ trans("home.CONTENT.des_copper") }}
-            </p>
-            <a href="{{ route('page.show', ['slug' => '/our-products/copper']) }}" class="btn btn-gray btn-xs ">{{
-              trans("home.readmoreDOWN") }}</a>
-          </div>
-        </div>
-      </div>
-      <div class="product-list-item row">
-        <div class="col-md-6 col-sm-6 col-xs-6">
-          <div class="info">
-            <h3><a class="title" href="#">{{ trans("home.CONTENT.bismuth") }} </a></h3>
-            {{-- <ul>
-              <li> Use as a medicine for gastritis, stomach cancer, burns
-              </li>
-              <li>Fabrication of cosmetics such as eyeshadow, hair spray, nail polish
-              </li>
-            </ul> --}}
-            <p>
-              {{ trans("home.CONTENT.des_bismuth") }}
-            </p>
-            <a href="{{ route('page.show', ['slug' => 'our-products/bismuth']) }}" class="btn btn-gray btn-xs ">{{
-              trans("home.readmoreDOWN") }}</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-sm-7 col-md-6">
-          <div class="image effectImg" style="background-image:url('/assets/images/bismuth-product.png')"><a
-              href="#"><img class="img-responsive" src=""></a></div>
+          </p>
+          <a href="{{ route('page.show', ['slug' => 'our-products/tungsten']) }}" class="btn btn-gray btn-xs ">{{
+            trans("home.readmoreDOWN") }}</a>
         </div>
       </div>
     </div>
+    <div class="product-list-item row">
+      <div class="col-md-6 col-sm-6 col-xs-6">
+        <div class="info">
+          <h3><a class="title" href="#">
+              {{ trans("home.CONTENT.fluorspar") }}</a></h3>
+          {{-- <ul>
+            <li>Used in manufacturing ceramics and glazed metal</li>
+            <li>Used in many industries such as glass production, silicon chips, chemicals, ...
+            </li>
+            <li>Perforce
+            </li>
+            <li>Anesthesia in medicine
+            </li>
+            <li>Fabrication of microscopic lenses, cameras, telescopes
+            </li>
+          </ul> --}}
+          <p>
+
+            {{ trans("home.CONTENT.des_fluorspar") }}
+
+          </p>
+          <a href="{{ route('page.show', ['slug' => 'our-products/flourspar']) }}" class="btn btn-gray btn-xs ">{{
+            trans("home.readmoreDOWN") }}</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-7 col-md-6">
+        <div class="image effectImg" style="background-image:url('/assets/images/florite-product.png')"><a href="#"><img
+              class="img-responsive" src=""></a></div>
+
+      </div>
+    </div>
+    <div class="product-list-item row">
+      <div class="col-md-6 col-sm-6 col-xs-6">
+        <div class="image effectImg" style="background-image:url('/assets/images/copper-product.png')"><a href="#"><img
+              class="img-responsive" src=""></a></div>
+      </div>
+      <div class="col-md-6 col-sm-7 col-md-6">
+        <div class="info">
+          <h3><a class="title" href="#">{{ trans("home.CONTENT.copper") }}</a></h3>
+          {{-- <ul>
+            <li> Fabrication of cars, aircraft, train
+            </li>
+            <li>Fabrication of sea pipes, industrial water spraying systems
+            </li>
+            <li>Manufacturing semiconductors in computers, phones, television
+            </li>
+          </ul> --}}
+          <p>
+            {{ trans("home.CONTENT.des_copper") }}
+          </p>
+          <a href="{{ route('page.show', ['slug' => '/our-products/copper']) }}" class="btn btn-gray btn-xs ">{{
+            trans("home.readmoreDOWN") }}</a>
+        </div>
+      </div>
+    </div>
+    <div class="product-list-item row">
+      <div class="col-md-6 col-sm-6 col-xs-6">
+        <div class="info">
+          <h3><a class="title" href="#">{{ trans("home.CONTENT.bismuth") }} </a></h3>
+          {{-- <ul>
+            <li> Use as a medicine for gastritis, stomach cancer, burns
+            </li>
+            <li>Fabrication of cosmetics such as eyeshadow, hair spray, nail polish
+            </li>
+          </ul> --}}
+          <p>
+            {{ trans("home.CONTENT.des_bismuth") }}
+          </p>
+          <a href="{{ route('page.show', ['slug' => 'our-products/bismuth']) }}" class="btn btn-gray btn-xs ">{{
+            trans("home.readmoreDOWN") }}</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-7 col-md-6">
+        <div class="image effectImg" style="background-image:url('/assets/images/bismuth-product.png')"><a href="#"><img
+              class="img-responsive" src=""></a></div>
+      </div>
+    </div>
+  </div>
   </div>
   <div class="news py-4">
     <div class="container-fluid p-0 image" style="background-image:url('/assets/images/bg-news.png')">

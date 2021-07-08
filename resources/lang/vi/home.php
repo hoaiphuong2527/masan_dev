@@ -17,57 +17,61 @@ return [
     'max_content'=>'The message may not be greater than {0}',
     'r_captcha'=>'Vui lòng xác nhận bạn không phải là robot',
     
-    'readmoreUP' => 'READ MORE',
-    'readmoreDOWN' => 'Read more',
-    'viewAllDown' => 'View all',
+    'readmoreUP' => 'XEM THÊM',
+    'readmoreDOWN' => 'Xem Thêm',
+    'viewAllDown' => 'Xem tất cả',
     'previous' => 'Previous',
     'next' => 'Next',
     'CONTENT' => [
-      'ourStory' => 'Our Story',
-      'subTitle_story_1' => 'FROM STRATEGIC RESOURCES',
-      'subTitle_story_2' => 'TO GLOBAL HIGH-TECH MATERIALS',
+      'ourStory' => 'Câu chuyện của MHT',
+      'subTitle_story_1' => 'TỪ TÀI NGUYÊN CHIẾN LƯỢT VIỆT NAM',
+      'subTitle_story_2' => 'ĐẾN VẬT LIỆU CÔNG NGHỆ CAO TOÀN CẦU',
 
-      'desc_story_1' => 'Masan High-Tech Materials (MHT) is a leading global supplier of midstream
-      tungsten products across critical industries such as, automotive, aviation,
-      chemical production, construction, electronics, energy, engineering, mining, and
-      tool making.',
+      'desc_story_1' => 'Masan High-Tech Materials (MHT) là nhà cung cấp hàng đầu toàn cầu về các sản phẩm vonfram trong các ngành công nghiệp quan trọng như ô tô, hàng không, sản xuất hóa chất, xây dựng, điện tử, năng lượng, kỹ thuật, khai thác mỏ và chế tạo dụng cụ.',
 
-      'desc_story_2' => "Masan High-Tech Materials' objective is to demonstrate to the world that a
-      Vietnamese company can lead the transformation of the global tungsten market by
-      working closely with our customers to deliver them local solutions developed
-      globally. This will enable MHT to deliver a consistent and strong financial
-      profile across business cycles.",
-
-      'product' => 'Product',
+      'desc_story_2' => "Mục tiêu của Masan High-Tech Materials là chứng minh cho thế giới thấy rằng một công ty Việt Nam có thể dẫn đầu việc chuyển đổi thị trường vonfram toàn cầu bằng cách hợp tác chặt chẽ với khách hàng của chúng tôi để cung cấp cho họ các giải pháp địa phương được phát triển trên toàn cầu. Điều này sẽ cho phép MHT cung cấp một hồ sơ tài chính nhất quán và mạnh mẽ trong các chu kỳ kinh doanh.",
+      
+      'history' => 'Lịch sử Công ty',
+      '2011' => 'Thúc đẩy phát triển Dự án Núi Pháo.',
+      '2012' => 'Tháng 2, Dự án Núi Pháo được Bộ Công thương chính thức phê duyệt thiết kế mỏ cơ sở.',
+      '2013' => 'Tháng 8, Công ty nhận Giấy chứng nhận Đầu tư Số 41122000131 do Ủy ban Nhân dân Thành phố Hồ Chí Minh cấp.',
+      '2014.1' => 'Dự án Núi Pháo bắt đầu sản xuất thương mại các sản phẩm ôxít vonfram và tinh quặng đồng từ ngày 01 tháng 3, florit cấp axít từ ngày 01 tháng 6 và tinh quặng bismut từ ngày 01 tháng 9.',
+      '2014.2' => 'Thành lập Công ty TNHH Tinh luyện Vonfram Núi Pháo – H.C.Starck (“NHTCM”) tại Việt Nam',
+      '2015.1' => 'Tháng 9, Công ty đăng ký giao dịch thành công cổ phiếu của Masan Tài nguyên trên sàn UPCOM của Sở Giao dịch Chứng khoán Hà Nội.',
+      '2015.2' => 'Đăng cai tổ chức Hội nghị Thường niên lần thứ 28 của ITIA.',
+      '2016.1' => 'được đánh giá là mã chứng khoán tiềm năng trên sàn UPCOM của Sàn giao dịch chứng khoán Hà Nội.',
+      '2016.2' => 'thành công thực hiện chào mua cổ phiếu của Masan Tài nguyên, tăng tỷ lệ sở hữu tại MSR lên 93.7%',
+      '2017' => 'MHT is recognized as a global brand.',
+      '2018' => 'H.C. Starck GmBH acauisition 49% and changed the name of Nui Phao - H.C. Stack Tungsten Manufacturing LLC to Masan Tungsten Limited Liability (MTC)',
+      '2019.1' => 'H.C. Starck GmbH acquisition 100%',
+      '2019.2' => 'MTC obtained the Certificate of High-Tech Enterprise',
+      '2020' => "6/2020, Company's name changed into Masan High Tech Materials",
+      
+      'product' => 'Sản phẩm',
       'subTitle_product' => 'With the exceptional features, our products played an
       important role in the global heavy industry.',
 
       'tungsten' => 'Tungsten',
-      'des_tungsten' => "is a strategically important rare metal. With the unique physical and chemical properties, Tungsten is
-      applied in traditionally heavy industries such as mechanical engineering and toolmaking, oil and gas
-      industry, medical technology, aerospace, chemical industry, and electrical industry.",
+      'des_tungsten' => "Tungsten là một kim loại chuyển tiếp hiếm. là một kim loại hiếm, có tính chiến lược. Do đặc tính vật lý vượt trội như nhiệt độ nóng chảy và độ cứng cao Với các tính chất vật lý và hóa học độc đáo, Vonfram được ứng dụng trong nhiều các ngành công nghiệp nặng then chốt truyền
+      thống như ngành chế tạo, dầu khí, y tế, hàng không vũ trụ, công nghiệp hóa chất và công nghiệp điện.",
 
       'fluorspar' => 'Fluorspar',
-      'des_fluorspar' => "with its highly corrosive characteristic, is popularly used in many industries such as chemical, mining,
-      refining, glass finishing, silicon chip manufacturing and cleaning.",
+      'des_fluorspar' => "Fluorspar với đặc tính ăn mòn cao, được sử dụng phổ biến trong nhiều ngành công nghiệp như hóa chất, khai thác khoáng sản, tinh luyện, sản xuất kính, sản xuất chíp silicon và vệ sinh công nghiệp.",
 
       'copper' => 'Copper',
-      'des_copper' => "a soft, malleable and ductile metal with very high thermal and electrical conductivity, is used in many
-      different industries such as electrical cable production, architecture, jewelry, agriculture (crop
-      treatments), etc.",
+      'des_copper' => "Đồng, một kim loại mềm, dễ uốn, có độ dẫn nhiệt và dẫn điện rất cao nên được sử dụng trong nhiều ngành công nghiệp khác nhau như ngành kiến trúc, nông nghiệp, hóa chất, sản xuất điện, kỹ thuật tổng hợp, khai thác mỏ…",
 
       'bismuth' => 'Bismuth',
-      'des_bismuth' => "is a good antibacterial properties metal, is used widely in medical application, with its luster make it
-      ideal for cosmetic and ceramic production.",
+      'des_bismuth' => "Bismuth là kim loại có tính kháng khuẩn tốt, được sử dụng rộng rãi trong các ứng dụng y tế, để điều trị các bệnh dạ dày, bỏng, và rối loạn đường ruột. Màu sắc óng ánh và các chất tạo màu của Bismut là đặc tính lý tưởng cho ngành sản xuất mỹ phẩm và gốm sứ.",
 
-      'news' => 'News',
-      'show_all_news' => 'Show All News',
+      'news' => 'Tin tức',
+      'show_all_news' => 'Các tin tức khác',
 
-      'business' => 'Our Business',
+      'business' => 'Đôi nét về công ty',
       'about' => 'About Us',
       'products' => 'Products',
       'sustainability' => 'Sustainability',
 
-      'media' => 'Media Library',
+      'media' => 'Tư liệu truyền thông',
     ],
 ];
