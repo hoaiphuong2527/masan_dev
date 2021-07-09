@@ -1,7 +1,6 @@
 .arrow--3 {
     width: rem(30);
     height: rem(50);
-    background: rgba(#000, 0.5);
     text-align: center;
     z-index: 99;
     position: absolute;
@@ -27,10 +26,10 @@
         // }
     }
     &.arrow--prev {
-        left: 0;
+        left: -50px; 
     }
     &.arrow--next {
-        right: 0;
+        right: -50px; 
     }
 }
 

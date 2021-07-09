@@ -237,6 +237,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
+            <h3 class="sub-title" data-waypoint="100%">Corporate History</h3>
             <div class="" style="background-image:url('/assets/images/milestone-bg.svg')">
               <div id="carouselId" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators story-indicators">
@@ -269,7 +270,7 @@
     </div>
     <!-- <div class="titleHeadingDetail" data-waypoint="100%"> {{ trans("home.CONTENT.subTitle_product") }} -->
   </div>
-
+  <div class="container">
   <div class="listLease mediaEffect-2" data-waypoint="100%">
     <div class="product-list-item row">
       <div class="col-md-6 col-sm-6 col-xs-6">
@@ -327,18 +328,38 @@
     </div>
     <div class="product-list-item row">
       <div class="col-md-6 col-sm-6 col-xs-6">
-        <div class="image effectImg" style="background-image:url('/assets/images/copper-product.png')"><a href="#"><img
+        <div class="image effectImg" style="background-image:url('/assets/images/bismuth-product.png')"><a href="#"><img
               class="img-responsive" src=""></a></div>
-      </div>
+      </div>  
       <div class="col-md-6 col-sm-7 col-md-6">
         <div class="info">
-          <h3><a class="title" href="#">{{ trans("home.CONTENT.copper") }}</a></h3>
+          <h3><a class="title" href="#">{{ trans("home.CONTENT.bismuth") }} </a></h3>
+
           {{-- <ul>
             <li> Fabrication of cars, aircraft, train
             </li>
             <li>Fabrication of sea pipes, industrial water spraying systems
             </li>
             <li>Manufacturing semiconductors in computers, phones, television
+            </li>
+          </ul> --}}
+
+          <p>
+            {{ trans("home.CONTENT.des_bismuth") }}
+          </p>
+          <a href="{{ route('page.show', ['slug' => 'our-products/bismuth']) }}" class="btn btn-gray btn-xs ">{{
+            trans("home.readmoreDOWN") }}</a>
+        </div>
+      </div>
+    </div>
+    <div class="product-list-item row">
+      <div class="col-md-6 col-sm-6 col-xs-6">
+        <div class="info">
+          <h3><a class="title" href="#">{{ trans("home.CONTENT.copper") }}</a></h3>
+          {{-- <ul>
+            <li> Use as a medicine for gastritis, stomach cancer, burns
+            </li>
+            <li>Fabrication of cosmetics such as eyeshadow, hair spray, nail polish
             </li>
           </ul> --}}
           <p>
@@ -348,26 +369,8 @@
             trans("home.readmoreDOWN") }}</a>
         </div>
       </div>
-    </div>
-    <div class="product-list-item row">
-      <div class="col-md-6 col-sm-6 col-xs-6">
-        <div class="info">
-          <h3><a class="title" href="#">{{ trans("home.CONTENT.bismuth") }} </a></h3>
-          {{-- <ul>
-            <li> Use as a medicine for gastritis, stomach cancer, burns
-            </li>
-            <li>Fabrication of cosmetics such as eyeshadow, hair spray, nail polish
-            </li>
-          </ul> --}}
-          <p>
-            {{ trans("home.CONTENT.des_bismuth") }}
-          </p>
-          <a href="{{ route('page.show', ['slug' => 'our-products/bismuth']) }}" class="btn btn-gray btn-xs ">{{
-            trans("home.readmoreDOWN") }}</a>
-        </div>
-      </div>
       <div class="col-md-6 col-sm-7 col-md-6">
-        <div class="image effectImg" style="background-image:url('/assets/images/bismuth-product.png')"><a href="#"><img
+        <div class="image effectImg" style="background-image:url('/assets/images/copper-product.png')"><a href="#"><img
               class="img-responsive" src=""></a></div>
       </div>
     </div>
@@ -391,8 +394,8 @@
               @endforeach
               <div class="row ">
                 <div class="col-12 text-right ">
-                  <a class="text-dark" href="#">
-                    <span class="mr-2 ">{{ trans('home.CONTENT.show_all_news') }} </span><i class="fa fa-play gray"
+                  <a class="text-deep-blue" href="#">
+                    <span class="mr-2 ">{{ trans('home.CONTENT.show_all_news') }} </span><i class="fa fa-play deep-blue"
                       aria-hidden="true"></i>
                   </a>
                 </div>
@@ -446,19 +449,17 @@
       </div>
       <div class="row py-5 mt-5 ">
         <h5 class="text-uppercase text-center col-12">
-          <a href="#">
-            {{ trans("home.viewAllDown") }}
+          <a href="#" class="btn btn-gray btn-xs ">{{ trans("home.viewAllDown") }}
           </a>
-
         </h5>
       </div>
 
     </div>
   </div>
   </div>
-  <div class="container-fluid p-0">
+  {{-- <div class="container-fluid p-0">
     <img src="/assets/images/global.png" alt="" style="width: 100%;">
-  </div>
+  </div> --}}
 </section>
 @endsection
 

@@ -1,7 +1,7 @@
 <div class="footer__totop"><i class="ic-top"></i><span>{{trans('frontend.top')}}</span></div>
 <footer class="bd-footer">
     <div class="container">
-        <div class="row footer-logo">
+        {{-- <div class="row footer-logo">
             <div class="col-lg-4 col-9"><a class="logo" href="{{route('page.home')}}"><img src="/assets/images/masan-logo.svg" alt=""></a></div>
             <div class="col-md-8 ">
                 <div class="row brand-logo">
@@ -11,11 +11,10 @@
                     <img src="/assets/images/chemilytics-logo.svg" alt="">
                 </div>
             </div>
-        </div>
-        <div class="row ">
-            <div class="col-md-12">
+        </div> --}}
+        <div class="row  mt-5">
+            <div class="col-md-10">
                 <ul class="nav-footer" id="nav-footer">
- 
                     <li><a href="{{getPageUrlByCode('ABOUT')}}" title="{{ $title = getPageUrlByCode('ABOUT', 'title') }}"><span>{{ $title }}</span></a>
                     </li>
                     <li><a href="{{getPageUrlByCode('SITEMAP')}}" title="Sitemap "><span>{{trans('frontend.sitemap')}}</span></a>
@@ -28,17 +27,27 @@
                     </li>
                 </ul>
             </div>
+            <div class="col-md-2">
+                <ul class="list-inline d-flex">
+                    <li><a href="" ><span><i class="fa fa-linkedin" aria-hidden="true"></i></span></a>
+                    </li>
+                    <li><a href="" ><span><i class="fa fa-facebook-square" aria-hidden="true"></i></span></a>
+                    </li>
+                    <li><a href="" ><span><i class="fa fa-youtube-play" aria-hidden="true"></i></span></a>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-12">
                 <div class="copyright">
-                    <p>© 2021 <span>Masan High-Tech Materials Corporation.</span></p>
+                    <p>© 2021 Masan High-Tech Materials. By using this site you agree that we can place cookies on your device. View our privacy policy for details.</span></p>
                 </div>
             </div>
-            <div class="col-md-8">
+            {{-- <div class="col-md-8">
             <div class="note">
                 <p>By using this site you agree that we can place cookies on your device. View our privacy policy for details.</p>
-            </div>
+            </div> --}}
         </div>
 
     </div>

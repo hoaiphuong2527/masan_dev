@@ -144,6 +144,7 @@
                                     <img src="images/flags/{{ $localeCode }}.png" alt="">
                                         Global | English
                                         @else
+                                    <img src="images/flags/{{ $localeCode }}.png" alt="">
                                         Tiếng Việt
                                         @endif
                                     </a>

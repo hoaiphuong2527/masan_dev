@@ -226,7 +226,11 @@
 			text-indent: unset;
 			background: unset;
       padding: 0px 30px;
-		}
+	  margin-bottom: 17px;
+      cursor: pointer; }
+      	 li:hover {
+        color: #4495D1; }
+		
 		li:after {
 			content: '|';
 			position: absolute;

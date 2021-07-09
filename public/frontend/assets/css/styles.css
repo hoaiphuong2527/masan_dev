@@ -9683,8 +9683,8 @@ button.close {
       padding: 0px 30px;
       margin-bottom: 17px;
       cursor: pointer; }
-      .carousel-indicators.name-indicators li:hover {
-        color: #4495D1; }
+    .carousel-indicators.name-indicators li:hover {
+      color: #4495D1; }
     .carousel-indicators.name-indicators li:after {
       content: '|';
       position: absolute;
@@ -9892,7 +9892,7 @@ button.close {
   src: local(""), url("../fonts/UniversLTStd.otf?#iefix") format("embedded-opentype"); }
 
 .sub-title {
-  color: #4b3905;
+  color: #013B71;
   font-size: 1.5rem;
   font-family: 'Lato';
   font-weight: 400; }
@@ -10432,7 +10432,7 @@ button.close {
   margin-left: auto;
   margin-right: auto; }
   .slick-track:before, .slick-track:after {
-    content: '';
+    content: "";
     display: table; }
   .slick-track:after {
     clear: both; }
@@ -14497,6 +14497,7 @@ select.selectpicker {
   font-family: 'Univers' !important;
   background: #fff;
   font-size: 1.125rem;
+  font-family: 'Lato';
   font-weight: bold;
   z-index: 99;
   left: 0;
@@ -14923,7 +14924,7 @@ a:focus {
     max-width: 100%; } }
 
 footer.bd-footer {
-  background: #efefef;
+  background: #58595B;
   padding-top: 2.1875rem;
   padding-bottom: 2.1875rem; }
   footer.bd-footer .footer-logo {
@@ -14936,9 +14937,26 @@ footer.bd-footer {
         max-width: 23%;
         margin: 0 auto;
         max-height: 60px; }
+  footer.bd-footer .list-inline {
+    text-align: center; }
+    footer.bd-footer .list-inline li {
+      width: 33.33%; }
+      footer.bd-footer .list-inline li a {
+        color: #E6E6E6;
+        font-size: 24px;
+        transition: all 0.2s ease-in-out; }
+        @media screen and (prefers-reduced-motion: reduce) {
+          footer.bd-footer .list-inline li a {
+            transition: none; } }
+        footer.bd-footer .list-inline li a:hover {
+          color: #00a8df;
+          text-decoration: none;
+          transition: all 0.2s ease-in-out; }
+          @media screen and (prefers-reduced-motion: reduce) {
+            footer.bd-footer .list-inline li a:hover {
+              transition: none; } }
   footer.bd-footer .nav-footer {
     padding: 0;
-    margin-top: 1.25rem;
     list-style: none;
     font-size: 1rem;
     font-family: "Lato"; }
@@ -14958,7 +14976,7 @@ footer.bd-footer {
           padding-left: 0.6875rem;
           padding-right: 0.1875rem; } }
       footer.bd-footer .nav-footer > li > a {
-        color: #393939;
+        color: #E6E6E6;
         transition: all 0.2s ease-in-out; }
         @media screen and (prefers-reduced-motion: reduce) {
           footer.bd-footer .nav-footer > li > a {
@@ -14972,7 +14990,7 @@ footer.bd-footer {
               transition: none; } }
 
 .copyright, .note {
-  color: #000;
+  color: #E6E6E6;
   text-align: center;
   padding-top: 0rem;
   margin-top: 0.625rem;
@@ -14980,7 +14998,7 @@ footer.bd-footer {
   font-weight: 500;
   text-align: left; }
   .copyright.note, .note.note {
-    color: #8b8b8b;
+    color: #E6E6E6;
     text-align: right; }
   .copyright p, .note p {
     margin: 0; }
@@ -15105,10 +15123,6 @@ footer.bd-footer {
   line-height: unset;
   text-transform: uppercase;
   color: #fff; }
-  .homeSlider .discovery-btn:hover {
-    color: #fff;
-    background-color: #4589C5;
-    border-color: #4589C5; }
   .homeSlider .discovery-btn i {
     font-size: 12px;
     margin-left: 20px; }
@@ -15152,7 +15166,7 @@ footer.bd-footer {
     height: 100%; }
 
 .homeSlider__des {
-  font-family: 'Lato';
+  font-family: 'Futura';
   max-width: 675px;
   position: relative;
   padding-left: 3.125rem;
@@ -15272,7 +15286,7 @@ section.mainContent {
   border-left: 5px solid aqua; }
 
 .page-content .block-item .slash {
-  border-left: solid #4588C5;
+  border-left: solid #4588c5;
   height: 100%;
   width: 1px;
   display: block;
@@ -15289,18 +15303,19 @@ section.mainContent {
   height: 15px;
   margin: 0px 10px;
   border-radius: 100%;
-  border: solid 1px #9AA9A1; }
-  .carousel-indicators.story-indicators li.active {
-    background-color: #9AA9A1; }
+  border: solid 1px #9aa9a1; }
+
+.carousel-indicators.story-indicators li.active {
+  background-color: #9aa9a1; }
 
 .btn-gray {
-  color: #a6b4ac;
-  background-color: transparent;
-  border-color: #a6b4ac; }
+  color: #fff;
+  background-color: #013b71;
+  border-color: #013b71; }
   .btn-gray:hover {
     color: #fff;
-    background-color: #4589C5;
-    border-color: #4589C5; }
+    background-color: #4589c5;
+    border-color: #4589c5; }
 
 .img-responsive {
   width: 100%; }
@@ -15310,7 +15325,7 @@ section.mainContent {
   padding-right: 3rem; }
 
 .product-list-item {
-  padding: 20px; }
+  padding: 20px 0px; }
   .product-list-item:hover {
     box-shadow: 0px 0px 10px 5px #f3f3f3;
     transition: all 0.5s ease-in-out; }
@@ -15330,7 +15345,7 @@ section.mainContent {
     .product-list-item .info .title {
       margin-left: 1.125rem;
       font-size: 1.75rem;
-      color: #4b3905; }
+      color: #013b71; }
       .product-list-item .info .title:hover {
         text-decoration: none; }
     .product-list-item .info p {
@@ -15350,16 +15365,16 @@ section.mainContent {
     border-radius: 0; }
 
 .blue {
-  color: #418AC6; }
+  color: #418ac6; }
 
 .gray {
-  color: #98A9A1; }
+  color: #98a9a1; }
 
 .news .titleHeading {
   color: #fff; }
 
 .news .image {
-  height: 630px;
+  height: 550px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -15373,12 +15388,13 @@ section.mainContent {
 
 .news .news-list-item .bg-white {
   background-color: #fff;
+  box-shadow: #ccc 0px 1px 27px;
   height: 100%; }
 
 .news .read-more {
-  color: #A6B4AC; }
+  color: #a6b4ac; }
   .news .read-more:hover {
-    color: #418AC6;
+    color: #418ac6;
     text-decoration: none;
     transition: all 0.2s ease-in-out; }
 
@@ -15449,12 +15465,19 @@ section.mainContent {
         width: 0.75rem;
         background-size: contain !important; }
 
+.text-deep-blue {
+  color: #013b71; }
+
+.deep-blue {
+  color: #013b71 !important; }
+
 .media-center h5 a {
-  color: #909090; }
-  .media-center h5 a:hover {
-    color: #418AC6;
-    text-decoration: none;
-    transition: all 0.2s ease-in-out; }
+  color: #e6e6e6; }
+
+.media-center h5 a:hover {
+  color: #e6e6e6;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out; }
 
 @media (max-width: 991.98px) {
   .gridPartner .slidePartner .arrow--1 {
@@ -16862,9 +16885,9 @@ html[lang="vi"] .ourPresenceLocation__item {
 
 .itemNew .title {
   display: block;
-  font-size: 1.125rem;
-  color: #393939;
-  font-weight: 700;
+  font-size: 1rem;
+  color: #013B71;
+  font-weight: 900;
   letter-spacing: 0.75px;
   line-height: 1.5;
   max-height: 4.5em;
@@ -16879,9 +16902,8 @@ html[lang="vi"] .ourPresenceLocation__item {
   @media screen and (prefers-reduced-motion: reduce) {
     .itemNew .title {
       transition: none; } }
-
-.itemNew p {
-  font-weight: normal; }
+  .itemNew .title:hover {
+    color: #104d7f; }
 
 .itemNew .btn-link {
   font-size: 0.875rem; }

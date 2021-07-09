@@ -304,6 +304,7 @@ function slideCase() {
         ]
     });
 }
+
 function hashTag(){
     var navbox = $('#navTop'),
         headerHeight =$('.header').height(),

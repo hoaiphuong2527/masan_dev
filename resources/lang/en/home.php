@@ -28,8 +28,8 @@ return [
       'banner_btn' => 'Discovery',
 
       'ourStory' => 'Our Story',
-      'subTitle_story_1' => 'FROM STRATEGIC RESOURCES',
-      'subTitle_story_2' => 'TO GLOBAL HIGH-TECH MATERIALS',
+      'subTitle_story_1' => 'From Strategic Resources',
+      'subTitle_story_2' => 'to Global High-tech  Materials',
       
       'desc_story_1' => 'Masan High-Tech Materials (MHT) is a leading glebal supplier of
       midstream tungsten products across critical industries such as,

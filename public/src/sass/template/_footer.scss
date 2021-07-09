@@ -17,10 +17,28 @@ footer.bd-footer {
         }
     }
 	
-    background: #efefef;
+    background: #58595B;
     padding-top: rem(35);
     padding-bottom: rem(35);
+    .list-inline{
+        text-align: center;
+
+        li{
+            width: 33.33%;
+            a {
+                color: #E6E6E6;
+                font-size: 24px;
+                @include transition();
+                &:hover {
+                    color: $color-hover;
+                    text-decoration: none;
+                    @include transition();
+                }
+            }
+        }
+    }
     .nav-footer {
+     
         padding: 0;
         list-style: none;
         font-size: rem(16);
@@ -44,7 +62,7 @@ footer.bd-footer {
             
     
             >a {
-                color: $color-title;
+                color: #E6E6E6;
                 @include transition();
                 &:hover {
                     color: $color-hover;
@@ -60,12 +78,12 @@ footer.bd-footer {
 
 .copyright,.note {
     &.note{
-        color: #8b8b8b;
+        color: #E6E6E6;
         text-align: right;
     }
-    color: $black;
+    color: #E6E6E6;
     text-align: center;
-    padding-top: rem(20);
+    padding-top: rem(0);
     margin-top: rem(10);
     font-size: rem(14);
     font-weight: 500;
