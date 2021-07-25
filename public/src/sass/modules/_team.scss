@@ -50,7 +50,7 @@
                 font-size:rem(16);
                 font-weight:800;
                 letter-spacing: 0.75px;
-                color:$color-active;
+                color:#11396F;
                 font-family:$font-custom;
                 margin:0;
                 padding:0 0 rem(12) 0px;
@@ -107,7 +107,7 @@
     .modal-dialog{
         max-width:1180px;
         .modal-content {
-            background: #e6e6e6 url($image-path + "bg-popup.png") no-repeat right bottom ;
+            background: #e6e6e6 no-repeat right bottom ;
             border-radius: 0;
             border: none;
             padding: rem(60);

@@ -12,14 +12,14 @@
                 </div>
             </div>
         </div> --}}
-        <div class="row  mt-5">
+        <div class="row">
             <div class="col-md-10">
                 <ul class="nav-footer" id="nav-footer">
                     <li><a href="{{getPageUrlByCode('ABOUT')}}" title="{{ $title = getPageUrlByCode('ABOUT', 'title') }}"><span>{{ $title }}</span></a>
                     </li>
                     <li><a href="{{getPageUrlByCode('SITEMAP')}}" title="Sitemap "><span>{{trans('frontend.sitemap')}}</span></a>
                     </li>
-                    <li><a href="{{getPageUrlByCode('PRIVACY-POLICY')}}" title="{{trans('frontend.privacy_policy')}}"><span>{{trans('frontend.privacy_policy')}}</span></a>
+                    <li><a href="{{getPageUrlByCode('PRIVACY-POLICY')}}" title="{{ $title = getPageUrlByCode('PRIVACY-POLICY', 'title') }}"><span>{{ $title }}</span></a>
                     </li>
                     <li><a href="{{getPageUrlByCode('DOWNLOAD')}}" title="{{ $title = getPageUrlByCode('DOWNLOAD', 'title') }}"><span>Download</span></a>
                     </li>
@@ -29,19 +29,22 @@
             </div>
             <div class="col-md-2">
                 <ul class="list-inline d-flex">
-                    <li><a href="" ><span><i class="fa fa-linkedin" aria-hidden="true"></i></span></a>
+                    <li><a href="https://www.linkedin.com/company/masan-hightech-materials/" ><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                     </li>
-                    <li><a href="" ><span><i class="fa fa-facebook-square" aria-hidden="true"></i></span></a>
+                    <li><a href="https://www.facebook.com/nuiphaominingcompany/" ><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
                     </li>
-                    <li><a href="" ><span><i class="fa fa-youtube-play" aria-hidden="true"></i></span></a>
+                    <li><a href="https://www.youtube.com/channel/UCnpPGli-n4Oe635hr6xJ7aA" ><i class="fa fa-youtube-play" aria-hidden="true" style="
+                        font-size: 31px;
+                        margin-top: 2px;
+                    "></i></a>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 pt-3">
                 <div class="copyright">
-                    <p>© 2021 Masan High-Tech Materials. By using this site you agree that we can place cookies on your device. View our privacy policy for details.</span></p>
+                    <p>{{ trans('frontend.coppy_right') }}</span></p>
                 </div>
             </div>
             {{-- <div class="col-md-8">

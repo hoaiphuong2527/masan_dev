@@ -184,10 +184,11 @@ a:focus {
             transform: scale(1.25);
         }
     }
+    
 }
 
 .bgBanner {
-    @include bg-box(1920, 350);
+    @include bg-box(1920, 700);
     position: relative;
 
     &--news {

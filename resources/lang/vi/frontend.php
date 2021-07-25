@@ -9,6 +9,7 @@ return [
     'learn_more'=>'Tìm hiểu thêm',
     'sitemap'=>'Sơ đồ website',
     'privacy_policy'=>'Chính sách bảo mật',
+    'coppy_right' => '@2021Masan High-Tech Materials. Việc truy cập vào website này đồng nghĩa với việc chấp nhận cookies được gắn trên thiết bị. Để biết thêm thông tin, vui lòng xem chính sách bảo mật.',
     'top'=>'TOP',
     'bwid'=>'CÔNG TY CỔ PHẦN PHÁT TRIỂN CÔNG NGHIỆP BW',
     'we_are'=>'Chúng tôi là',
@@ -50,9 +51,12 @@ return [
     'clear'=>'Xem tất cả',
     'related_videos'=>'Video liên quan',
     'related_photos'=>'Hình ảnh liên quan',
-
+    'press_release' =>'THÔNG CÁO BÁO CHÍ    ',
+    'mht_in_the_news' =>'TIN TỨC    ',
+    'media_center_menu' =>'TƯ LIỆU TRUYỀN THÔNG',
     'south'=>'Miền Nam',
     'north'=>'Miền Bắc',
+    'all_product' =>'Tất cả Sản phẩm',
 
     'learn_about_other_properties'=>'Xem thêm',
     'project_features' => 'Dự Án Nổi Bật',

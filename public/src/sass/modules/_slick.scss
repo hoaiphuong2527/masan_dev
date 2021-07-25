@@ -263,7 +263,7 @@ ul.slick-dots {
             //     width:calc(50% - 7px);
             // }
             button {
-                background:$color-hover;
+                background:#55ade2;
                
             }
            
@@ -272,7 +272,11 @@ ul.slick-dots {
         
     }
 }
-
+.greenDots {
+    ul.slick-dots li.slick-active button {
+      background: #A6CD43;
+    }
+  }
 
 /*custom button*/
 

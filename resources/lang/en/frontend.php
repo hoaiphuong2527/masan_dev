@@ -50,7 +50,11 @@ return [
     'clear'=>'Clear',
     'related_videos'=>'Related videos',
     'related_photos'=>'Related photos',
-
+    'coppy_right' => '© 2021 Masan High-Tech Materials. By using this site you agree that we can place cookies on your device. View our privacy policy for details.',
+    'press_release' =>'Press release',
+    'mht_in_the_news' =>'MHT in the news',
+    'media_center' =>'Media center',
+    'all_product' =>'All Products',
     'south'=>'South',
     'north'=>'North',
 

@@ -70,11 +70,13 @@ return [
 
       'news' => 'Tin tức',
       'show_all_news' => 'Các tin tức khác',
+      'new_news' => 'Tin mới',
+
 
       'business' => 'Đôi nét về công ty',
-      'about' => 'About Us',
-      'products' => 'Products',
-      'sustainability' => 'Sustainability',
+      'about' => 'Giới thiệu',
+      'products' => 'Sản Phẩm',
+      'sustainability' => 'Phát triển bền vững',
 
       'media' => 'Tư liệu truyền thông',
     ],

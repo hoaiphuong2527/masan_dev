@@ -1,4 +1,4 @@
-$color-title-heading: #a6b4ac;
+$color-title-heading: #7B7C7E;
 $color-sub-title-heading: #4b3905;
 
 $bg-title-before: #00a8df;
@@ -6,12 +6,11 @@ $bg-title-after: #d7d7d7;
 .sub-title{
 color: #013B71;
 font-size: rem(24);
-font-family: 'Lato';
-font-weight: 400;
-
+font-family: 'Arial';
+font-weight: 500;
 }
 .titleHeading{
-    font-family: 'Lato';
+    font-family: 'Arial';
     font-weight: 500;
     // text-transform: uppercase;
     font-size: rem(48);
@@ -97,7 +96,7 @@ font-weight: 400;
 }
 
 .titleHeadingDetail{
-    font-family: "Lato";
+    font-family: "Arial";
     font-weight: 500;
     font-size: 1.125rem;
     letter-spacing: (75/1000)*1rem;
@@ -131,7 +130,7 @@ font-weight: 400;
 }
 
 .titleIcon{
-    font-family: 'Lato';
+    font-family: 'Arial';
     font-weight: 800;
     text-transform: capitalize;
     font-size: rem(20); 

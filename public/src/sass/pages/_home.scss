@@ -66,7 +66,7 @@
 		}
 	}
 	&__des {
-		font-family: 'Futura';
+		font-family: 'Arial';
 		max-width: 675px;
 		position: relative;
 		padding-left: rem(50);
@@ -151,7 +151,11 @@
 		}
 	}
 }
-
+.chemilytics-silde{
+	.homeSlider .image{
+		background-position: center top;
+	}
+}
 .wrapper {
 	@include media-breakpoint-down(md) {
 		overflow: hidden;
@@ -186,7 +190,7 @@ section.mainContent {
 .page-content {
 	.block-item {
 		h3 {
-			font-size: rem(20);
+			font-size: rem(24);
 		}
 		.text-block {
 			.desc {
@@ -251,6 +255,7 @@ section.mainContent {
 		.title {
 			margin-left: rem(18);
 			font-size: rem(28);
+			font-weight: 700;
 			color: #013b71;
 			&:hover {
 				text-decoration: none;
@@ -279,7 +284,7 @@ section.mainContent {
 }
 
 .blue {
-	color: #418ac6;
+	color: #58595B;
 }
 
 .gray {
@@ -300,12 +305,16 @@ section.mainContent {
 			background-color: #fff;
 			box-shadow: #ccc 0px 1px 27px;
 			height: 100%;
-		}
+			
+		}	
+	.text-deep-blue:hover{
+		color: #013b71;
+	}
 	}
 	.read-more {
-		color: #a6b4ac;
+		color: #58595B;
 		&:hover {
-			color: #418ac6;
+			color: #58595B;
 			text-decoration: none;
 			transition: all 0.2s ease-in-out;
 		}
@@ -328,7 +337,7 @@ section.mainContent {
 			margin: 0;
 			padding-bottom: rem(18);
 			font-weight: 800;
-			font-family: 'Lato';
+			font-family: 'Arial';
 			@include media-breakpoint-down(xs) {
 				text-align: center;
 			}
@@ -440,7 +449,7 @@ section.mainContent {
 		margin: 0;
 		padding-bottom: rem(18);
 		font-weight: 800;
-		font-family: 'Lato';
+		font-family: 'Arial';
 	}
 }
 

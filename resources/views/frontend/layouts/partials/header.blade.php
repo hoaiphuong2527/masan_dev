@@ -28,15 +28,15 @@
                                                     @endforeach
                                                 </ul>
                                             </li> --}}
-                                            <li><a href="{{getPageUrlByCode('MEDIA-CENTER')}}" title="{{ $title = getPageUrlByCode('MEDIA-CENTER', 'title') }}"><span>Press Releases</span></a>
+                                            <li><a href="{{getPageUrlByCode('MEDIA-CENTER')}}" title="{{ $title = getPageUrlByCode('MEDIA-CENTER', 'title') }}"><span>{{trans('frontend.press_release')}}</span></a>
                                             </li>
-                                            <li><a href="{{getPageUrlByCode('MEDIA-CENTER')}}" title="{{ $title = getPageUrlByCode('MEDIA-CENTER', 'title') }}"><span>MHT in the news</span></a>
+                                            <li><a href="{{getPageUrlByCode('MEDIA-CENTER')}}" title="{{ $title = getPageUrlByCode('MEDIA-CENTER', 'title') }}"><span>{{trans('frontend.mht_in_the_news')}}</span></a>
                                             </li>
-                                            <li><a href="{{getPageUrlByCode('MEDIA-CENTER')}}" title="{{ $title = getPageUrlByCode('MEDIA-CENTER', 'title') }}"><span>Media Library</span></a>
+                                            <li><a href="{{getPageUrlByCode('MEDIA-CENTER')}}" title="{{ $title = getPageUrlByCode('MEDIA-CENTER', 'title') }}"><span>{{trans('frontend.media_center_menu')}}</span></a>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="nav-item "><a class="nav-link" href="{{getPageUrlByCode('CAREER')}}" title="{{ $title = getPageUrlByCode('CAREER', 'title') }}"><span>{{ $title }}</span></a><span class="expand"><i class="fa fa-angle-down"></i></span>
+                                    <li class="nav-item hasChild"><a class="nav-link" href="{{getPageUrlByCode('CAREER')}}" title="{{ $title = getPageUrlByCode('CAREER', 'title') }}"><span>{{ $title }}</span></a><span class="expand"><i class="fa fa-angle-down"></i></span>
                                         {{-- <ul id="">
                                             <li><a href="{{getPageUrlByCode('CAREER-OPPORTUNITY')}}" title="{{ $title = getPageUrlByCode('CAREER-OPPORTUNITY', 'title') }}"><span>{{ $title }}</span></a>
                                             </li>
@@ -47,7 +47,7 @@
                                         </ul> --}}
                                     </li>
                                     <li class="nav-item hasChild"><a class="nav-link" href="{{getPageUrlByCode('ABOUT')}}" title="{{ $title = getPageUrlByCode('ABOUT', 'title') }}"><span>{{ $title }}</span></a><span class="expand"><i class="fa fa-angle-down"></i></span>
-                                        <ul id="">
+                                        {{-- <ul id="">
                                             <li class=""><a href="{{getPageUrlByCode('OVERVIEW')}}" title="{{ $title = getPageUrlByCode('OVERVIEW', 'title') }}"><span>{{ $title }}</span></a>
                                             </li>
                                             <li><a href="{{getPageUrlByCode('STRATEGY')}}" title="{{ $title = getPageUrlByCode('STRATEGY', 'title') }}"><span>{{ $title }}</span></a>
@@ -60,7 +60,7 @@
                                             </li>
                                             <li><a href="{{getPageUrlByCode('AWARDS')}}" title="{{ $title = getPageUrlByCode('AWARDS', 'title') }}"><span>{{ $title }}</span></a>
                                             </li>
-                                        </ul>
+                                        </ul> --}}
                                     </li>
                                 
                                 </ul>
@@ -97,9 +97,11 @@
                                             </li>
                                             <li><a href="{{getPageUrlByCode('H-C-STARCK')}}" title="{{ $title = getPageUrlByCode('H-C-STARCK', 'title') }}"><span>{{ $title }}</span></a>
                                             </li>
+                                            <li><a href="{{getPageUrlByCode('CHEMILYTICS')}}" title="{{ $title = getPageUrlByCode('CHEMILYTICS', 'title') }}"><span>{{ $title }}</span></a>
+                                            </li>
                                         </ul>
                                     </li>
-                                    <li class="nav-item hasChild"><a class="nav-link" href="{{getPageUrlByCode('PRODUCT')}}" title="{{ $title = getPageUrlByCode('PRODUCT', 'title') }}"><span>{{ $title }}</span></a><span class="expand"><i class="fa fa-angle-down"></i></span>
+                                    <li class="nav-item hasChild"><a class="nav-link" href="javascript:void(0);" title="{{ $title = getPageUrlByCode('PRODUCT', 'title') }}"><span>{{ $title }}</span></a><span class="expand"><i class="fa fa-angle-down"></i></span>
                                         <ul id="">
                                             <li><a href="{{getPageUrlByCode('TUNGSTEN')}}" title="{{$title = getPageUrlByCode('TUNGSTEN', 'title')}}"><span>{{ $title }}</span></a>
                                             </li>

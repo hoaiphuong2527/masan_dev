@@ -25,7 +25,7 @@ return [
     'CONTENT' => [
       'banner_text1' => 'The global leading integrated supplier',
       'banner_text2' => 'of high-tech advanced materials',
-      'banner_btn' => 'Discovery',
+      'banner_btn' => 'Explore',
 
       'ourStory' => 'Our Story',
       'subTitle_story_1' => 'From Strategic Resources',
@@ -67,7 +67,7 @@ return [
       'des_tungsten' => "Tungsten is a strategically important rare metal. With the unigue
       physical and chemical properties, Tungsten is applied in traditionally
       heavy industries such as mechanical engineering and toolmaking, oil
-      and gas industry. medical technology. aerospace, chemical industry,
+      and gas industry, medical technology, aerospace, chemical industry,
       and electrical industry.",
 
       'fluorspar' => 'Fluorspar',
@@ -88,6 +88,7 @@ return [
 
       'news' => 'News',
       'show_all_news' => 'Show All News',
+      'new_news' => 'New',
 
       'business' => 'Our Business',
       'about' => 'About Us',
@@ -95,6 +96,5 @@ return [
       'sustainability' => 'Sustainability',
 
       'media' => 'Media Library',
-      
     ],
 ];

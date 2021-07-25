@@ -161,7 +161,7 @@ function slideNews() {
     el.slick({
         infinite: true,
         slidesToShow: 3,
-        slidesToScroll: 1,  focusOnSelect: true,
+        slidesToScroll: 1, focusOnSelect: true,
         //autoplay: true,
         autoplaySpeed: 3000,
         prevArrow: '<a class="arrow--1 arrow--prev" href="javascript:void(0)"><i class="ic-left-2"></i></a>',
@@ -202,7 +202,7 @@ function sildePhoto() {
         fade: true,
         dots: true,
         autoplay: true,
-  autoplaySpeed: 4000,
+        autoplaySpeed: 4000,
         centerPadding: '0px',
         cssEase: 'linear',
         prevArrow: '<a class="arrow--1 arrow--2 arrow--prev" href="javascript:void(0)"><i class="ic-left-2"></i></a>',
@@ -251,7 +251,7 @@ function sildePhotoNews() {
         slidesToScroll: 1,
         arrows: true,
         fade: true,
-        dots: true,  autoplay: true,
+        dots: true, autoplay: true,
         autoplaySpeed: 4000,
         centerPadding: '0px',
         cssEase: 'linear',
@@ -263,28 +263,29 @@ function sildePhotoNews() {
         slidesToShow: 1,
         slidesToScroll: 1,
         asNavFor: bigEl,
-        centerMode: true,  autoplay: true,
+        centerMode: true, autoplay: true,
         autoplaySpeed: 4000,
         arrows: false,
-       // prevArrow: '<a class="arrow--1 arrow--prev" href="javascript:void(0)"><i class="ic-left-2"></i></a>',
+        // prevArrow: '<a class="arrow--1 arrow--prev" href="javascript:void(0)"><i class="ic-left-2"></i></a>',
         //nextArrow: '<a class="arrow--1 arrow--next" href="javascript:void(0)"><i class="ic-right-2"></i></a>',
         centerPadding: '0px',
         focusOnSelect: true
     });
 }
+
 function slideCase() {
-    var el=$('.sliderCase');
+    var el = $('.sliderCase');
     el.slick({
         slidesToShow: 1,
-       // slidesToScroll: 1,
+        // slidesToScroll: 1,
         arrows: true,
         infinite: true,
-        speed: 250,  autoplay: true,
+        speed: 250, autoplay: true,
         autoplaySpeed: 3000,
         dots: true,
         centerPadding: '200px',
         centerMode: true,
-       // variableWidth: true,
+        // variableWidth: true,
         cssEase: 'linear',
         prevArrow: '<a class="arrow--1 arrow--3 arrow--prev" href="javascript:void(0)"><i class="ic-left"></i></a>',
         nextArrow: '<a class="arrow--1 arrow--3 arrow--next" href="javascript:void(0)"><i class="ic-right"></i></a>',
@@ -305,12 +306,45 @@ function slideCase() {
     });
 }
 
-function hashTag(){
+function slideMutiManager() {
+    var el = $('.sliderMutiManager');
+    el.slick({
+        slidesToShow: 3,
+        // slidesToScroll: 1,
+        arrows: true,
+        infinite: true,
+        speed: 250, autoplay: true,
+        autoplaySpeed: 3000,
+        dots: true,
+        centerPadding: '200px',
+        centerMode: true,
+        // variableWidth: true,
+        cssEase: 'linear',
+        prevArrow: '<a class="arrow--1 arrow--3 arrow--prev" href="javascript:void(0)"><i class="ic-left"></i></a>',
+        nextArrow: '<a class="arrow--1 arrow--3 arrow--next" href="javascript:void(0)"><i class="ic-right"></i></a>',
+        responsive: [
+            {
+                breakpoint: 980,
+                settings: {
+                    centerPadding: '100px',
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    centerPadding: '60px',
+                }
+            }
+        ]
+    });
+}
+
+function hashTag() {
     var navbox = $('#navTop'),
-        headerHeight =$('.header').height(),
-        bannerHeight =$('.bgBanner').height(),
+        headerHeight = $('.header').height(),
+        bannerHeight = $('.bgBanner').height(),
         offsetTop = headerHeight + bannerHeight - 50;
-// if we have a hash in the address bar
+    // if we have a hash in the address bar
     if (window.location.hash) {
         console.log(offsetTop);
         $('html, body').stop().animate({
@@ -328,13 +362,13 @@ function hashTag(){
 //         //alert( this.value );
 //     });
 // }
-function clearBtn(){
-    var elbtn=$('#btn-clear'),
-        elSlt= $('.selectpicker');
-        elSltV= $('.selectpicker').title;
-       // console.log(this.title);
-        elbtn.hide();
-    $('select.selectpicker').on('change', function() {
+function clearBtn() {
+    var elbtn = $('#btn-clear'),
+        elSlt = $('.selectpicker');
+    elSltV = $('.selectpicker').title;
+    // console.log(this.title);
+    elbtn.hide();
+    $('select.selectpicker').on('change', function () {
         //console.log(this.value)
         elbtn.show();
         //alert( this.value );
@@ -420,7 +454,7 @@ function responheight() {
     var height = $(window).height();
     $('.menuMain').css({ top: hheader - 1 });
     $('.menuMain').css({ paddingBottom: hheader });
-    $('.imageFull').css({ height: height- hheader});
+    $('.imageFull').css({ height: height - hheader });
 }
 
 
@@ -454,11 +488,12 @@ function newsPhoto() {
         nextArrow: '<a class="arrow--3 arrow--next" href="#"><i class="ic-right"></i></a>'
     });
 }
+
 function slideCareer() {
-    var el=$('#slideCareer');
-        el.slick({
+    var el = $('#slideCareer');
+    el.slick({
         slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToScroll: 1,
         infinite: true,
         arrows: true,
         autoplaySpeed: 3000,
@@ -469,14 +504,14 @@ function slideCareer() {
                 breakpoint: 800,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToScroll: 1,
                 }
             },
             {
                 breakpoint: 640,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToScroll: 1,
                 }
             },
             {
@@ -489,6 +524,44 @@ function slideCareer() {
         ]
     });
 }
+
+
+function slideManager() {
+    var el = $('.sliderManager');
+    el.slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        infinite: true,
+        speed: 250,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        accessibility: false,
+        // dots: true,
+        // centerPadding: '20px',
+        // centerMode: true,
+        //    variableWidth: true,
+        cssEase: 'linear',
+        prevArrow: '<a class="arrow--1 arrow--prev" href="javascript:void(0)"><i class="ic-left-2"></i></a>',
+        nextArrow: '<a class="arrow--1 arrow--next" href="javascript:void(0)"><i class="ic-right-2"></i></a>',
+        responsive: [
+            {
+                breakpoint: 980,
+                settings: {
+                    centerPadding: '100px',
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    centerPadding: '60px',
+                }
+            }
+        ]
+    });
+}
+
+
 function removeText() {
     var el = $('.btnRemove'),
         elInput = $('.searchHeading__form input.form-control');
@@ -518,28 +591,28 @@ function loadMoreItem() {
             if (el.parents('.loadMoreGroup').find(".showBox:hidden").length == 0) {
                 el.fadeOut('slow');
             }
-          
+
         });
     });
 }
 
 //show we chat
-function wechat(){
+function wechat() {
     var el = $('.showwechat');
-    el.click(function(e){
+    el.click(function (e) {
         e.preventDefault();
         $('.box_weChat').toggleClass("active");
-        
+
 
     })
     $(document).click(function () {
-            if ($('.box_weChat').hasClass('active')) {
-                $('.box_weChat').removeClass('active');
-            }
-        });
-        el.bind('click', function (e) {
-            e.stopPropagation();
-        });
+        if ($('.box_weChat').hasClass('active')) {
+            $('.box_weChat').removeClass('active');
+        }
+    });
+    el.bind('click', function (e) {
+        e.stopPropagation();
+    });
 }
 wechat()
 loadMoreItem();
@@ -560,6 +633,7 @@ sildePhotoNews();
 slideCareer();
 slideCase();
 hashTag();
+slideManager();
 $().ready(function () {
     $("#contactForm").validate({
         rules: {
@@ -579,6 +653,22 @@ $(window).resize(function () {
     $(".header").sticky({ topSpacing: 0 });
     responheight();
 
+});
+
+
+$('.manager-nav li a').click(function(e) {
+    e.preventDefault();
+    $('.manager-nav li').removeClass('active');
+    $(this).parent('li').addClass('active');
+    let target = $(this).parent('li').attr('data-target');
+    $('.sliderManager').removeClass('active')
+    $(`#${target}`).addClass('active');
+
+});
+
+$(".hover-active").children().children().hover(function(e){
+    $(this).addClass('active');
+    $(this).parent().parent().children().children().removeClass('active')
 });
 
 // $(document).ready(function(){
