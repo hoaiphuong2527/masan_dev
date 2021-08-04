@@ -41,7 +41,7 @@ class NewsController extends Controller
 
         $news_category = $this->news_category->findBySlug($slug);
         Breadcrumb::add($news_category->name, route('media.news.category',['parent_slug'=>$news_category_parent->slug,'slug'=>$news_category->slug]));
-        $news = $news_category->news()->paginate(12);
+        $news = $news_category->news()->paginate(10);
 
         foreach ($news_category_parent->translations as $translation) {
             TranslateUrl::addWithLink($translation->locale, \LaravelLocalization::getURLFromRouteNameTranslated($translation->locale, 'routes.media_center_news_category', ['parent_slug'=>$translation->slug]));

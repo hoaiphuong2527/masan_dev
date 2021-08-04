@@ -6,17 +6,18 @@
     <title>{{$media_photo_detail->name}}</title>
 @endsection
 @section('content')
-    <section class="ourNewsDetail">
+    {{-- @include('themes.partials.base',['banner'=>'frontend/images/media-banner.png']) --}}
+    <section class="ourNewsDetail my-5">
         <div class="container">
             <h1 class="titleHeading titleHeading--content" data-waypoint="100%">{{$media_photo_detail->name}}</h1>
             <div class="mediaEffect" data-waypoint="100%">
                 <div class="row">
                     <div class="col-md-5">
-                        <div class="date"> <i class="fa fa-calendar"></i>{{Date2String($media_photo_detail->published_date, 'd-m-Y')}}</div>
+                        <div class="date"> <i class="fa fa-calendar"></i>{{Date2String($media_photo_detail->published_date, ' M d, Y')}}</div>
                     </div>
-                    <div class="col-md-7">
+                    {{-- <div class="col-md-7">
                         @include('themes.partials.share',['title'=>$media_photo_detail->name])
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="slideDetail">
                     <div class="bigImg">
@@ -35,7 +36,7 @@
                     </div>
                 </div>
             </div>
-            <div class="relativeBox mediaEffect-2" data-waypoint="100%">
+            {{-- <div class="relativeBox mediaEffect-2" data-waypoint="100%">
                 <div class="titleHeading--news">{{trans('frontend.related_photos')}}</div>
                 <div class="gridNews--2 gridNewsPhoto slideNews">
                     @foreach($media_photo_relative as $item)
@@ -45,7 +46,7 @@
                     </div>
                     @endforeach
                 </div>
-            </div>
+            </div> --}}
         </div>
     </section>
 @endsection

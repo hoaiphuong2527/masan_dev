@@ -2,7 +2,9 @@
 
 @section('style')
 @endsection
-
+@php
+$title = getPageUrlByCode('CHEMILYTICS', 'title');
+@endphp
 @section('content')
 
     <div>&nbsp;</div>
@@ -11,12 +13,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10">
-                <h3 class="titleHeading titleHeading--medium sus-title">ChemiLytics
+                <h3 class="titleHeading titleHeading--medium sus-title">{{$title}}
                 </h3>
             </div>
             <div class="col-md-2 text-right">
                 <a class="text-gray" href="{{ getPageUrlByCode('SUBSIDAIRY') }}">
-                    ‹ Back
+                    {{ trans('frontend.back') }}
                 </a>
             </div>
         </div>
@@ -51,7 +53,7 @@
                 {{-- <h1 class="titleHeading" data-waypoint="100%">{{$block->name}}</h1> --}}
                 <div class="document" data-waypoint="100%">
                     {!! $block->content !!}
-                    {{-- <section id="subsidiary">
+                    {{-- <section id="subsidiary" class="en">
                         <div>&nbsp;</div>
 
                         <div>&nbsp;</div>
@@ -89,7 +91,35 @@
 
                         <div>&nbsp;</div>
                     </section> --}}
+                    {{-- <section id="subsidiary" class="vi">
+                        <div>&nbsp;</div>
 
+                        <div>&nbsp;</div>
+
+                        <h1><span style="color:#55ade2;">Về chúng tôi</span></h1>
+
+                        <div style="text-align: justify;">ChemiLytics là công ty thuộc Masan High-Tech Materials, sở hữu một trong những phòng thí nghiệm lớn nhất về quy mô công nghiệp ở Đức, chuyên phân tích nguyên tố vô cơ và đặc tính của bột kim loại. 
+                        </div>
+
+                        <div style="text-align: justify;">&nbsp;</div>
+
+                        <div style="text-align: justify;">Với 70 nhân sự có trình độ cao đang làm việc theo nhóm hoạt động 7 ngày một tuần, ChemiLytics cung cấp dịch vụ phân tích cho tất cả các phân khúc thị trường từ các ngành công nghiệp sản xuất truyền thống cho đến các ngành công nghiệp mới đang trên đà phát triển như sản xuất phụ gia, ứng dụng hàng không vũ trụ hoặc công nghệ di động điện tử. Các mẫu được phân tích điển hình bao gồm quặng Vonfram, quặng Tantali và Niobi, tất cả các loại phế liệu và bột chịu lửa, Si3N4, tiền chất của pin, v.v…
+                        </div>
+
+                        <div style="text-align: justify;">&nbsp;</div>
+
+                        <div style="text-align: justify;">ChemiLytics cộng tác với khách hàng cho phép tùy chỉnh trong cung cấp dịch vụ từ gửi các mẫu truyền thống đến phát triển các giải pháp tùy chỉnh riêng có thể cho phép cung cấp phân tích mẫu kiểm soát hoạt động trực tuyến cho đến phát triển các ứng dụng công nghệ và phân tích cụ thể cho khách hàng dựa trên danh mục dịch vụ độc đáo của ChemiLytics, đặc biệt trong ngành điện tử (phân tích WCl6).
+                        </div>
+
+                        <div style="text-align: justify;">&nbsp;</div>
+
+                        <div style="text-align: justify;">Click here to view ChemiLytics's Website&nbsp;<a
+                                href="https://www.chemilytics.com/home~e.en.html">here</a></div>
+
+                        <div>&nbsp;</div>
+
+                        <div>&nbsp;</div>
+                    </section> --}}
                 </div>
         </div>
 

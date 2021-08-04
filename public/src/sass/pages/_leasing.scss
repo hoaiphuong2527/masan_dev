@@ -141,7 +141,7 @@
             .title{
                 font-family: "Arial";
                 font-weight: 800;
-                font-size: rem(26);
+                font-size: rem(22);
                 color: #11396F;
                 letter-spacing: (75/1000)*1rem;
                 margin-bottom: rem(10);
@@ -216,6 +216,10 @@
 
 
 .listLease-tungsteng{
+    .col-md-3{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
     &__item{
         margin-bottom:rem(20);
         &__image{

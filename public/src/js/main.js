@@ -17,7 +17,7 @@ $(function ($) {
         elUl = $(this).next("ul");
         $childUl = el.parent('li').parent('ul').find('ul.menuChild');
         $childExpand = el.parent('li').parent('ul').find('.expand');
-        //$childUl.hide();
+        $childUl.hide();
         if (el.hasClass('active')) {
             el.removeClass('active');
             elUl.stop().slideUp(200);

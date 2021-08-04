@@ -42,7 +42,7 @@ echo "<title></title>";
     <meta name="msapplication-TileColor" content="#f05b28">
     <meta name="msapplication-TileImage" content="/frontend/assets/images/icons/ms-icon-144x144.png">
     <meta name="theme-color" content="#f05b28">
-    <link href="{{getAssetResourceVersion('frontend/assets/css/styles.css')}}" rel="stylesheet">
+    <link href="{{getAssetResourceVersion('frontend/assets/css/styles.css?v=1')}}" rel="stylesheet">
     <link href="{{getAssetResourceVersion('assets/css/custom.css')}}" rel="stylesheet">
     <link href="{{getAssetResourceVersion('assets/css/hadesker.css')}}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,900" rel="stylesheet">

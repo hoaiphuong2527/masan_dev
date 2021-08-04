@@ -11,6 +11,7 @@ return [
     'privacy_policy'=>'Chính sách bảo mật',
     'coppy_right' => '@2021Masan High-Tech Materials. Việc truy cập vào website này đồng nghĩa với việc chấp nhận cookies được gắn trên thiết bị. Để biết thêm thông tin, vui lòng xem chính sách bảo mật.',
     'top'=>'TOP',
+    'back'=>'Quay lại',
     'bwid'=>'CÔNG TY CỔ PHẦN PHÁT TRIỂN CÔNG NGHIỆP BW',
     'we_are'=>'Chúng tôi là',
     'coming_soon'=>'Coming soon',

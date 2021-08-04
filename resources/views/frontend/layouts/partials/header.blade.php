@@ -10,29 +10,13 @@
                                 <ul class="nav-menu" id="sub-menu">
                                 <li class="nav-item"><a class="nav-link" href="{{getPageUrlByCode('CONTACT')}}" title="{{ $title = getPageUrlByCode('CONTACT', 'title') }}"><span>{{ $title }}</span></a><span class="expand"><i class="fa fa-angle-down"></i></span>
                                        </li>
-                                <li class="nav-item hasChild"><a class="nav-link" href="{{getPageUrlByCode('MEDIA-CENTER')}}" title="{{$title = getPageUrlByCode('MEDIA-CENTER', 'title')}}"><span>{{$title}}</span></a><span class="expand"><i class="fa fa-angle-down"></i></span>
+                                <li class="nav-item hasChild"><a class="nav-link" href="{{ route('media.news.category',['parent_slug'=>'news','slug'=>'mht-in-the-news']) }}" title="{{$title = getPageUrlByCode('MEDIA-CENTER', 'title')}}"><span>{{$title}}</span></a><span class="expand"><i class="fa fa-angle-down"></i></span>
                                         <ul class="menuChild" id="navbar-70">
-                                            {{-- <li class=" hasChild"><a href="{{getPageUrlByCode('MEDIA-GALLERY')}}" title="{{$title = getPageUrlByCode('MEDIA-GALLERY', 'title')}}"><span>{{$title}}</span></a><span class="expand"><i class="fa fa-angle-down"></i></span>
-                                                <ul id="navbar-732">
-                                                    <li><a href="{{getPageUrlByCode('MEDIA-GALLERY-PHOTO')}}" title="{{$title = getPageUrlByCode('MEDIA-GALLERY-PHOTO','title')}}"><span>{{$title}}</span></a>
-                                                    </li>
-                                                    <li><a href="{{getPageUrlByCode('MEDIA-GALLERY-VIDEO')}}" title="{{$title = getPageUrlByCode('MEDIA-GALLERY-VIDEO','title')}}"><span>{{$title}}</span></a>
-                                                    </li>
-                                                </ul>
+                                            <li><a href="{{ route('media.news.category',['parent_slug'=>'news','slug'=>'press-release']) }}" title="{{ $title = getPageUrlByCode('MEDIA-CENTER', 'title') }}"><span>{{trans('frontend.press_release')}}</span></a>
                                             </li>
-                                            <li class=" hasChild"><a href="{{getPageUrlByCode('MEDIA-INDEX')}}" title="{{$title = getPageUrlByCode('MEDIA-INDEX','title')}}"><span>{{ $title }}</span></a><span class="expand"><i class="fa fa-angle-down"></i></span>
-                                                <ul id="navbar-1186">
-                                                    @foreach($composer_news_categories_root as $item)
-                                                    <li><a href="{{ route('media.news.category',['parent_slug'=>$item->slug]) }}" title="{{ $item->name }}"><span>{{ $item->name }}</span></a>
-                                                    </li>
-                                                    @endforeach
-                                                </ul>
-                                            </li> --}}
-                                            <li><a href="{{getPageUrlByCode('MEDIA-CENTER')}}" title="{{ $title = getPageUrlByCode('MEDIA-CENTER', 'title') }}"><span>{{trans('frontend.press_release')}}</span></a>
+                                            <li><a href="{{ route('media.news.category',['parent_slug'=>'news','slug'=>'mht-in-the-news']) }}" title="{{ $title = getPageUrlByCode('MEDIA-CENTER', 'title') }}"><span>{{trans('frontend.mht_in_the_news')}}</span></a>
                                             </li>
-                                            <li><a href="{{getPageUrlByCode('MEDIA-CENTER')}}" title="{{ $title = getPageUrlByCode('MEDIA-CENTER', 'title') }}"><span>{{trans('frontend.mht_in_the_news')}}</span></a>
-                                            </li>
-                                            <li><a href="{{getPageUrlByCode('MEDIA-CENTER')}}" title="{{ $title = getPageUrlByCode('MEDIA-CENTER', 'title') }}"><span>{{trans('frontend.media_center_menu')}}</span></a>
+                                            <li><a href="{{getPageUrlByCode('MEDIA-GALLERY-PHOTO')}}" title="{{ $title = getPageUrlByCode('MEDIA-CENTER', 'title') }}"><span>{{trans('frontend.media_center_menu')}}</span></a>
                                             </li>
                                         </ul>
                                     </li>
@@ -65,15 +49,15 @@
                                 
                                 </ul>
                                 <ul class="nav-menu" id="main-menu">
-                                <li class="nav-item hasChild"><a class="nav-link" href="{{getPageUrlByCode('INVESTER-CENTER')}}" title="{{ $title = getPageUrlByCode('INVESTER-CENTER', 'title') }}"><span>{{ $title }}</span></a><span class="expand"><i class="fa fa-angle-down"></i></span>
+                                <li class="nav-item hasChild"><a class="nav-link" href="{{ route('media.investments.category',['parent_slug'=>'investor-center','slug'=>'annual-reports']) }}" title="{{ $title = getPageUrlByCode('INVESTER-CENTER', 'title') }}"><span>{{ $title }}</span></a><span class="expand"><i class="fa fa-angle-down"></i></span>
                                         <ul id="">
-                                            <li><a href="{{getPageUrlByCode('ANNUAL-REPORTS')}}" title="{{ $title = getPageUrlByCode('ANNUAL-REPORTS', 'title') }}"><span>{{ $title }}</span></a>
+                                            <li><a href="{{ route('media.investments.category',['parent_slug'=>'investor-center','slug'=>'annual-reports']) }}" title="{{ $title = getPageUrlByCode('MEDIA-CENTER', 'title') }}"><span>{{trans('frontend.annual_reports')}}</span></a>
                                             </li>
-                                            <li><a href="{{getPageUrlByCode('CORPORATE-DOCUMENTS')}}" title="{{ $title = getPageUrlByCode('CORPORATE-DOCUMENTS', 'title') }}"><span>{{ $title }}</span></a>
+                                            <li><a href="{{ route('media.investments.category',['parent_slug'=>'investor-center','slug'=>'corporate-documents']) }}" title="{{ $title = getPageUrlByCode('MEDIA-CENTER', 'title') }}"><span>{{trans('frontend.corporate_documents')}}</span></a>
                                             </li>
-                                            <li><a href="{{getPageUrlByCode('FINANCIAL-INFOMATION')}}" title="{{ $title = getPageUrlByCode('FINANCIAL-INFOMATION', 'title') }}"><span>{{ $title }}</span></a>
+                                            <li><a href="{{ route('media.investments.category',['parent_slug'=>'investor-center','slug'=>'financial-information']) }}" title="{{ $title = getPageUrlByCode('MEDIA-CENTER', 'title') }}"><span>{{trans('frontend.financial_information')}}</span></a>
                                             </li>
-                                            <li><a href="{{getPageUrlByCode('CORPORATE-ANNOUNCEMENTS')}}" title="{{ $title = getPageUrlByCode('CORPORATE-ANNOUNCEMENTS', 'title') }}"><span>{{ $title }}</span></a>
+                                            <li><a href="{{ route('media.investments.category',['parent_slug'=>'investor-center','slug'=>'corporate-announcements']) }}" title="{{ $title = getPageUrlByCode('MEDIA-CENTER', 'title') }}"><span>{{trans('frontend.corporate_announcements')}}</span></a>
                                             </li>
                                         </ul>
                                     </li>
@@ -134,7 +118,7 @@
                                 <button style="text-transform: uppercase" class="btn dropdown-toggle btn-language" id="dropdownMenuButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fa fa-globe" aria-hidden="true"></i>
                                @if($composer_locale == 'en')
-                                Global | English
+                                English
                                 @else
                                 Tiếng Việt
                                 @endif
@@ -144,7 +128,7 @@
                                     <a class="dropdown-item" title="{{$properties['native']}}" href="{{ \App\Helper\TranslateUrl::getLink($localeCode)  }}">
                                     @if($localeCode == 'en')
                                     <img src="images/flags/{{ $localeCode }}.png" alt="">
-                                        Global | English
+                                        English
                                         @else
                                     <img src="images/flags/{{ $localeCode }}.png" alt="">
                                         Tiếng Việt

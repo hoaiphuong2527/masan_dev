@@ -3,7 +3,7 @@
 @section('style')
 @endsection
 @php
-    $title = getPageUrlByCode('ABOUT', 'title')
+$title = getPageUrlByCode('ABOUT', 'title');
 @endphp
 @section('content')
     @include('themes.partials.base',['banner'=>'/assets/images/about-banner.png','text'=> $title])
@@ -14,18 +14,18 @@
                 {{-- <h1 class="titleHeading" data-waypoint="100%">{{ $block->name }}</h1> --}}
                 {{-- <div class="document" data-waypoint="100%"> --}}
                 {!! $block->content !!}
-{{-- 
-                <div>&nbsp;</div>
+              
 
-                <div>&nbsp;</div>
+                {{-- <div id="en">
+                    <div>&nbsp;</div>
 
-                <div id="en">
+                    <div>&nbsp;</div>
                     <div class="block-item"
                         style="                                                                                                                                                      background:url('/assets/images/overview-bg.png');
-                                                                                                                                                                                background-repeat: no-repeat;
-                                                                                                                                                                                background-position-x: right;
-                                                                                                                                                                                background-size: 60%;
-                                                                                                                                                                                ">
+                                                                                                                                                                                                    background-repeat: no-repeat;
+                                                                                                                                                                                                    background-position-x: right;
+                                                                                                                                                                                                    background-size: 60%;
+                                                                                                                                                                                                    ">
                         <div class="row ">
                             <div class="col-md-7 col-sm-7 col-xs-12 py-4 px-2">
                                 <div class="card text-white over-view-bg">
@@ -145,7 +145,7 @@
                                     data-toggle="modal" href="javascript:void(0);">READ MORE </a></div>
                         </div>
                     </div>
-                    
+
                     <div>&nbsp;</div>
 
                     <div class="row">
@@ -468,8 +468,8 @@
                                 <div class="card border-primary">
                                     <div class="card-image"><img alt="masan" src="/assets/images/masan-logo.png"
                                             style="   
-                                                                                                                                                                                                                                        padding: 10px 0px;
-                                                                                                                                                                                                                                                    height: 100px;" />
+                                                                                                                                                                                                                                                            padding: 10px 0px;
+                                                                                                                                                                                                                                                                        height: 100px;" />
                                     </div>
 
                                     <div class="card-body">
@@ -496,8 +496,9 @@
                                 <div class="card border-primary">
                                     <div class="card-image"><img alt="mitsubishi" src="/assets/images/mitsubishi-logo.png"
                                             style="    width: 100%;
-                                                                                                                    padding: 30px 30px;
-                                                                                                                                                                                                                                                                                        height: 100px;" />
+                                                                                                                                        padding: 30px 30px;
+                                                                                                                                        padding-left:0px;
+                                                                                                                                                                                                                                                                                                            height: 100px;" />
                                     </div>
 
                                     <div class="card-body">
@@ -514,7 +515,7 @@
                                             companies of Mitsubishi Group in Japan.</p>
 
                                         <p class="card-text" style="text-align: justify;">Click <a
-                                                href="https://www.mmc.co.jp/corporate/en/"><span
+                                                href="https://www.mmc.co.jp/corporate/en/" target="_blank"><span
                                                     style="color:#3498db;">here</span></a> to view MMC Website.</p>
                                     </div>
                                 </div>
@@ -526,29 +527,28 @@
                         <span style="color:#55ade2;"><span style="font-size:36px;">Awards</span></span>
                     </div>
 
-                    <div style="text-align: justify;">&nbsp;</div>
+                    <div>&nbsp;</div>
 
-                    <div style="text-align: justify;"><em>Masan High-Tech Materials has constantly placed its strong
-                            footprints on its journey of going global, entrenching its position as a leading global
-                            high-tech material producer, and marking its footprint on the global mining map. Below are the
-                            prestigious local and international awards and honors that Masan High Tech Materials and its
-                            subsidiaries have proudly received in recognition of our progress and achievements throughout
-                            the years. &nbsp;</em></div>
+                    <div><em>Masan High-Tech Materials has constantly placed its strong footprints on its journey of going
+                            global, entrenching its position as a leading global high-tech material producer, and marking
+                            its footprint on the global mining map. Below are the prestigious local and international awards
+                            and honors that Masan High Tech Materials and its subsidiaries have proudly received in
+                            recognition of our progress and achievements throughout the years. &nbsp;</em></div>
 
-                    <div style="text-align: justify;">&nbsp;</div>
+                    <div>&nbsp;</div>
 
                     <section id="award"
                         style="
-                                                                                                                                                                                                background-image: url(/assets/images/award-background.png);
-                                                                                                                                                                                                background-position: bottom center;
-                                                                                                                                                                                                background-size: cover;
-                                                                                                                                                                                                background-repeat: no-repeat;
-                                                                                                                                                                                                width: 100vw;
-                                                                                                                                                                                                position: relative;
-                                                                                                                                                                                                margin-left: -50.6vw;
-                                                                                                                                                                                                left: 50%;
-                                                                                                                                                                                                padding-bottom: 200px;
-                                                                                                                                                                                            ">
+                                                                                                                                                                                                                    background-image: url(/assets/images/award-background.png);
+                                                                                                                                                                                                                    background-position: bottom center;
+                                                                                                                                                                                                                    background-size: cover;
+                                                                                                                                                                                                                    background-repeat: no-repeat;
+                                                                                                                                                                                                                    width: 100vw;
+                                                                                                                                                                                                                    position: relative;
+                                                                                                                                                                                                                    margin-left: -50vw;
+                                                                                                                                                                                                                    left: 50%;
+                                                                                                                                                                                                                    padding-bottom: 200px;
+                                                                                                                                                                                                                ">
                         <div class="container">
                             <div class="row ">
                                 <div class="col-md-8">
@@ -706,20 +706,20 @@
                     </section>
                 </div> --}}
 
-                    @endif
+
+            @endif
 
         </div>
     </section>
     @if (!empty($blocks['MODAL']) && ($modal = $blocks->get('MODAL')->first()))
-    {!! $modal->content !!}
+        {!! $modal->content !!}
     @endif
 
     {{-- <div class="modal teamModal fade" id="teamModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-                <button class="close btn-close" type="button" data-dismiss="modal" aria-label="Close"><i
-                        class="ic-close"></i></button>
+                <button class="close btn-close" type="button" data-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
                 <div class="modal-body">
                     <div class="teamSlide">
                         <div class="teamSlide__item">

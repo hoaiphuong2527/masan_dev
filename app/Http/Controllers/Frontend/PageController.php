@@ -242,7 +242,7 @@ class PageController extends Controller
                 case 'media_gallery':{
                     $media_gallery_photo = $this->gallery->datatable()->where('type','IMAGES')->orderBy('position')->orderByDesc('published_date')->limit(9)->get();
                     $media_gallery_video = $this->gallery->datatable()->where('type','VIDEOS')->orderBy('position')->orderByDesc('published_date')->limit(4)->get();
-
+                    $media_gallery_photo = $media_gallery_photo->paginate(9);
                     $with = [
                         'media_gallery_photo' => $media_gallery_photo,
                         'media_gallery_video'=>$media_gallery_video
@@ -250,9 +250,12 @@ class PageController extends Controller
                 } break;
 
                 case 'media_gallery_photo':{
-                    $media_gallery_photo = $this->gallery->datatable()->where('type','IMAGES')->orderBy('position')->orderByDesc('published_date')->paginate(9);
+                    $media_gallery_photo = $this->gallery->datatable()->where('type','IMAGES')->orderBy('position')->orderByDesc('published_date')->limit(9)->get();
+                    $media_gallery_video = $this->gallery->datatable()->where('type','VIDEOS')->orderBy('position')->orderByDesc('published_date')->limit(4)->get();
+
                     $with = [
-                        'media_gallery_photo' => $media_gallery_photo
+                        'media_gallery_photo' => $media_gallery_photo,
+                        'media_gallery_video'=>$media_gallery_video
                     ];
                 } break;
 

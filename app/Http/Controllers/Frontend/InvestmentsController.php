@@ -41,11 +41,11 @@ class InvestmentsController extends Controller
             $slug = $slug ?? $news_category_parent->child()->first()->slug;
             $news_category = $this->investments_category->findBySlug($slug);
             Breadcrumb::add($news_category->name, route('media.investments.category',['parent_slug'=>$news_category_parent->slug,'slug'=>$news_category->slug]));  
-            $news = $news_category->news()->paginate(5);
+            $news = $news_category->news()->paginate(7);
         }
         else{
             $news_category = $news_category_parent;
-            $news = $news_category->newsByCategoryParentId($news_category_parent->id)->paginate(5);
+            $news = $news_category->newsByCategoryParentId($news_category_parent->id)->paginate(9);
         }
 
         foreach ($news_category_parent->translations as $translation) {

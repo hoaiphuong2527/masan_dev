@@ -46,7 +46,6 @@ class GlobalComposer
         $news_categories_root = $this->news_category->datatable()->orderBy('position')->where('parent_id',0)->get();
 
         $invest_categories_root = $this->invest_category->datatable()->orderBy('position')->where('parent_id',0)->get();
-
         $view->with('composer_project_category', $project_category);
         $view->with('composer_news_categories_root', $news_categories_root);
         $view->with('composer_invest_categories_root', $invest_categories_root);

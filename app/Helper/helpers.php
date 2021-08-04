@@ -502,10 +502,13 @@ function checkReCaptcha()
 }
 
 function getLocalFile($url){
-    if((strpos($url,'http') !== false) || (file_exists(public_path($url)) && is_file(public_path($url)))){
-        return $url;
-    }
-    return "images/no_image.jpg";
+    return $url ? $url : "images/no_image.jpg";
+    // var_dump($url);die;
+
+    // if((strpos($url,'https') !== false) || (file_exists(public_path($url)) && is_file(public_path($url)))){
+    //     return $url;
+    // }
+    // return "images/no_image.jpg";
 }
 
 function getNewsCategoryByCode($code = 'INVESTORS'){
@@ -513,7 +516,7 @@ function getNewsCategoryByCode($code = 'INVESTORS'){
 }
 
 function getLocalFileSpec($url){
-    if((strpos($url,'http') !== false)){
+    if((strpos($url,'https') !== false)){
         return $url;
     }
     return asset($url);
