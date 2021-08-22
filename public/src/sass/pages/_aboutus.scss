@@ -145,7 +145,7 @@
     
       .info{
           // background:#f9f9f9;
-          // padding:rem(20);
+          margin-top:rem(20);
           .title{
               font-family: "Arial";
               font-weight: 800;
@@ -182,8 +182,9 @@
       .name {
           margin-top: rem(0);
           // border-bottom: 1px solid #e1e1e1;
-          margin-bottom: rem(20);
-          padding-bottom: rem(20);
+          -webkit-line-clamp: 2;
+          height: 3em;
+          max-height: unset;
           font-size:rem(16);
           h5{
               margin:0;
@@ -215,6 +216,7 @@
       .info-manager{
           .title{
               font-size: rem(20);
+              
           }
       }
 

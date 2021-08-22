@@ -14,9 +14,41 @@ label.error {
     padding-bottom: rem(50);
 }
 .formLocation{
-    padding-left: rem(40);
+    // padding-left: rem(40);
 }
+.maps-tabs{
+    ul{
+        padding: 20px;
+        padding-left: 0px;
+        li{
+            margin-right: 20px;
+            position: relative;
 
+            a{
+                font-size: rem(20);
+                color: #7B7C7E;
+                &.active{
+                    color: #00396F;
+
+                }
+            }
+            &::after{
+                content: "|";
+                position: absolute;
+                right: -12px;
+                top: -5px;
+                font-size: 24px;
+            }
+            &:last-child::after{
+                content: "";
+                position: absolute;
+                right: -12px;
+                top: -5px;
+                font-size: 24px;
+            }
+        }
+    }
+}
 .location{
     margin: rem(40) 0 rem(15) 0;
     list-style-type: none;
@@ -44,8 +76,7 @@ label.error {
 }
 .formContact,.form-style{
     .btn-submit{
-        margin-top:4px;
-        margin-bottom: 4px;
+        margin-bottom: 1rem;
     }
     .form-group{
         .dropdown{
@@ -128,7 +159,7 @@ label.error {
                     z-index: 2;
                 }
                 &::after{
-                    color: $color-arrow;
+                    color: #C4C6C7;
                     margin-right: 8px;
                     z-index: 3;
                     position: relative;
@@ -151,21 +182,28 @@ label.error {
             .btn{
                 border: 0;
                 padding: rem(13) 0.75rem;
-                background-color: $bg-formcontrol;
+
             }
         }
         .form-control{
             &::placeholder{
-                color: $color-text;
+                color: #C4C6C7;
             }
-            font-family: 'Roboto';
+            font-family: 'Arial';
             color: $color-text;
             padding: rem(12) 0.75rem;
-            resize: none;
-            border: 0;
-            background-color: $bg-formcontrol;
+            resize: none;   
+            border: solid 1px #C4C6C7;
+            border-radius: 0px;
         }
-       
+        .filter-option{
+            border: solid 1px #C4C6C7;
+            background-color: #fff;
+        }
+        .bs-placeholder .filter-option-inner{
+            color: #C4C6C7 !important;
+
+        }
     }
 }
 

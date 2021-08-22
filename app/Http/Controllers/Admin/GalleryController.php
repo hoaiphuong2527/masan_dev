@@ -81,6 +81,12 @@ class GalleryController extends Controller
                 return $data->type;
             })
             ->editColumn(
+                'is_top',
+                function ($data) {
+                    return $data->is_top ? '<i class="material-icons col-pink">check</i>' : '<i class="material-icons">more_horiz</i>';
+                }
+            )
+            ->editColumn(
                 'published_date',
                 function ($data) {
                     return $data->published_date_format;
@@ -142,7 +148,6 @@ class GalleryController extends Controller
         $input = $request->all();
 
         $this->gallery->update($input, $id);
-
         $locale = \App::getLocale();
 
         activity('Update Gallery')->log(\Auth::user()->name.'('.\Auth::user()->email.') updated '.$input['type'].' gallery "'.$input[$locale]['name'].'" (id: '.$id.')');

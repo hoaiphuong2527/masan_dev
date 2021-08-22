@@ -4,24 +4,56 @@
 @endsection
 
 @section('content')
-@include('themes.partials.base',['banner'=>'frontend/images/media-banner.png','text'=>'Media Center'])
-<section class="ourNewsList">
+    @include('themes.partials.base',['banner'=>'frontend/images/media-banner.png','text'=>'Media Center'])
+    <section class="ourNewsList">
         <div class="container">
-            <h1 class="titleHeading" data-waypoint="100%">{{trans('frontend.video')}}</h1>
-            <div class="gridNews--2 gridNewsPhoto gridNewsVideo mediaEffect" data-waypoint="100%">
+            <div class="gridNews--2 gridNewsPhoto mediaEffect" data-waypoint="100%">
+                <ul class="navLink" id="navTop" data-waypoint="100%">
+
+                    @if ($composer_locale == 'vi')
+                        <li><a
+                                href="{{ route('media.news.category', ['parent_slug' => 'tin-tuc', 'slug' => 'thong-cao-bao-chi']) }}">Thông
+                                cáo báo chí</a></li>
+                        <li class=""><a
+                                href="{{ route('media.news.category', ['parent_slug' => 'tin-tuc', 'slug' => 'ban-tin-mht']) }}">Bản
+                                tin MHT</a>
+                        </li>
+                    @else
+                        <li><a
+                                href="{{ route('media.news.category', ['parent_slug' => 'news', 'slug' => 'press-release']) }}">Press
+                                Release</a></li>
+                        <li class=""><a
+                                href="{{ route('media.news.category', ['parent_slug' => 'news', 'slug' => 'mht-in-the-news']) }}">MHT
+                                in the news</a>
+                        </li>
+                    @endif
+
+                    <li class="active"><a href="{{ getPageUrlByCode('MEDIA-GALLERY-VIDEO') }}">Media Library</a></li>
+                </ul>
                 <div class="row">
-                    @foreach($media_gallery_video as $item)
-                        <div class="col-md-4 col-6 break360">
+                    @foreach ($media_gallery_video as $item)
+                        <div class="col-md-4 col-12 break360">
                             <div class="itemNew">
-                                <div class="image effectImg"><a style="background-image:url('{{$item->thumbnail}}')" href="{{route('media.gallery.video.detail',['slug'=>$item->slug])}}"><img src="{{$item->thumbnail}}"><i class="ic-img"></i></a></div>
-                                <div class="info"><a class="title" href="{{route('media.gallery.video.detail',['slug'=>$item->slug])}}">{{summary($item->name, 140)}}</a></div>
+                                <div class="image effectImg">
+                                    <a style="background-image:url('{{ $item->thumbnail }}')" target="blank"
+                                        href="{{ $item->url_video }}">
+                                        <img src="{{ $item->thumbnail }}"><i class="ic-video"></i>
+                                    </a>
+                                </div>
+                                <div class="info">
+                                    <div class="date"> <i
+                                            class="fa fa-calendar"></i>{{ Date2String($item->published_date, 'd-m-Y') }}
+                                    </div>
+                                    <a class="title" target="blank"
+                                        href="{{ $item->url_video }}">{{ summary($item->name, 110) }}</a>
+                                </div>
                             </div>
                         </div>
                     @endforeach
                 </div>
             </div>
             <nav class="text-center">
-                {{$media_gallery_video->links()}}
+                {{ $media_gallery_video->links() }}
             </nav>
         </div>
     </section>

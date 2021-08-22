@@ -23,7 +23,7 @@
                    {!! $news->content !!}
                 </div>
             </div>
-            {{-- <div class="relativeBox mediaEffect-2" data-waypoint="100%">
+            <div class="relativeBox mediaEffect-2" data-waypoint="100%">
                 <div class="titleHeading--news">{{trans('news.related_news')}}</div>
                 <div class="gridNews--2 slideNews">
                     @foreach($news_relative as $item)
@@ -35,7 +35,7 @@
                     </div>
                     @endforeach
                 </div>
-            </div> --}}
+            </div>
         </div>
     </section>
 @endsection

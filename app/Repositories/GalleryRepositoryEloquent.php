@@ -46,6 +46,8 @@ class GalleryRepositoryEloquent extends BaseRepository implements GalleryReposit
 
     public function create(array $input)
     {
+        $input['is_top'] = !empty($input['is_top']) ? 1 : 0;
+
         $input['published_date'] = !empty($input['published_date']) ? cvDbTime($input['published_date'], PHP_DATE, DB_DATE) : date("Y-m-d");
 
         if ($input['type'] == Gallery::TYPE_VIDEOS) {
@@ -74,6 +76,7 @@ class GalleryRepositoryEloquent extends BaseRepository implements GalleryReposit
     public function update(array $input, $id)
     {
         $model = $this->model->findOrFail($id);
+        $input['is_top'] = !empty($input['is_top']) ? 1 : 0;
 
         if ($input['type'] == Gallery::TYPE_VIDEOS) {
             $input['url_video'] = $input['url_video'];
@@ -167,5 +170,24 @@ class GalleryRepositoryEloquent extends BaseRepository implements GalleryReposit
             ->whereTranslation('slug', $slug, $locale)
             ->with('translations')
             ->firstOrFail();
+    }
+    public function homeGallery($limit = 0, $is_top = false)
+    {
+        $model = $this->model->active()
+            ->requiredTranslation()
+            ->with('translations')
+
+            ->withTranslation();
+        if ($is_top) {
+            $model->orderBy('is_top', 'desc');
+        }
+        $model->orderBy('is_top', 'desc')
+            ->orderBy('publish_at', 'desc');
+
+        if ($limit) {
+            return $model->limit($limit)
+                ->get();
+        }
+        return $model->paginate(9);
     }
 }

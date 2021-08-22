@@ -21,4 +21,6 @@ interface GalleryRepository extends RepositoryInterface
 
     public function findBySlug($slug);
 
+    public function homeGallery($limit, $is_top);
+
 }

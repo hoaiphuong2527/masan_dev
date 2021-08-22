@@ -43,7 +43,8 @@ class GlobalComposer
     public function compose(View $view)
     {
         $project_category = $this->project_category->datatable()->orderBy('position')->where('active',1)->limit(4)->get();
-        $news_categories_root = $this->news_category->datatable()->orderBy('position')->where('parent_id',0)->get();
+        $news_categories_root = $this->news_category->datatable()->orderBy('position')->where('parent_id',13)->get();
+// dd($news_categories_root[0]);
 
         $invest_categories_root = $this->invest_category->datatable()->orderBy('position')->where('parent_id',0)->get();
         $view->with('composer_project_category', $project_category);

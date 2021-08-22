@@ -119,8 +119,8 @@ class PageController extends Controller
 
         $branches = $this->branch->datatable()->orderBy('city_id')->get()->groupBy('city_id');
         $cities = City::has('branches')->get();
-        $media_gallery_photo = $this->gallery->datatable()->where('type','IMAGES')->orderBy('position')->orderByDesc('published_date')->limit(9)->get();
-        $latest_news = $this->news->datatable()->orderByDesc('publish_at')->limit(4)->get();
+        $media_gallery_photo = $this->gallery->datatable()->where('type','VIDEOS')->where('is_top',1)->orderBy('position')->orderByDesc('published_date')->limit(9)->get();
+        $latest_news = $this->news->datatable()->orderByDesc('publish_at')->limit(3)->get();
         $projects = $this->project->datatable()->limit(3)->get();
 
         if (view()->exists(THEME_PATH_VIEW . ".{$page->theme}")) {
@@ -382,7 +382,7 @@ class PageController extends Controller
         $input = $request->all();
         $this->contact->create($input);
 
-        if (\App::environment('production')) {
+        // if (\App::environment('localhost')) {
             $this->dispatch(new SendContactEmailJob($input));
             $locale = \App::getLocale();
 //
@@ -395,7 +395,7 @@ class PageController extends Controller
 //                //Send to admin
 //                \Mail::to($system_email)->send(new SendContactEmail($input, $locale));
 //            }
-        }
+        // }
 
         session()->flash('success', trans('message.contact_sent_success'));
         if($locale == 'en'){

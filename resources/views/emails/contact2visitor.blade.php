@@ -28,16 +28,12 @@
                                                 Thank you for contacting {{env('APP_NAME')}}. We would like to confirm your information as follows:
                                             </p>
                                             <div style="text-align: left">- Name: {{ $input['name'] ?? '[name]' }}</div>
-                                            <div style="text-align: left">- Phone: {{ $input['phone'] ?? '[phone]' }}</div>
                                             <div style="text-align: left">- E-mail: {{ $input['email'] ?? '[email]' }}</div>
                                             <div style="text-align: left">- Company: {{ $input['company'] ?? '[company]' }}</div>
-                                            <div style="text-align: left">- Subject: {{ $input['subject'] ?? '[subject]' }}</div>
-                                            <div style="text-align: left">- Company profile:
+                                            <div style="text-align: left">- Message:
                                                 <p>{{ $input['company_profile'] ?? '[company_profile]' }}</p>
                                             </div>
-                                            <div style="text-align: left">- Information:
-                                                <p>{{ $input['information'] ?? '[information]' }}</p>
-                                            </div>
+                                            
 
                                             <p style="text-align: left">
                                                 Our customer care staff will contact you as soon as possible. In the meantime, if you need more requests or need assistance, please contact {{env ('APP_NAME')}} directly by phone number: {{\System::content('phone')}} or email: {{\System::content('email')}}

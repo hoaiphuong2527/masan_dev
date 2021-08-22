@@ -7,12 +7,14 @@ use App\Http\Controllers\Controller;
 use App\Models\Catalogue;
 use App\Models\Page;
 use App\Models\Slider;
+use App\Models\News;
 use App\Repositories\CatalogueRepository;
 use App\Repositories\NewsRepository;
 use App\Repositories\NewsCategoryRepository;
 use Breadcrumb;
 use DB;
 use App;
+use Carbon\Carbon;
 
 class NewsController extends Controller
 {
@@ -41,13 +43,17 @@ class NewsController extends Controller
 
         $news_category = $this->news_category->findBySlug($slug);
         Breadcrumb::add($news_category->name, route('media.news.category',['parent_slug'=>$news_category_parent->slug,'slug'=>$news_category->slug]));
-        $news = $news_category->news()->paginate(10);
-
+        $news = $news_category->news()->where('is_top', 0)->paginate(8);
+        $top_news = $news_category->news()->where('is_top', 1)->first();
+        $news_press_release = $news_category->news()->get()->groupBy(function($val) {
+            return Carbon::parse($val->publish_at)->format('Y');
+      })->toArray();
         foreach ($news_category_parent->translations as $translation) {
             TranslateUrl::addWithLink($translation->locale, \LaravelLocalization::getURLFromRouteNameTranslated($translation->locale, 'routes.media_center_news_category', ['parent_slug'=>$translation->slug]));
         }
         $metadata = $news_category->meta;
-        return view('themes.media_news_list',compact('news_category_parent','news_category','news','metadata'));
+
+        return view('themes.media_news_list',compact('news_category_parent','news_category','news','metadata','news_press_release','top_news'));
     }
 
     public function getNewsDetail($slug)

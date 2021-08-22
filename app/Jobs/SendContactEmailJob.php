@@ -34,26 +34,25 @@ class SendContactEmailJob implements ShouldQueue
      */
     public function handle()
     {
-        //Send to visitor
-        $email = new EMail();
-        $email->subject = 'BWIDJSC Contact';
-        $email->receiver_address = $this->input['email'];;
-        $email->receiver_name = $this->input['name'];
-        $email->body = [
-            'view'=>'emails.contact2visitor',
-            'content'=>[
-                'input'=>$this->input
-            ]
-        ];
-        sendMail($email);
+        // //Send to visitor
+        // $email = new EMail();
+        // $email->subject = 'MHT Masan Contact';
+        // $email->receiver_address = $this->input['email'];;
+        // $email->receiver_name = $this->input['name'];
+        // $email->body = [
+        //     'view'=>'emails.contact2visitor',
+        //     'content'=>[
+        //         'input'=>$this->input
+        //     ]
+        // ];
+        // sendMail($email);
 
 
         // Send to admin
-        if ($this->input['subject'] === 'Employmenta' || $this->input['subject'] === 'Tuyển dụng'){
-            $system_email = config('services.email.mail_hr');
+            $system_email = strip_tags($this->input['department_contact']);
             if ($system_email) {
                 $email = new EMail();
-                $email->subject = 'BWIDJSC Contact';
+                $email->subject = 'MHT Web Enquiry - '.$this->input['name'];
                 $email->receiver_address = $system_email;
                 $email->receiver_name = 'Admin';
                 $email->body = [
@@ -64,21 +63,21 @@ class SendContactEmailJob implements ShouldQueue
                 ];
                 sendMail($email);
             }
-        }else{
-            $system_email = config('services.email.mail_admin');
-            if ($system_email) {
-                $email = new EMail();
-                $email->subject = 'BWIDJSC Contact';
-                $email->receiver_address = $system_email;
-                $email->receiver_name = 'Admin';
-                $email->body = [
-                    'view'=>'emails.contact2admin',
-                    'content'=>[
-                        'input'=>$this->input
-                    ]
-                ];
-                sendMail($email);
-            }
-        }
+        // }else{
+        //     $system_email = config('services.email.mail_admin');
+        //     if ($system_email) {
+        //         $email = new EMail();
+        //         $email->subject = 'MHT Masan Contact';
+        //         $email->receiver_address = $system_email;
+        //         $email->receiver_name = 'Admin';
+        //         $email->body = [
+        //             'view'=>'emails.contact2admin',
+        //             'content'=>[
+        //                 'input'=>$this->input
+        //             ]
+        //         ];
+        //         sendMail($email);
+        //     }
+        // }
     }
 }

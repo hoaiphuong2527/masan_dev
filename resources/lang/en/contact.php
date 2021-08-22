@@ -13,7 +13,7 @@ return [
     'send_us_message'=>'SEND US A MESSAGE',
     'send_us_message_description'=>'If you have any suggestions or support, please leave a message here!',
     'company'=>'Company name',
-    'company_profile'=>'Contact us to learn more about this',
+    'company_profile'=>'Enter your message',
     'information'=>'Information',
     'anlacgiao_company'=>'An Lac Giao Service Company Limited',
     'enter_name'=>'Enter name',

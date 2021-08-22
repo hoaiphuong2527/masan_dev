@@ -17,7 +17,7 @@ return [
     'contact_after'=>'Please come back later',
     'our_company'=>'Our company',
     'vision_values'=>'Vision & Values',
-    'core_management_team'=>'Core management team',
+    'management_team'=>'Management team',
     'milestones'=>'Milestones',
     'fund_management'=>'Our partners',
     'our_businesses'=>'Our businesses',
@@ -51,8 +51,8 @@ return [
     'clear'=>'Clear',
     'related_videos'=>'Related videos',
     'related_photos'=>'Related photos',
-    'coppy_right' => '© 2021 Masan High-Tech Materials. By using this site you agree that we can place cookies on your device. View our privacy policy for details.',
-    'press_release' =>'Press release',
+    'coppy_right' => '© 2021 Masan High-Tech Materials. All rights reserved.',
+    'coppy_right_2'=>'By using this site you agree that we can place cookies on your device. View our privacy policy for details.',    'press_release' =>'Press release',
     'mht_in_the_news' =>'MHT in the news',
     'annual_reports' =>'Annual report',
     'corporate_documents' =>'Corporate Documents ',
@@ -63,7 +63,7 @@ return [
     'all_product' =>'All Products',
     'south'=>'South',
     'north'=>'North',
-
+    'department_contact'=> 'Department Contact',
     'learn_about_other_properties'=>'Learn about other Properties',
     'project_features' => 'Project Features',
     'project_pictures' => 'Pictures'

@@ -11,23 +11,26 @@
     </div>
 </div>
 <div class="row">
-    <div style="padding: 20px">
-        <h4>{!! trans("admin_gallery.choose_type_gallery") !!}</h4>
-        <div class="col-md-2">
-            <input type="radio" name="type" value="IMAGES" id="IMAGES"
-                   @if(empty($gallery) || !empty($gallery) && $gallery->type === 'IMAGES') checked @endif>
-            <label for="IMAGES">IMAGES</label>
+    <div style="padding: 20px; ">
+        <h4>Active in home</h4>
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="checkbox" id="is_top" name="is_top"
+                       value="1" {!! !empty($gallery) && $gallery->is_top ? "checked" : null !!}>
+                <label for="is_top">{!! trans("admin_news.form.active") !!}</label>
+            </div>
         </div>
 
-        <div class="col-md-2">
+        <div class="col-md-2 hidden">
             <input type="radio" name="type" value="VIDEOS" id="VIDEOS"
-                   @if(!empty($gallery) && $gallery->type === 'VIDEOS') checked @endif>
+                    checked
+                     >
             <label for="VIDEOS">VIDEOS</label>
         </div>
     </div>
 </div>
 
-<div id="tab-photos" @if(!empty($gallery) && $gallery->type === 'VIDEOS') class="hidden" @endif>
+{{-- <div id="tab-photos" @if(!empty($gallery) && $gallery->type === 'VIDEOS') class="hidden" @endif>
     <ul id="sortable-photos" class="list-photos">
         @if(!empty($gallery) && $gallery->type === 'IMAGES')
             @foreach($gallery->medias as $rs)
@@ -49,9 +52,9 @@
     </div>
 </div>
 
-<div class="clear-fix"></div>
+<div class="clear-fix"></div> --}}
 
-<div id="tab-video" @if(empty($gallery) || !empty($gallery) && $gallery->type === 'IMAGES') class="hidden" @endif>
+<div id="tab-video">
     <div class="row">
         <div class="col-md-6 col-sm-6">
             <div class="font-bold col-green">{!! trans("admin_gallery.form.link_video") !!}</div>
@@ -93,8 +96,8 @@
     'object_trans' => $gallery ?? null,
     'default_tab' => $composer_locale,
     'form_fields' => [
-        ['type' => 'text', 'name' => 'name'],
-        !empty($gallery) ? ['type' => 'text', 'name' => 'slug'] : null,
+        ['type' => 'text', 'name' => 'name', ],
+        !empty($gallery) ? ['type' => 'text', 'name' => 'slug',  ] : null,
         ['type' => 'textarea', 'name' => 'description']
     ],
     'metadata' => $metadata ?? null,

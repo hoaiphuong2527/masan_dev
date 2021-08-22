@@ -1,6 +1,4 @@
-<?php 
 
-?>
 <!DOCTYPE html>
 <html lang="{{ $composer_locale }}">
 <head>
@@ -9,21 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <base href="{{asset('/')}}">
-<?php
 
-$current = $_SERVER['REQUEST_URI'];
-if($current  == '/media-center/news-category/') {
-echo "<title></title>";
-}
-	else {
-
-?>
     @section("seo")
         @include('frontend.layouts.partials.seo')
     @show
-  <!--  <title>BWID</title>
--->
-<?php } ?>
+
     <link rel="apple-touch-icon" sizes="57x57" href="/frontend/assets/images/icons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/frontend/assets/images/icons/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/frontend/assets/images/icons/apple-icon-72x72.png">
@@ -81,6 +69,9 @@ if($current  == '/')
 @include('frontend.layouts.partials.footer')
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"
+integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="{{getAssetResourceVersion('frontend/assets/js/library.js')}}"></script>
 <script src="{{getAssetResourceVersion('frontend/assets/js/main.js')}}"></script>
 <script src="{{getAssetResourceVersion('assets/js/hadesker.js')}}"></script>

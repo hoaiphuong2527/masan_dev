@@ -10,14 +10,15 @@
         </div>
     </div>
 
-    <div class="col-md-4">
-        <div class="font-bold col-green">{!! trans("admin_news.form.banner") !!}</div>
-        <div class="form-group">
-            @component('admin.layouts.components.upload_photo', [
-                'image' => $investments->banner ?? null,
-                'name' => 'banner',
-            ])
-            @endcomponent
+    <div class="col-md-8">
+        <div class="font-bold col-green">File to download</div>
+        <div class="form-group form-float">
+            <div class="form-line">
+                <input type="text" id="link_download_input" class="form-control"
+                       name="banner"
+                       value="{!! !empty($investments->banner)  ? $investments->banner : old("banner") !!}">
+                <button type="button" class="btn btn-primary btn_select_a_file" data-append="#link_download_input" style="position: absolute; top: 2px; right:2px">{{ trans('button.or_select_a_file') }}</button>
+            </div>
         </div>
     </div>
 </div>

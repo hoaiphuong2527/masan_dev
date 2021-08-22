@@ -26,6 +26,7 @@ class Gallery extends Model
         'published_date',
         'url_video',
         'thumbnail',
+        'is_top',
         'position'
     ];
 
@@ -36,7 +37,10 @@ class Gallery extends Model
         'description',
         'slug',
     ];
-
+    public function scopeTopNews($query)
+    {
+        return $query->where('is_top', 1);
+    }
     public function getPublishedDateFormatAttribute()
     {
         return cvDbTime($this->published_date);
