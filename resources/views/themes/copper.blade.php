@@ -14,7 +14,7 @@ $title = getPageUrlByCode('copper', 'title');
                 {{-- <h1 class="titleHeading" data-waypoint="100%">{{ $block->name }}</h1> --}}
                 <div class="document" data-waypoint="100%">
                     {!! $block->content !!}
-                    <div>&nbsp;</div>
+                    {{-- <div>&nbsp;</div>
 
                     <h1><span style="font-size:28px;"><span style="color:#00396f;">Copper (Cu) </span></span></h1>
 
@@ -331,7 +331,7 @@ $title = getPageUrlByCode('copper', 'title');
 
                             <div>&nbsp;</div>
                         </div>
-                    </div>
+                    </div> --}}
 
                 </div>
 

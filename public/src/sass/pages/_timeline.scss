@@ -8,6 +8,11 @@
     height: 100px;
   }
 }
+.siteMap__item ul li a{
+  &:hover{
+    color: #00a8df;
+  }
+}
 #award{
         background-size: cover;
         background-repeat: no-repeat;
@@ -23,7 +28,20 @@
     width: 778.5px;
   }
 }
+.text-blue{
+  color: #11396f;
+}
+.overview-bg{
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position-x: right;
+
+}
 @include media-breakpoint-down(md) {
+  .overview-bg{
+    background-size: 100%;
+
+  }
   .invesmentNewsList .navLink li{
     padding-top: 0px;
   }
@@ -33,7 +51,7 @@
   }
   #cooper{
     svg{
-      width: 778.5px;
+      width: 100%;
     }
   }
   .popup-overlay .popup{
@@ -82,7 +100,7 @@
     display: block;
   }
   .plan-css .loader {
-    max-height: 400px;
+    height: 400px;
   }
   .plan-css .loader .col-bar:nth-child(1) {
   }

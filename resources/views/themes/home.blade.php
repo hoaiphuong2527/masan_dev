@@ -73,8 +73,8 @@
                             </div>
                         </div>
                         <div id="time-line">
-                            <div class="col-lg-12 px-4">
-                                <div class="milestone py-4">
+                            <div class="col-lg-12 px-lg-4">
+                                <div class="milestone py-lg-4">
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-lg-12">

@@ -22,10 +22,8 @@ $title = getPageUrlByCode('ABOUT', 'title');
                 <div id="en">
                     @if (!empty($blocks['OVERVIEW']) && ($overviewBlock = $blocks->get('OVERVIEW')->first()))
 
-                        <div class="block-item" style=" background:url('{{ $overviewBlock->photo }}');
-                                                        background-repeat: no-repeat;
-                                                        background-position-x: right;
-                                                        background-size: 60%;
+                        <div class="block-item overview-bg" style=" background:url('{{ $overviewBlock->photo }}');
+                                                      
                                                         ">
                             <div class="row ">
                                 <div class="col-md-7 col-sm-7 col-xs-12 py-4 px-2">
@@ -50,9 +48,6 @@ $title = getPageUrlByCode('ABOUT', 'title');
                         <div class="col-md-6"><strong><span
                                     style="font-size:36px;">{{ trans('frontend.management_team') }}</span></strong>
                         </div>
-                        <div>&nbsp;</div>
-
-                        <div>&nbsp;</div>
                         <div class="col-md-6 manager-nav">
                             <nav class="navbar navbar-expand ">
                                 <ul class="nav navbar-nav">

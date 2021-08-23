@@ -28,7 +28,7 @@
   .carousel-control-next-icon {
     background-image: unset;
     &:after {
-      content: ">";
+      content: "";
       font-size: 55px;
       color: #7b7c7e;
     }
@@ -37,7 +37,7 @@
   .carousel-control-prev-icon {
     background-image: unset;
     &:after {
-      content: "<";
+      content: "";
       font-size: 55px;
       color: #7b7c7e;
     }

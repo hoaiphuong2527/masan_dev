@@ -35,7 +35,7 @@ return [
     'register' => 'Register',
     'view_more' => 'Xem thêm',
     'view_and_download' => 'View & Download',
-    'read_more' => 'Read more',
+    'read_more' => 'Đọc thêm',
     'contact' => 'Contact',
     'contact_to_buy' => 'Contact to buy',
     'or_select_a_file' => 'Or select a file',

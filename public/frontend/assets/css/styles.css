@@ -9525,14 +9525,14 @@ button.close {
 #time-line .carousel-control-next-icon {
   background-image: unset; }
   #time-line .carousel-control-next-icon:after {
-    content: ">";
+    content: "";
     font-size: 55px;
     color: #7b7c7e; }
 
 #time-line .carousel-control-prev-icon {
   background-image: unset; }
   #time-line .carousel-control-prev-icon:after {
-    content: "<";
+    content: "";
     font-size: 55px;
     color: #7b7c7e; }
 
@@ -10117,7 +10117,7 @@ button.close {
   .nav-menu .nav-item {
     list-style: none;
     float: right;
-    padding-right: 1.875rem;
+    padding-right: 1.5rem;
     padding-bottom: 1rem;
     position: relative; }
     .nav-menu .nav-item:first-child {
@@ -15364,14 +15364,13 @@ footer.bd-footer {
 
 #time-line .timeline ol li .timeline-content {
   position: absolute;
-  left: -1px;
-  padding: 40px 5px;
+  left: 0px;
   font-size: 1rem;
   white-space: normal;
   width: 140%;
   color: black;
   border-left: solid 1px #99a79f; }
-  #time-line .timeline ol li .timeline-content > ul {
+  #time-line .timeline ol li .timeline-content ul {
     padding-left: 20px; }
 
 #time-line .timeline ol li:nth-child(odd) .timeline-dot {
@@ -15433,7 +15432,7 @@ footer.bd-footer {
 
 @media (min-width: 960px) {
   #time-line .timeline ol > li {
-    width: 13%; }
+    width: 12%; }
   #time-line .timeline ol li:nth-child(odd) .timeline-dot {
     position: absolute;
     top: -3rem;
@@ -18554,6 +18553,9 @@ h4.list-title {
   padding: 30px 30px;
   height: 100px; }
 
+.siteMap__item ul li a:hover {
+  color: #00a8df; }
+
 #award {
   background-size: cover;
   background-repeat: no-repeat;
@@ -18567,14 +18569,24 @@ h4.list-title {
 #cooper svg {
   width: 778.5px; }
 
+.text-blue {
+  color: #11396f; }
+
+.overview-bg {
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position-x: right; }
+
 @media (max-width: 991.98px) {
+  .overview-bg {
+    background-size: 100%; }
   .invesmentNewsList .navLink li {
     padding-top: 0px; }
   .location {
     margin: 0px;
     margin-bottom: 1rem; }
   #cooper svg {
-    width: 778.5px; }
+    width: 100%; }
   .popup-overlay .popup {
     min-height: 230px; }
   #sustainability th,
@@ -18606,7 +18618,7 @@ h4.list-title {
     width: 100%;
     display: block; }
   .plan-css .loader {
-    max-height: 400px; }
+    height: 400px; }
   .plan-css .loader__bar {
     padding: 20px;
     position: relative; }

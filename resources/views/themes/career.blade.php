@@ -182,8 +182,7 @@ $title = getPageUrlByCode('CAREER', 'title');
                                                                             <div>&nbsp;</div>
 
                                                                             <div><a class="btn career-btn"
-                                                                                    href="{{ $vacancie->url }}">READ
-                                                                                    MORE</a>
+                                                                                    href="{{ $vacancie->url }}">{{trans('button.read_more')}}</a>
                                                                             </div>
                                                                         </td>
                                                                     </tr>

@@ -28,7 +28,7 @@
                                             <div class="col-md-8 col-sm-8 col-xs-6">
                                                 <div class="image effectImg first-post"><a
                                                         style="background-image:url('{{ getLocalFile($top_news->image) }}')"
-                                                        href="{{ route('media.news.detail', ['slug' => $top_news->slug]) }}"><img
+                                                        href="{{ getLocalFile($top_news->banner) }}"><img
                                                             class="img-responsive"
                                                             src="{{ getLocalFile($top_news->image) }}"></a>
                                                 </div>
@@ -40,8 +40,8 @@
                                                         {{ Date2String($top_news->publish_at, ' M d, Y') }}
                                                     </div>
                                                     <a class="title"
-                                                        href="{{ route('media.news.detail', ['slug' => $top_news->slug]) }}">{{ summary($top_news->title, 140) }}</a>
-                                                    <p class="short-desc">{{ $top_news->description }}</p>
+                                                        href="{{ getLocalFile($top_news->banner) }}">{{ summary($top_news->title, 140) }}</a>
+                                                    <p class="short-desc">{{ $top_news->shortdesc }}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -53,11 +53,11 @@
                                     <div class="itemNew">
                                         <div class="image effectImg"><a
                                                 style="background-image:url('{{ getLocalFile($item->image) }}')"
-                                                href="{{ route('media.investments.detail', ['slug' => $item->slug]) }}"><img
+                                                href="{{ getLocalFile($item->banner) }}"><img
                                                     src="{{ getLocalFile($item->image) }}"></a></div>
                                         <div class="info">
                                             <a class="title"
-                                                href="{{ route('media.investments.detail', ['slug' => $item->slug]) }}">{{ summary($item->title, 140) }}
+                                                href="{{ getLocalFile($item->banner) }}">{{ summary($item->title, 140) }}
                                             </a>
                                             <div class="name">
                                                 <p class="card-text">
@@ -67,7 +67,7 @@
                                             <div class="row pt-3">
                                                 <div class="col-12 text-right">
                                                     <a class="btn-link"
-                                                        href="{{ route('media.investments.detail', ['slug' => $item->slug]) }}">
+                                                        href="{{ getLocalFile($item->banner) }}">
                                                         {{ trans('button.view_and_download') }}
                                                     </a>
                                                 </div>

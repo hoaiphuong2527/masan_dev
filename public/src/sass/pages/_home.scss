@@ -254,17 +254,17 @@
 
   .timeline ol li .timeline-content {
     position: absolute;
-    left: -1px;
-    padding: 40px 5px;
+    left: 0px;
     font-size: 1rem;
     white-space: normal;
     width: 140%;
     color: black;
     border-left: solid 1px #99a79f;
-    & > ul {
+    &  ul {
       padding-left: 20px;
     }
   }
+  
 
   .timeline ol li .timeline-content p {
     // margin-top: 70px;
@@ -281,6 +281,14 @@
     background: #555555;
     z-index: 1;
   }
+
+  // .timeline ol li:nth-child(odd) .timeline-content {
+  //   padding: 0px 0px 40px 5px;
+   
+  // }
+  // .timeline ol li:nth-child(even) .timeline-content {
+  //   padding: 0px 40px 0px 5px;
+  // }
 
   .timeline ol li:nth-child(odd) .timeline-dot::after {
     content: "";
@@ -343,7 +351,7 @@
 
   @media (min-width: 960px) {
     .timeline ol > li {
-      width: 13%;
+      width: 12%;
     }
 
     .timeline ol li:nth-child(odd) .timeline-dot {

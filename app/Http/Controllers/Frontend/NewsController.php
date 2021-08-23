@@ -43,7 +43,7 @@ class NewsController extends Controller
 
         $news_category = $this->news_category->findBySlug($slug);
         Breadcrumb::add($news_category->name, route('media.news.category',['parent_slug'=>$news_category_parent->slug,'slug'=>$news_category->slug]));
-        $news = $news_category->news()->where('is_top', 0)->paginate(8);
+        $news = $news_category->news()->where('is_top', 0)->paginate(9);
         $top_news = $news_category->news()->where('is_top', 1)->first();
         $news_press_release = $news_category->news()->get()->groupBy(function($val) {
             return Carbon::parse($val->publish_at)->format('Y');
@@ -60,7 +60,8 @@ class NewsController extends Controller
     {
         $get_locale = App::getLocale();
         $news = $this->news->findBySlug($slug);
-        $news_relative = $this->news->datatable()->where('id','!=',$news->id)->limit(10)->get();
+        $news_relative = $this->news->datatable()->where('id','!=',$news->id)->where('news_category_id','!=',10)->limit(10)->get();
+
         Breadcrumb::add( $news->title, url()->current());
         $metadata = DB::table('metadata')
             ->join('metadata_translations', 'metadata.id', '=', 'metadata_translations.metadata_id')

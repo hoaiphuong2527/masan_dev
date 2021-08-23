@@ -40,7 +40,7 @@ class InvestmentsController extends Controller
             $slug = $slug ?? $news_category_parent->child()->first()->slug;
             $news_category = $this->investments_category->findBySlug($slug);
             Breadcrumb::add($news_category->name, route('media.investments.category',['parent_slug'=>$news_category_parent->slug,'slug'=>$news_category->slug]));  
-            $annual_report = $news_category->news()->paginate(8);
+            $annual_report = $news_category->news()->where('is_top', 0)->paginate(9);
             $news = $news_category->news()->get()->groupBy(function($val) {
                 return Carbon::parse($val->publish_at)->format('Y');
           })->toArray();
@@ -48,6 +48,7 @@ class InvestmentsController extends Controller
         }
         else{
             $news_category = $news_category_parent;
+            $annual_report = $news_category->news()->where('is_top', 0)->paginate(9);
             $news = $news_category->newsByCategoryParentId($news_category_parent->id)->paginate(7);
             $news = $news_category->news()->get()->groupBy(function($val) {
                 return Carbon::parse($val->publish_at)->format('Y');

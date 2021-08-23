@@ -6,7 +6,6 @@
     <title>{{$news->title}}</title>
 @endsection
 @section('content')
-    @include('themes.partials.base',['banner'=>$news->banner ?? 'frontend/images/media-banner.png','text'=>'Media Library'])
     <section class="ourNewsDetail">
         <div class="container">
             <h1 class="titleHeading titleHeading--content" data-waypoint="100%">{{$news->title}}</h1>

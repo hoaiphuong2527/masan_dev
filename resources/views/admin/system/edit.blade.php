@@ -20,7 +20,7 @@
                         <input type="hidden" name="_method" value="PUT">
                         {{ csrf_field() }}
                         <div class="row">
-                            <div class="col-md-4">
+                            {{-- <div class="col-md-4">
                                 <div class="font-bold col-green">{!! trans('admin_system.form.contact_email') !!}</div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
@@ -48,7 +48,7 @@
                                                value="{{ $system['fax']['content'] ?? null }}">
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
 
                             {{--<div class="col-md-4">--}}
                                 {{--<div class="font-bold col-green">{!! trans('admin_system.form.phone') !!}</div>--}}
@@ -59,7 +59,7 @@
                                     {{--</div>--}}
                                 {{--</div>--}}
                             {{--</div>--}}
-                            <div class="col-md-4">
+                            {{-- <div class="col-md-4">
                                 <div class="font-bold col-green">{!! trans('admin_system.form.phone_bottom_no') !!}</div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
@@ -67,9 +67,9 @@
                                                value="{{ $system['phone_bottom_no']['content'] ?? null }}">
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
 
-                            <div class="col-md-4">
+                            {{-- <div class="col-md-4">
                                 <div class="font-bold col-green">{!! trans('admin_system.form.phone_bottom') !!}</div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
@@ -77,9 +77,9 @@
                                                value="{{ $system['phone_bottom']['content'] ?? null }}">
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
 
-                            <div class="col-md-4">
+                            {{-- <div class="col-md-4">
                                 <div class="font-bold col-green">{!! trans('admin_system.form.location') !!}</div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
@@ -87,9 +87,9 @@
                                                value="{{ $system['location']['content'] ?? null }}">
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
-
+{{-- 
                         <div class="row">
                             @foreach($composer_locales as $key => $value)
                                 <div class="col-md-4">
@@ -101,9 +101,9 @@
                                     </div>
                                 </div>
                             @endforeach
-                        </div>
+                        </div> --}}
 
-                        <div class="row">
+                        {{-- <div class="row">
                             @foreach($composer_locales as $key => $value)
                                 <div class="col-md-4">
                                     <div class="font-bold col-green">{!! trans('admin_system.form.address_show_room') !!} ({{ $value['native'] }})</div>
@@ -114,7 +114,7 @@
                                     </div>
                                 </div>
                             @endforeach
-                        </div>
+                        </div> --}}
 
 
                         <h4>{{ trans('admin_system.social') }}</h4>
@@ -177,7 +177,7 @@
                                     {{--</div>--}}
                                 {{--</div>--}}
                             {{--</div>--}}
-                            <div class="col-md-4">
+                            {{-- <div class="col-md-4">
                                 <div class="font-bold col-green">{!! trans('admin_system.form.weixin') !!}</div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
@@ -185,7 +185,7 @@
                                                value="{{ $system['weixin']['content'] ?? null }}">
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
 
                         <h4>{{ trans('admin_system.website_info') }}</h4>

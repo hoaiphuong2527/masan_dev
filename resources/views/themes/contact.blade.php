@@ -18,15 +18,16 @@ $title = getPageUrlByCode('CONTACT', 'title');
     <section class="mainContact py-5 my-5">
         @if (!empty($blocks['INTRODUCE']) && ($block = $blocks->get('INTRODUCE')->first()))
             <div class="container">
-                <h1 class="titleHeading titleHeading--medium" data-waypoint="100%">
-                    {{ $block->name }}
-                </h1>
+               
 
                 <div class="innerContact" data-waypoint="100%">
                     <div class="row">
                         <div class="col-md-9 col-12">
                             @include('frontend.layouts.partials.alert')
-                            <h6 class="my-4">
+                            <h1 class="titleHeading titleHeading--medium text-blue" data-waypoint="100%">
+                                {{ $block->name }}
+                            </h1>
+                            <h6 class="mb-4">
                                 {{ $block->description }}
                             </h6>
                             <div class="formContact">
@@ -84,7 +85,7 @@ $title = getPageUrlByCode('CONTACT', 'title');
                         </div>
                         <div class="col-md-3 col-12">
                             <div class="formLocation" id="formLocationHD">
-                                <h3 class="titleHeading titleHeading--medium">{{ trans('frontend.department_contact') }}
+                                <h3 class="titleHeading titleHeading--medium text-blue">{{ trans('frontend.department_contact') }}
                                 </h3>
                                 @foreach ($block->children as $item)
                                     <div class="row my-2">

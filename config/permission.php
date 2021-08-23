@@ -3,27 +3,27 @@ return [
     'permission' => [
         'model' => 'Admin',
         'permissions' => [
-            'admin.index' => 'Truy cập'
+            'admin.index' => 'View'
         ]
     ],
 
     // 'project_category' => [
     //     'model' => 'Danh mục dự án',
     //     'permissions' => [
-    //         'admin.project.category.index' => 'Truy cập',
-    //         'admin.project.category.create' => 'Tạo',
-    //         'admin.project.category.edit' => 'Sửa',
-    //         'admin.project.category.destroy' => 'Xóa'
+    //         'admin.project.category.index' => 'View',
+    //         'admin.project.category.create' => 'Create',
+    //         'admin.project.category.edit' => 'Edit',
+    //         'admin.project.category.destroy' => 'Delete'
     //     ]
     // ],
 
     // 'project' => [
     //     'model' => 'Dự án',
     //     'permissions' => [
-    //         'admin.project.index' => 'Truy cập',
-    //         'admin.project.create' => 'Tạo',
-    //         'admin.project.edit' => 'Sửa',
-    //         'admin.project.destroy' => 'Xóa',
+    //         'admin.project.index' => 'View',
+    //         'admin.project.create' => 'Create',
+    //         'admin.project.edit' => 'Edit',
+    //         'admin.project.destroy' => 'Delete',
     //     ]
     // ],
 
@@ -40,69 +40,69 @@ return [
 //    'product' => [
 //        'model' => 'Sản phẩm',
 //        'permissions' => [
-//            'admin.product.index' => 'Truy cập',
-//            'admin.product.create' => 'Tạo',
-//            'admin.product.edit' => 'Sửa',
-//            'admin.product.destroy' => 'Xóa'
+//            'admin.product.index' => 'View',
+//            'admin.product.create' => 'Create',
+//            'admin.product.edit' => 'Edit',
+//            'admin.product.destroy' => 'Delete'
 //        ]
 //    ],
 
     // 'invest_category' => [
     //     'model' => 'Loại tin tức đầu tư',
     //     'permissions' => [
-    //         'admin.invest.category.index' => 'Truy cập',
-    //         'admin.invest.category.create' => 'Tạo',
-    //         'admin.invest.category.edit' => 'Sửa',
-    //         'admin.invest.category.destroy' => 'Xóa'
+    //         'admin.invest.category.index' => 'View',
+    //         'admin.invest.category.create' => 'Create',
+    //         'admin.invest.category.edit' => 'Edit',
+    //         'admin.invest.category.destroy' => 'Delete'
     //     ]
     // ],
     'investments' => [
-        'model' => 'Tin tức đầu tư',
+        'model' => 'Invester Centor',
         'permissions' => [
-            'admin.investments.index' => 'Truy cập',
-            'admin.investments.create' => 'Tạo',
-            'admin.investments.edit' => 'Sửa',
-            'admin.investments.destroy' => 'Xóa'
+            'admin.investments.index' => 'View',
+            'admin.investments.create' => 'Create',
+            'admin.investments.edit' => 'Edit',
+            'admin.investments.destroy' => 'Delete'
         ]
     ],
 
     // 'news_category' => [
     //     'model' => 'Loại tin tức',
     //     'permissions' => [
-    //         'admin.news.category.index' => 'Truy cập',
-    //         'admin.news.category.create' => 'Tạo',
-    //         'admin.news.category.edit' => 'Sửa',
-    //         'admin.news.category.destroy' => 'Xóa'
+    //         'admin.news.category.index' => 'View',
+    //         'admin.news.category.create' => 'Create',
+    //         'admin.news.category.edit' => 'Edit',
+    //         'admin.news.category.destroy' => 'Delete'
     //     ]
     // ],
 
     'news' => [
-        'model' => 'Tin tức',
+        'model' => 'News',
         'permissions' => [
-            'admin.news.index' => 'Truy cập',
-            'admin.news.create' => 'Tạo',
-            'admin.news.edit' => 'Sửa',
-            'admin.news.destroy' => 'Xóa',
+            'admin.news.index' => 'View',
+            'admin.news.create' => 'Create',
+            'admin.news.edit' => 'Edit',
+            'admin.news.destroy' => 'Delete',
         ]
     ],
 
     // 'service' => [
     //     'model' => 'Dịch vụ',
     //     'permissions' => [
-    //         'admin.service.index' => 'Truy cập',
-    //         'admin.service.create' => 'Tạo',
-    //         'admin.service.edit' => 'Sửa',
-    //         'admin.service.destroy' => 'Xóa',
+    //         'admin.service.index' => 'View',
+    //         'admin.service.create' => 'Create',
+    //         'admin.service.edit' => 'Edit',
+    //         'admin.service.destroy' => 'Delete',
     //     ]
     // ],
 
     // 'brochures' => [
     //     'model' => 'Tài liệu quảng cáo',
     //     'permissions' => [
-    //         'admin.brochures.index' => 'Truy cập',
-    //         'admin.brochures.create' => 'Tạo',
-    //         'admin.brochures.edit' => 'Sửa',
-    //         'admin.brochures.destroy' => 'Xóa',
+    //         'admin.brochures.index' => 'View',
+    //         'admin.brochures.create' => 'Create',
+    //         'admin.brochures.edit' => 'Edit',
+    //         'admin.brochures.destroy' => 'Delete',
     //     ]
     // ],
 
@@ -111,30 +111,30 @@ return [
     // 'theme' => [
     //     'model' => 'Bản mẫu',
     //     'permissions' => [
-    //         'admin.theme.index' => 'Truy cập',
-    //         'admin.theme.create' => 'Tạo',
-    //         'admin.theme.edit' => 'Sửa',
-    //         'admin.theme.destroy' => 'Xóa',
+    //         'admin.theme.index' => 'View',
+    //         'admin.theme.create' => 'Create',
+    //         'admin.theme.edit' => 'Edit',
+    //         'admin.theme.destroy' => 'Delete',
     //     ]
     // ],
 
     'page' => [
-        'model' => 'Trang',
+        'model' => 'Page',
         'permissions' => [
-            'admin.page.index' => 'Truy cập',
-            'admin.page.create' => 'Tạo',
-            'admin.page.edit' => 'Sửa',
-            'admin.page.destroy' => 'Xóa'
+            'admin.page.index' => 'View',
+            'admin.page.create' => 'Create',
+            'admin.page.edit' => 'Edit',
+            'admin.page.destroy' => 'Delete'
         ]
     ],
 
     // 'career' => [
     //     'model' => 'Tuyển dụng',
     //     'permissions' => [
-    //         'admin.career.index' => 'Truy cập',
-    //         'admin.career.create' => 'Tạo',
-    //         'admin.career.edit' => 'Sửa',
-    //         'admin.career.destroy' => 'Xóa',
+    //         'admin.career.index' => 'View',
+    //         'admin.career.create' => 'Create',
+    //         'admin.career.edit' => 'Edit',
+    //         'admin.career.destroy' => 'Delete',
     //         'admin.career.application' => 'Ứng tuyển'
     //     ]
     // ],
@@ -150,26 +150,26 @@ return [
     // ],
 
     'contact' => [
-        'model' => 'Liên hệ',
+        'model' => 'Contact',
         'permissions' => [
-            'admin.contact.index' => 'Truy cập',
-            'admin.contact.destroy' => 'Xóa'
+            'admin.contact.index' => 'View',
+            'admin.contact.destroy' => 'Delete'
         ]
     ],
 
     // 'register' => [
     //     'model' => 'Đăng ký theo dõi',
     //     'permissions' => [
-    //         'admin.register.index' => 'Truy cập',
-    //         'admin.register.destroy' => 'Xóa'
+    //         'admin.register.index' => 'View',
+    //         'admin.register.destroy' => 'Delete'
     //     ]
     // ],
 
     // 'subscribe' => [
     //     'model' => 'Subscribe',
     //     'permissions' => [
-    //         'admin.subscribe.index' => 'Truy cập',
-    //         'admin.subscribe.destroy' => 'Xóa'
+    //         'admin.subscribe.index' => 'View',
+    //         'admin.subscribe.destroy' => 'Delete'
     //     ]
     // ],
 
@@ -177,18 +177,18 @@ return [
 //    'rfp' => [
 //        'model' => 'Rfp',
 //        'permissions' => [
-//            'admin.rfp.index' => 'Truy cập',
-//            'admin.rfp.destroy' => 'Xóa'
+//            'admin.rfp.index' => 'View',
+//            'admin.rfp.destroy' => 'Delete'
 //        ]
 //    ],
 
 //    'faq' => [
 //        'model' => 'FAQs',
 //        'permissions' => [
-//            'admin.faq.index' => 'Truy cập',
-//            'admin.faq.create' => 'Tạo',
-//            'admin.faq.edit' => 'Sửa',
-//            'admin.faq.destroy' => 'Xóa'
+//            'admin.faq.index' => 'View',
+//            'admin.faq.create' => 'Create',
+//            'admin.faq.edit' => 'Edit',
+//            'admin.faq.destroy' => 'Delete'
 //        ]
 //    ],
 
@@ -205,123 +205,123 @@ return [
     // 'slider' => [
     //     'model' => 'Băng rôn',
     //     'permissions' => [
-    //         'admin.slider.index' => 'Truy cập',
-    //         'admin.slider.create' => 'Tạo',
-    //         'admin.slider.edit' => 'Sửa',
-    //         'admin.slider.destroy' => 'Xóa'
+    //         'admin.slider.index' => 'View',
+    //         'admin.slider.create' => 'Create',
+    //         'admin.slider.edit' => 'Edit',
+    //         'admin.slider.destroy' => 'Delete'
     //     ]
     // ],
 
 //    'image_map' => [
 //        'model' => 'Bản đồ hình ảnh',
 //        'permissions' => [
-//            'admin.image.map.index' => 'Truy cập',
-//            'admin.image.map.create' => 'Tạo',
-//            'admin.image.map.edit' => 'Sửa',
-//            'admin.image.map.destroy' => 'Xóa',
+//            'admin.image.map.index' => 'View',
+//            'admin.image.map.create' => 'Create',
+//            'admin.image.map.edit' => 'Edit',
+//            'admin.image.map.destroy' => 'Delete',
 //        ]
 //    ],
 
     // 'partner' => [
     //     'model' => 'Đối tác',
     //     'permissions' => [
-    //         'admin.partner.index' => 'Truy cập',
-    //         'admin.partner.create' => 'Tạo',
-    //         'admin.partner.edit' => 'Sửa',
-    //         'admin.partner.destroy' => 'Xóa'
+    //         'admin.partner.index' => 'View',
+    //         'admin.partner.create' => 'Create',
+    //         'admin.partner.edit' => 'Edit',
+    //         'admin.partner.destroy' => 'Delete'
     //     ]
     // ],
 
     // 'team' => [
     //     'model' => 'Đội ngũ',
     //     'permissions' => [
-    //         'admin.team.index' => 'Truy cập',
-    //         'admin.team.create' => 'Tạo',
-    //         'admin.team.edit' => 'Sửa',
-    //         'admin.team.destroy' => 'Xóa'
+    //         'admin.team.index' => 'View',
+    //         'admin.team.create' => 'Create',
+    //         'admin.team.edit' => 'Edit',
+    //         'admin.team.destroy' => 'Delete'
     //     ]
     // ],
 
 //    'book_space' => [
 //        'model' => 'Đăng ký đặt chỗ',
 //        'permissions' => [
-//            'admin.book.space.index' => 'Truy cập',
+//            'admin.book.space.index' => 'View',
 //            'admin.book.space.show' => 'Hiển thị',
-//            'admin.book.space.destroy' => 'Xóa'
+//            'admin.book.space.destroy' => 'Delete'
 //        ]
 //    ],
 
 //    'visit_registration' => [
 //        'model' => 'Đăng ký tham quan',
 //        'permissions' => [
-//            'admin.visit.registration.index' => 'Truy cập',
+//            'admin.visit.registration.index' => 'View',
 //            'admin.visit.registration.show' => 'Hiển thị',
-//            'admin.visit.registration.destroy' => 'Xóa'
+//            'admin.visit.registration.destroy' => 'Delete'
 //        ]
 //    ],
 
     // 'general' => [
     //     'model' => 'Thông tin chung',
     //     'permissions' => [
-    //         'admin.general.index' => 'Truy cập',
-    //         'admin.general.create' => 'Tạo',
-    //         'admin.general.edit' => 'Sửa',
-    //         'admin.general.destroy' => 'Xóa'
+    //         'admin.general.index' => 'View',
+    //         'admin.general.create' => 'Create',
+    //         'admin.general.edit' => 'Edit',
+    //         'admin.general.destroy' => 'Delete'
     //     ]
     // ],
 
     'user' => [
-        'model' => 'Tài khoản',
+        'model' => 'User',
         'permissions' => [
-            'admin.user.index' => 'Truy cập',
-            'admin.user.create' => 'Tạo',
-            'admin.user.edit' => 'Sửa',
-            'admin.user.destroy' => 'Xóa',
-            'admin.user.set.permission' => 'Cấp quyền'
+            'admin.user.index' => 'View',
+            'admin.user.create' => 'Create',
+            'admin.user.edit' => 'Edit',
+            'admin.user.destroy' => 'Delete',
+            'admin.user.set.permission' => 'Set role'
         ]
     ],
 
     'role' => [
-        'model' => 'Vai trò',
+        'model' => 'Role',
         'permissions' => [
-            'admin.role.index' => 'Truy cập',
-            'admin.role.create' => 'Tạo',
-            'admin.role.edit' => 'Sửa',
-            'admin.role.destroy' => 'Xóa'
+            'admin.role.index' => 'View',
+            'admin.role.create' => 'Create',
+            'admin.role.edit' => 'Edit',
+            'admin.role.destroy' => 'Delete'
         ]
     ],
 
     'system' => [
-        'model' => 'Hệ thống',
+        'model' => 'System',
         'permissions' => [
-            'admin.system.edit' => 'Sửa',
+            'admin.system.edit' => 'Edit',
         ]
     ],
 
     'activity' => [
-        'model' => 'Hoạt động',
+        'model' => 'Activity Log',
         'permissions' => [
-            'admin.activity.index' => 'Truy cập',
+            'admin.activity.index' => 'View',
         ]
     ],
 
     'gallery' => [
-        'model' => 'Thư viện ảnh/video',
+        'model' => 'Library',
         'permissions' => [
-            'admin.gallery.index' => 'Truy cập',
-            'admin.gallery.create' => 'Tạo',
-            'admin.gallery.edit' => 'Sửa',
-            'admin.gallery.destroy' => 'Xóa'
+            'admin.gallery.index' => 'View',
+            'admin.gallery.create' => 'Create',
+            'admin.gallery.edit' => 'Edit',
+            'admin.gallery.destroy' => 'Delete'
         ]
     ],
 
 //    'catalogue' => [
 //        'model' => 'Catalogue',
 //        'permissions' => [
-//            'admin.catalogue.index' => 'Truy cập',
-//            'admin.catalogue.create' => 'Tạo',
-//            'admin.catalogue.edit' => 'Sửa',
-//            'admin.catalogue.destroy' => 'Xóa'
+//            'admin.catalogue.index' => 'View',
+//            'admin.catalogue.create' => 'Create',
+//            'admin.catalogue.edit' => 'Edit',
+//            'admin.catalogue.destroy' => 'Delete'
 //        ]
 //    ],
 ];
