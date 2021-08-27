@@ -35,12 +35,6 @@
                             <div class="searchResult__item" onclick="location.href='{{route('page.search',['q'=>request()->get('q'),'type'=>0])}}'"><a href="#"></a><span class="searchResult__item__text">{{trans('frontend.all')}}</span><span class="searchResult__item__number">{{$pages['total'] ?? 0}}</span></div>
                         </div>
                         <div class="col-lg-2">
-                            <div class="searchResult__item" onclick="location.href='{{route('page.search',['q'=>request()->get('q'),'type'=>1])}}'"><a href="#"></a><span class="searchResult__item__text">{{trans('frontend.our_businesses')}}</span><span class="searchResult__item__number">{{$collect1_count ?? 0}}</span></div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="searchResult__item" onclick="location.href='{{route('page.search',['q'=>request()->get('q'),'type'=>2])}}'"><a href="#"></a><span class="searchResult__item__text">{{trans('frontend.property_leasing')}}</span><span class="searchResult__item__number">{{$collect2_count ?? 0}}</span></div>
-                        </div>
-                        <div class="col-lg-2">
                             <div class="searchResult__item" onclick="location.href='{{route('page.search',['q'=>request()->get('q'),'type'=>3])}}'"><a href="#"></a><span class="searchResult__item__text">{{trans('frontend.media_center')}}</span><span class="searchResult__item__number">{{$collect3_count ?? 0}}</span></div>
                         </div>
                         <div class="col-lg-2">

@@ -32,7 +32,7 @@
 </div>
 <div class="row">
     <div class="col-md-8">
-        <div class="font-bold col-green">Image or pdf</div>
+        <div class="font-bold col-green">Image or pdf(EN)</div>
         <div class="form-group form-float">
             <div class="form-line">
                 <input type="text" id="link_download_input" class="form-control"
@@ -42,7 +42,19 @@
             </div>
         </div>
     </div>
+    <div class="col-md-8">
+        <div class="font-bold col-green">Image or pdf(VN)</div>
+        <div class="form-group form-float">
+            <div class="form-line">
+                <input type="text" id="link_download_input_vi" class="form-control"
+                       name="vi_file"
+                       value="{!! !empty($news->vi_file)  ? $news->vi_file : old("vi_file") !!}">
+                <button type="button" class="btn btn-primary btn_select_a_file" data-append="#link_download_input_vi" style="position: absolute; top: 2px; right:2px">{{ trans('button.or_select_a_file') }}</button>
+            </div>
+        </div>
+    </div>
 </div>
+
 {{-- <div class="row">
     <div class="col-md-4">
         <div class="font-bold col-green">{!! trans("admin_news.form.image") !!}</div>

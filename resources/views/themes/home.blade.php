@@ -30,19 +30,16 @@
                                         </a>
                                     </div>
                                 </div>
-                                {{-- @elseif($banner->code == 'BANNER-MOBILE')
-                                <div class="imageFull" style="background-image:url('{{ $banner->photo_translation }}')">
-                                    @if ($composer_locale == 'en')
-                                        <picture>
-                                            <source type="image/webp" srcset="/upload/images/banner-mobile.webp">
-                                            <source type="image/jxr" srcset="/upload/images/banner-mobile.jxr">
-                                            <source type="/upload/images/banner-mobile.jp2">
-                                            <img src="{{ $banner->photo_translation }}" alt="">
-                                        </picture>
-                                    @else
-                                        <img src="{{ $banner->photo_translation }}" alt="">
-                                    @endif
-                                </div> --}}
+                            @elseif($banner->code == 'BANNER-MOBILE')
+                            <div class="image" style="background-image:url('{{ $banner->photo }}')">
+                                <div class="container">
+                                    <h3 class="aun_h1">{!! $banner->content !!}</h3>
+                                    <a href="{{ $banner->url }}">
+                                        <span class="discovery-btn">{{ trans('home.CONTENT.banner_btn') }} <i
+                                                class="fa fa-play" aria-hidden="true"></i></span>
+                                    </a>
+                                </div>
+                            </div>
                             @endif
                         </div>
                     </div>
@@ -53,7 +50,7 @@
 
     </div>
     <section class=" mainContent--home">
-        <div class="container py-lg-4">
+        <div class="container pt-lg-4">
             <div class="page-content">
                 @if (!empty($blocks['OUR-STORY']) && ($ourStoryBlock = $blocks->get('OUR-STORY')->first()))
                     {!! $ourStoryBlock->content !!}
@@ -63,7 +60,7 @@
             <div class="milestone py-5">
                 <div class="container">
                     <div class="row">
-                        <div class=" pl-0 col-lg-6">
+                        <div class="pl-0 col-lg-6">
                             <div class="row">
                                 <div class="col-1">
                                 </div>
@@ -74,20 +71,23 @@
                         </div>
                         <div id="time-line">
                             <div class="col-lg-12 px-lg-4">
-                                <div class="milestone py-lg-4">
+                                <div class="milestone">
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <div id="carousel-time-line" class="carousel slide" data-ride="carousel">
                                                     <ol class="carousel-indicators story-indicators">
-                                                        <li data-target="#carousel-time-line" data-slide-to="0" class="active">
+                                                        <li data-target="#carousel-time-line" data-slide-to="0"
+                                                            class="active">
                                                         </li>
                                                         @if (!empty($blocks['TIME-LINE']) && ($timeLineBlock = $blocks->get('TIME-LINE')->first()))
                                                             @if (!empty($timeLineBlock->children[6]))
-                                                                <li data-target="#carousel-time-line" data-slide-to="1"></li>
+                                                                <li data-target="#carousel-time-line" data-slide-to="1">
+                                                                </li>
                                                             @endif
                                                             @if (!empty($timeLineBlock->children[12]))
-                                                                <li data-target="#carousel-time-line" data-slide-to="2"></li>
+                                                                <li data-target="#carousel-time-line" data-slide-to="2">
+                                                                </li>
                                                             @endif
                                                         @endif
                                                     </ol>
@@ -159,11 +159,13 @@
                                                             @endif
                                                         @endif
                                                     </div>
-                                                    <a class="carousel-control-prev" href="#carousel-time-line" role="button" data-slide="prev">
+                                                    <a class="carousel-control-prev" href="#carousel-time-line"
+                                                        role="button" data-slide="prev">
                                                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                                         <span class="sr-only">{{ trans('home.previous') }}</span>
                                                     </a>
-                                                    <a class="carousel-control-next" href="#carousel-time-line" role="button" data-slide="next">
+                                                    <a class="carousel-control-next" href="#carousel-time-line"
+                                                        role="button" data-slide="next">
                                                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                                         <span class="sr-only">{{ trans('home.next') }}</span>
                                                     </a>
@@ -173,29 +175,27 @@
                                     </div>
                                 </div>
                             </div>
-                           
-
                             <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"
                                                         integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g=="
                                                         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
                         </div>
                     </div>
+                </div>
             </div>
+            <div class="titleHeading" data-waypoint="100%">{{ trans('home.CONTENT.product') }}
+            </div>
+            <!-- <div class="titleHeadingDetail" data-waypoint="100%"> {{ trans('home.CONTENT.subTitle_product') }} -->
         </div>
-        <div class="titleHeading" data-waypoint="100%">{{ trans('home.CONTENT.product') }}
-        </div>
-        <!-- <div class="titleHeadingDetail" data-waypoint="100%"> {{ trans('home.CONTENT.subTitle_product') }} -->
-        </div>
-        @if(!empty($blocks['HOME-PRODUCT']) && $block = $blocks->get('HOME-PRODUCT')->first())
-        <div class="document" data-waypoint="100%">
-            {!! $block->content !!}
-        </div>
+        @if (!empty($blocks['HOME-PRODUCT']) && ($block = $blocks->get('HOME-PRODUCT')->first()))
+            <div class="document" data-waypoint="100%">
+                {!! $block->content !!}
+            </div>
         @endif
-        <div class="news py-lg-5">
+        <div class="news pb-lg-5">
             <div class="container-fluid p-0 image" style="background-image:url('/assets/images/bg-news.png')">
                 <div class="container">
-                    <div class="titleHeading" data-waypoint="100%">{{ trans('home.CONTENT.news') }}</div>
+                    <div class="titleHeading pt-lg-5" data-waypoint="100%">{{ trans('home.CONTENT.news') }}</div>
                     <div class="listLease mediaEffect-2" data-waypoint="100%">
                         <div class="news-list-item row">
                             <div class="col-md-6 col-sm-7 col-md-6 bg-white p-4">
@@ -207,7 +207,7 @@
                                             @endif
                                         </b>
                                         <a href="{{ route('media.news.detail', ['slug' => $item->slug]) }}"><span
-                                                class="read-more">{{ summary($item->title, 140) }} <i
+                                                class="read-more">{{ summary($item->title, 120) }} <i
                                                     class="fa fa-play blue" aria-hidden="true"></i></span></a>
                                     </div>
                                 @endforeach
@@ -226,7 +226,7 @@
                 </div>
             </div>
         </div>
-        <div class="our-business py-lg-4">
+        <div class="our-business pb-lg-5">
             <div class="container">
                 <div class="titleHeading" data-waypoint="100%">{{ trans('home.CONTENT.business') }}</div>
                 <div id="our-businness-carousel" class="carousel slide" data-ride="carousel">
@@ -238,19 +238,19 @@
                     <ol class="carousel-indicators name-indicators">
                         <li data-slide-to="0" class="active">
                             <a href="{{ getPageUrlByCode('ABOUT') }}">
-                                {{ trans('home.CONTENT.about') }}
+                                {{ $title = getPageUrlByCode('ABOUT', 'title') }}
                             </a>
                         </li>
                         <li data-slide-to="1">
-                            <a href="{{ route('page.show', ['slug' => 'our-products/tungsten']) }}">
-                                {{ trans('home.CONTENT.products') }}
+                            <a href="{{ getPageUrlByCode('SUBSIDAIRY') }}">
+                                {{ $title = getPageUrlByCode('SUBSIDAIRY', 'title') }}
                             </a>
 
                         </li>
                         <li data-slide-to="2">
                             <a href="{{ getPageUrlByCode('SUSTAINABILITY') }}">
 
-                                {{ trans('home.CONTENT.sustainability') }}
+                                {{ $title = getPageUrlByCode('SUSTAINABILITY', 'title') }}
                             </a>
                         </li>
                     </ol>
@@ -269,7 +269,7 @@
                 </div>
             </div>
         </div>
-        <div class="media-center py-lg-4">
+        <div class="media-center pb-lg-5">
             <div class="container">
                 <div class="titleHeading" data-waypoint="100%">{{ trans('home.CONTENT.media') }}</div>
                 <div class="sliderCase">

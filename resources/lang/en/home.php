@@ -59,7 +59,7 @@ return [
       '2019.2' => 'MTC obtained the Certificate of High-Tech Enterprise',
       '2020' => "6/2020, Company's name changed into Masan High Tech Materials",
 
-      'product' => 'Product',
+      'product' => 'Products',
       'subTitle_product' => 'With the exceptional features, our products played an
       important role in the global heavy industry.',
 

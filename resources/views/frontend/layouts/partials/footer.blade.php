@@ -24,8 +24,15 @@
                     <li><a href="{{ getPageUrlByCode('PRIVACY-POLICY') }}"
                             title="{{ $title = getPageUrlByCode('PRIVACY-POLICY', 'title') }}"><span>{{ $title }}</span></a>
                     </li>
-                    <li><a href="{{ route('media.investments.category', ['parent_slug' => 'investor-center', 'slug' => 'annual-reports']) }}"
-                            title="{{ $title = getPageUrlByCode('DOWNLOAD', 'title') }}"><span>Download</span></a>
+                    <li>
+                        @if ($composer_locale == 'en')
+                            <a href="{{ route('media.investments.category', ['parent_slug' => 'thong-tin-dau-tu', 'slug' => 'annual-reports']) }}"
+                                title="{{ $title = getPageUrlByCode('DOWNLOAD', 'title') }}"><span>Download</span></a>
+                        @else
+                            <a href="{{ route('media.investments.category', ['parent_slug' => 'thong-tin-dau-tu', 'slug' => 'bao-cao-thuong-nien']) }}"
+                                title="{{ $title = getPageUrlByCode('DOWNLOAD', 'title') }}"><span>Tài
+                                    liệu</span></a>
+                        @endif
                     </li>
                     <li><a href="{{ getPageUrlByCode('CONTACT') }}"
                             title="{{ $title = getPageUrlByCode('CONTACT', 'title') }}"><span>{{ $title }}</span></a>
@@ -50,13 +57,13 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4 pt-3">
+            <div class="col-md-5 pt-3">
                 <div class="copyright">
                     <p><span class="text-left">{{ trans('frontend.coppy_right') }}</span>
                     </p>
                 </div>
             </div>
-            <div class="col-md-8 pt-3">
+            <div class="col-md-7 pt-3">
                 <div class="copyright text-right">
                     <span class="">{{ trans('frontend.coppy_right_2') }}</span>
                     </p>
@@ -65,11 +72,14 @@
             <div class="popup-overlay">
                 <div class="popup">
                     <p class="title">Cookies</p>
-                    <p>We use website cookies
-                    </p>
-                    <p>Cookies are used to help us understand and improve how our website works in order to give you the
+                    
+                    <p>
+                        We use website cookies to help us understand and improve how our website works in order to give you the
                         best experience on our website. By your continued use of this site you accept such use. For more
-                        details, please see our Privacy Policy & Legal Notice.</p>
+                        details, please see our 
+                        <a href="{{ getPageUrlByCode('PRIVACY-POLICY') }}"
+                            title="{{ $title = getPageUrlByCode('PRIVACY-POLICY', 'title') }}"><span>Privacy Policy & Legal Notice</span></a>
+                        .</p>
                     <a href="javascript:;" class="close">Close</a>
                     <a href="javascript:;" class="submit">I Agree to Use of Data</a>
                 </div>

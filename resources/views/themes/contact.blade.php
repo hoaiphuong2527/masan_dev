@@ -15,14 +15,13 @@ $title = getPageUrlByCode('CONTACT', 'title');
 @endphp
 @section('content')
     @include('themes.partials.base',['banner'=>'/assets/images/contact-banner.png','text'=> $title])
-    <section class="mainContact py-5 my-5">
+    <section class="mainContact pt-5">
         @if (!empty($blocks['INTRODUCE']) && ($block = $blocks->get('INTRODUCE')->first()))
             <div class="container">
-               
 
                 <div class="innerContact" data-waypoint="100%">
                     <div class="row">
-                        <div class="col-md-9 col-12">
+                        <div class="col-md-8 col-12">
                             @include('frontend.layouts.partials.alert')
                             <h1 class="titleHeading titleHeading--medium text-blue" data-waypoint="100%">
                                 {{ $block->name }}
@@ -66,8 +65,7 @@ $title = getPageUrlByCode('CONTACT', 'title');
                                         <div class="col-lg-4 col-12">
                                             <div class="form-group">
                                                 <select name="department_contact" class="selectpicker show-tick "
-                                                    title="Department contact">
-                                                    
+                                                    title="{{ trans('frontend.department_contact') }}">
                                                     @foreach ($block->children as $index => $item)
                                                         <option value="{!! strip_tags($item->content) !!}">{{ $item->description }}
                                                         </option>
@@ -83,7 +81,7 @@ $title = getPageUrlByCode('CONTACT', 'title');
                                 </form>
                             </div>
                         </div>
-                        <div class="col-md-3 col-12">
+                        <div class="col-md-4 col-12">
                             <div class="formLocation" id="formLocationHD">
                                 <h3 class="titleHeading titleHeading--medium text-blue">{{ trans('frontend.department_contact') }}
                                 </h3>
@@ -102,7 +100,7 @@ $title = getPageUrlByCode('CONTACT', 'title');
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row pt-lg-4">
                         @if (!empty($blocks['CONTACT-MAPS']) && ($blockMaps = $blocks->get('CONTACT-MAPS')->first()))
                             <div class="col-12">
                                 <div class="nav-tabs-custom maps-tabs">
@@ -118,10 +116,10 @@ $title = getPageUrlByCode('CONTACT', 'title');
                                             <div class="tab-pane {{ $index == 0 ? 'active' : '' }}"
                                                 id="tab_{{ $index }}">
                                                 <div class="row">
-                                                    <div class="col-md-9">
+                                                    <div class="col-md-8">
                                                         {!! $maps->content !!}
                                                     </div>
-                                                    <div class="col-md-3">
+                                                    <div class="col-md-4">
                                                         @if (!empty($blocks['CONTACT-ADDRESS']) && ($blockAddress = $blocks->get('CONTACT-ADDRESS')->first()))
                                                             @if (!empty($blockAddress->children[$index]))
                                                                 <div class="row my-2">

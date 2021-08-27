@@ -1,4 +1,15 @@
 .invesmentNewsList {
+  .name{
+    p.card-text{
+      max-height: (24/16) * 5em;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      text-decoration: none;
+    }
+  }
     .gridNews--2 .itemNew .image > a{
         @include bg-box(405,260); 
 
@@ -32,7 +43,9 @@
       &:hover {
         color: $color-active;
       }
+      
     }
+   
     .btn-link {
       font-size: rem(14);
     }
@@ -53,6 +66,7 @@
       border: solid 1px #55ade2;
       padding: 1px 5px;
       font-size: 12px;
+      vertical-align: middle;
     }
   }
 
@@ -149,7 +163,7 @@
     }
   }
   .ic-video {
-    opacity: 0.8;
+    opacity: 0.3;
     width: 90px;
     height: 64px;
     border: 1px solid rgba(255, 255, 255, 0.5);
@@ -157,7 +171,7 @@
     transform: scale(1) !important;
     border-radius: 20px;
     top: 50%;
-    left: 50%;
+    left: 47%;
     margin-top: -1.875rem;
     margin-left: -1.875rem;
     background: #747474;
@@ -425,7 +439,7 @@
       // top: calc((100% - (((24/16)*4em) + (98*1em)))/2);
       //top: calc((100% - 194px)/2);
       //top: calc((100% - 194px)/2);
-      top: calc((100% - 194px) / 2);
+      top: calc((100% - 50px) / 2);
 
       margin-top: rem(-13);
       @include media-breakpoint-down(md) {
@@ -628,8 +642,7 @@
   }
 }
 .ic-video {
-    opacity: 0.8;
-
+    opacity: 0.3;
   width: 90px;
   height: 64px;
   border: 1px solid rgba(255, 255, 255, 0.5);
@@ -637,7 +650,7 @@
   transform: scale(1) !important;
   border-radius: 20px;
   top: 50%;
-  left: 50%;
+  left: 47%;
   margin-top: -1.875rem;
   margin-left: -1.875rem;
   background: #747474;

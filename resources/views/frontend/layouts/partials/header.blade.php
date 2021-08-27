@@ -42,11 +42,11 @@
                                                 <li><a
                                                         href="{{ route('media.news.category', ['parent_slug' => 'news', 'slug' => 'press-release']) }}">
                                                         <span>Press
-                                                            Release</span></a></li>
+                                                            Releases</span></a></li>
                                                 <li class=""><a
                                                         href="{{ route('media.news.category', ['parent_slug' => 'news', 'slug' => 'mht-in-the-news']) }}">
                                                         <span>MHT
-                                                            in the news</span></a>
+                                                            in the News</span></a>
                                                 </li>
                                                 <li><a href="{{ getPageUrlByCode('MEDIA-GALLERY-VIDEO') }}"
                                                         title="{{ $title = getPageUrlByCode('MEDIA-CENTER', 'title') }}"><span>{{ trans('frontend.media_center_menu') }}</span></a>
@@ -64,20 +64,6 @@
                                     <li class="nav-item hasChild"><a class="nav-link"
                                             href="{{ getPageUrlByCode('ABOUT') }}"
                                             title="{{ $title = getPageUrlByCode('ABOUT', 'title') }}"><span>{{ $title }}</span></a>
-                                        {{-- <ul id="">
-                                            <li class=""><a href="{{getPageUrlByCode('OVERVIEW')}}" title="{{ $title = getPageUrlByCode('OVERVIEW', 'title') }}"><span>{{ $title }}</span></a>
-                                            </li>
-                                            <li><a href="{{getPageUrlByCode('STRATEGY')}}" title="{{ $title = getPageUrlByCode('STRATEGY', 'title') }}"><span>{{ $title }}</span></a>
-                                            </li>
-                                            <li><a href="{{getPageUrlByCode('MANAGEMENT-TEAM')}}" title="{{ $title = getPageUrlByCode('MANAGEMENT-TEAM', 'title') }}"><span>{{ $title }}</span></a>
-                                            </li>
-                                            <li><a href="{{getPageUrlByCode('PARTNER')}}" title="{{$title = getPageUrlByCode('PARTNER', 'title')}}"><span>{{$title}}</span></a>
-                                            </li>
-                                            <li><a href="{{getPageUrlByCode('SHAREHOLDERS')}}" title="{{ $title = getPageUrlByCode('SHAREHOLDERS', 'title') }}"><span>{{ $title }}</span></a>
-                                            </li>
-                                            <li><a href="{{getPageUrlByCode('AWARDS')}}" title="{{ $title = getPageUrlByCode('AWARDS', 'title') }}"><span>{{ $title }}</span></a>
-                                            </li>
-                                        </ul> --}}
                                     </li>
 
                                 </ul>
@@ -222,7 +208,7 @@
                             </div>
                         </div>
                         <div class="searchBox">
-                            Search
+                            {{ trans('frontend.search') }}
                             <button class="btn-search navbar-search-btn"><i class="fa fa-search"></i></button>
                         </div>
                     </div>

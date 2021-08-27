@@ -22,9 +22,9 @@ $title = getPageUrlByCode('ABOUT', 'title');
                 <div id="en">
                     @if (!empty($blocks['OVERVIEW']) && ($overviewBlock = $blocks->get('OVERVIEW')->first()))
 
-                        <div class="block-item overview-bg" style=" background:url('{{ $overviewBlock->photo }}');
-                                                      
-                                                        ">
+                        <div class="block-item overview-bg" style=" background-image:url('{{ $overviewBlock->photo }}');
+                                                              
+                                                                ">
                             <div class="row ">
                                 <div class="col-md-7 col-sm-7 col-xs-12 py-4 px-2">
                                     <div class="card text-white over-view-bg">
@@ -37,12 +37,12 @@ $title = getPageUrlByCode('ABOUT', 'title');
                             </div>
                         </div>
                     @endif
-                    @if (!empty($blocks['DEVELOPMENT-STRATEGY']) && ($devBlock = $blocks->get('DEVELOPMENT-STRATEGY')->first()))
-
-                        {!! $devBlock->content !!}
-
-                    @endif
-
+                    <section id="strategy">
+                        @if (!empty($blocks['DEVELOPMENT-STRATEGY']) && ($devBlock = $blocks->get('DEVELOPMENT-STRATEGY')->first()))
+                            {!! $devBlock->content !!}
+                           
+                        @endif
+                    </section>
 
                     <div class="row">
                         <div class="col-md-6"><strong><span

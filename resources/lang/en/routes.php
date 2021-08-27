@@ -69,7 +69,7 @@ return [
     'media_center_news_detail'=>'media-center/news/detail/{slug}',
 
     'why_choose_vietnam'=>'invest-in-Vietnam/{slug}',
-    'invest_category'=>'invest-in-vietnam/{parent_slug}/{slug?}',
+    'invest_category'=>'invest/{parent_slug}/{slug?}',
     'invest_detail'=>'investments/detail/{slug}',
 
     'property_customer'=>'property-leasing/our-customer/{slug}',

@@ -49,7 +49,7 @@ class SendContactEmailJob implements ShouldQueue
 
 
         // Send to admin
-            $system_email = strip_tags($this->input['department_contact']);
+            $system_email = trim($this->input['department_contact']);
             if ($system_email) {
                 $email = new EMail();
                 $email->subject = 'MHT Web Enquiry - '.$this->input['name'];

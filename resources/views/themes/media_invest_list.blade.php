@@ -7,7 +7,7 @@
 @endsection
 @section('content')
     @include('themes.partials.base',['banner'=>$news_category->banner ??
-    'frontend/images/media-banner.png','text'=>'Investor Center'])
+    'frontend/images/media-banner.png','text'=>$title = getPageUrlByCode('INVESTER-CENTER', 'title') ])
     <section class="invesmentNewsList">
         <div class="container">
             <div class="gridNews--2 mediaEffect" data-waypoint="100%">
@@ -22,31 +22,66 @@
                     @if ($news_category->slug === 'annual-reports' || $news_category->slug === 'bao-cao-thuong-nien')
                         @if (count($annual_report) > 0 && !empty($top_news))
                             @if ((!empty($top_news) && empty($_GET['page'])) || $_GET['page'] == 1)
-                                <div class="col-md-12 break360 mb-4">
-                                    <div class="itemNew bd-tr-r-10">
-                                        <div class="news-list-item row">
-                                            <div class="col-md-8 col-sm-8 col-xs-6">
-                                                <div class="image effectImg first-post"><a
-                                                        style="background-image:url('{{ getLocalFile($top_news->image) }}')"
-                                                        href="{{ getLocalFile($top_news->banner) }}"><img
-                                                            class="img-responsive"
-                                                            src="{{ getLocalFile($top_news->image) }}"></a>
-                                                </div>
-                                            </div>
+                                <div class="col-md-12 col-12 break360 mb-4"> 
+                                    @if ($composer_locale == 'vi')
+                                    <div class="itemNew"> 
+                                        <div class="image effectImg first-post"><a 
+                                                style="background-image:url('{{ getLocalFile($top_news->image) }}')" 
+                                                href="{{ getLocalFile($top_news->vi_file) }}"><img 
+                                                    src="{{ getLocalFile($top_news->image) }}"></a></div> 
+                                        <div class="info"> 
+                                            <a class="title" 
+                                                href="{{ getLocalFile($top_news->vi_file) }}">{{ summary($top_news->title, 140) }} 
+                                            </a> 
+                                            <div class="name"> 
+                                                <p class="card-text"> 
+                                                    {{ $top_news->shortdesc }} 
+                                                </p> 
+                                            </div> 
+                                            <div class="row pt-3"> 
+                                                <div class="col-12 text-right"> 
+                                                    <a class="btn-link" 
+                                                        href="{{ getLocalFile($top_news->vi_file) }}"> 
+                                                        {{ trans('button.view_and_download') }} 
+                                                    </a> 
+                                                </div> 
+ 
+                                            </div> 
+ 
+                                        </div> 
+ 
+ 
+                                    </div> 
+                                @else
+                                <div class="itemNew"> 
+                                    <div class="image effectImg first-post"><a 
+                                            style="background-image:url('{{ getLocalFile($top_news->image) }}')" 
+                                            href="{{ getLocalFile($top_news->banner) }}"><img 
+                                                src="{{ getLocalFile($top_news->image) }}"></a></div> 
+                                    <div class="info"> 
+                                        <a class="title" 
+                                            href="{{ getLocalFile($top_news->banner) }}">{{ summary($top_news->title, 140) }} 
+                                        </a> 
+                                        <div class="name"> 
+                                            <p class="card-text"> 
+                                                {{ $top_news->shortdesc }} 
+                                            </p> 
+                                        </div> 
+                                        <div class="row pt-3"> 
+                                            <div class="col-12 text-right"> 
+                                                <a class="btn-link" 
+                                                    href="{{ getLocalFile($top_news->banner) }}"> 
+                                                    {{ trans('button.view_and_download') }} 
+                                                </a> 
+                                            </div> 
 
-                                            <div class="col-md-4 col-sm-4 col-xs-6">
-                                                <div class="info">
-                                                    <div class="date">
-                                                        {{ Date2String($top_news->publish_at, ' M d, Y') }}
-                                                    </div>
-                                                    <a class="title"
-                                                        href="{{ getLocalFile($top_news->banner) }}">{{ summary($top_news->title, 140) }}</a>
-                                                    <p class="short-desc">{{ $top_news->shortdesc }}</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                        </div> 
+
+                                    </div> 
+                                </div> 
+                                @endif
+                                    
+                                </div> 
                             @endif
                             @foreach ($annual_report as $index => $item)
                                 <div class="col-md-4 break360">
@@ -66,8 +101,7 @@
                                             </div>
                                             <div class="row pt-3">
                                                 <div class="col-12 text-right">
-                                                    <a class="btn-link"
-                                                        href="{{ getLocalFile($item->banner) }}">
+                                                    <a class="btn-link" href="{{ getLocalFile($item->banner) }}">
                                                         {{ trans('button.view_and_download') }}
                                                     </a>
                                                 </div>
@@ -88,7 +122,7 @@
                 @if (count($news) > 0)
                     @foreach ($news as $index => $item)
                         <div class="row">
-                            <div class="col-12 mb-lg-5">
+                            <div class="col-12 mb-lg-3">
                                 <div class="sub-title active" data-waypoint="100%">{{ $index }}
                                 </div>
                             </div>
@@ -101,24 +135,32 @@
                                             <div class="date"> <i
                                                     class="fa fa-calendar"></i>{{ Date2String($news['publish_at'], 'd/m/Y') }}
                                             </div>
-                                            <a class="text-gray" href="{{ $news['image'] }}">
-                                                <div class="name">
-                                                    <strong class="card-text">
-                                                        @if ($composer_locale == 'vi')
+                                            @if ($composer_locale == 'vi')
+                                                <a class="text-gray" href="{{ $news['vi_file'] }}">
+                                                    <div class="name">
+                                                        <strong class="card-text">
                                                             {{ $news['translations'][1]['title'] ? $news['translations'][1]['title'] : $news['translations'][0]['title'] }}
-                                                        @else
-                                                            {{ $news['translations'][0]['title'] }}
-                                                        @endif
-                                                    </strong>
-                                                </div>
-                                            </a>
-                                            <p class="card-text">
-                                                @if ($composer_locale == 'vi')
+                                                        </strong>
+                                                    </div>
+                                                </a>
+                                                <p class="card-text">
                                                     {{ $news['translations'][1]['description'] ? $news['translations'][1]['description'] : $news['translations'][0]['description'] }}
-                                                @else
+                                                </p>
+                                            @else
+                                                <a class="text-gray" href="{{ $news['image'] }}">
+                                                    <div class="name">
+                                                        <strong class="card-text">
+
+                                                            {{ $news['translations'][0]['title'] }}
+                                                        </strong>
+                                                    </div>
+                                                </a>
+                                                <p class="card-text">
+
                                                     {{ $news['translations'][0]['description'] }}
-                                                @endif
-                                            </p>
+                                                </p>
+                                            @endif
+
 
                                         </div>
                                     </div>

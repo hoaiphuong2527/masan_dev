@@ -4,7 +4,7 @@
 @endsection
 
 @section('content')
-    @include('themes.partials.base',['banner'=>'frontend/images/media-banner.png','text'=>'Media Center'])
+    @include('themes.partials.base',['banner'=>'frontend/images/media-banner.png','text'=>$title = getPageUrlByCode('MEDIA-CENTER', 'title') ])
     <section class="ourNewsList">
         <div class="container">
             <div class="gridNews--2 gridNewsPhoto mediaEffect" data-waypoint="100%">

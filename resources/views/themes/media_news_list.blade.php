@@ -6,8 +6,7 @@
     <title>{{ $news_category->name }}</title>
 @endsection
 @section('content')
-    @include('themes.partials.base',['banner'=>$news_category->banner ?? 'frontend/images/media-banner.png','text'=>'Media
-    Center'])
+    @include('themes.partials.base',['banner'=>$news_category->banner ?? 'frontend/images/media-banner.png','text'=>$title = getPageUrlByCode('MEDIA-CENTER', 'title') ])
     <section class="ourNewsList">
         <div class="container">
             <div class="gridNews--2 mediaEffect" data-waypoint="100%">
@@ -32,7 +31,7 @@
                     @if (count($news_press_release) > 0)
                         @foreach ($news_press_release as $index => $item)
                             <div class="row">
-                                <div class="col-12 mb-lg-5">
+                                <div class="col-12 mb-lg-3">
                                     <div class="sub-title active" data-waypoint="100%">{{ $index }}
                                     </div>
                                 </div>
@@ -40,32 +39,39 @@
                             <div class="relativeBox mt-0 pt-0" data-waypoint="100%">
                                 <div class="gridNews--2 slideNews">
                                     @foreach ($item as $news)
-                                        <div class="itemNew border-0">
-                                            <div class="info">
-                                                <div class="date"> <i
-                                                        class="fa fa-calendar"></i>{{ Date2String($news['publish_at'], 'd/m/Y') }}
-                                                </div>
-                                                <a class="text-gray" href="{{ $news['image'] }}">
+                                    <div class="itemNew border-0">
+                                        <div class="info">
+                                            <div class="date"> <i
+                                                    class="fa fa-calendar"></i>{{ Date2String($news['publish_at'], 'd/m/Y') }}
+                                            </div>
+                                            @if ($composer_locale == 'vi')
+                                                <a class="text-gray" href="{{ $news['vi_file'] }}">
                                                     <div class="name">
                                                         <strong class="card-text">
-                                                            @if ($composer_locale == 'vi')
-                                                                {{ $news['translations'][1]['title'] ? $news['translations'][1]['title'] : $news['translations'][0]['title'] }}
-                                                            @else
-                                                                {{ $news['translations'][0]['title'] }}
-                                                            @endif
+                                                            {{ $news['translations'][1]['title'] ? $news['translations'][1]['title'] : $news['translations'][0]['title'] }}
                                                         </strong>
                                                     </div>
                                                 </a>
                                                 <p class="card-text">
-                                                    @if ($composer_locale == 'vi')
-                                                        {{ $news['translations'][1]['description'] ? $news['translations'][1]['description'] : $news['translations'][0]['description'] }}
-                                                    @else
-                                                        {{ $news['translations'][0]['description'] }}
-                                                    @endif
+                                                    {{ $news['translations'][1]['description'] ? $news['translations'][1]['description'] : $news['translations'][0]['description'] }}
                                                 </p>
-                                            </div>
+                                            @else
+                                                <a class="text-gray" href="{{ $news['image'] }}">
+                                                    <div class="name">
+                                                        <strong class="card-text">
+
+                                                            {{ $news['translations'][0]['title'] }}
+                                                        </strong>
+                                                    </div>
+                                                </a>
+                                                <p class="card-text">
+
+                                                    {{ $news['translations'][0]['description'] }}
+                                                </p>
+                                            @endif
                                         </div>
-                                    @endforeach
+                                    </div>
+                                @endforeach
                                 </div>
                             </div>
                         @endforeach

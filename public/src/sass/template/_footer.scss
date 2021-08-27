@@ -93,12 +93,11 @@ footer.bd-footer {
         text-align: right;
     }
     color: #E6E6E6;
-    text-align: center;
     padding-top: rem(0);
     margin-top: rem(10);
     font-size: rem(14);
     font-weight: 500;
-    text-align:left;
+    line-break: anywhere;
 
     p {
         margin: 0;
