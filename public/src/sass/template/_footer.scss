@@ -88,6 +88,9 @@ footer.bd-footer {
 }
 
 .copyright,.note {
+    .lb-any{
+        line-break: anywhere;
+    }
     &.note{
         color: #E6E6E6;
         text-align: right;
@@ -97,15 +100,14 @@ footer.bd-footer {
     margin-top: rem(10);
     font-size: rem(14);
     font-weight: 500;
-    line-break: anywhere;
 
     p {
         margin: 0;
     }
     @include media-breakpoint-down(md) {
-        span{
-            display:block
-        }
+        // span{
+        //     display:block
+        // }
     }
 }
 
@@ -123,7 +125,7 @@ footer.bd-footer {
     cursor: pointer;
     display: none;
     font-size:rem(15);
-    //font-weight: 800;
+    //font-weight: bold;
     box-shadow: 1px 4px 16px 0px rgba(50, 50, 50, 0.13);
     z-index: 9999;
     @include media-breakpoint-down(md) {

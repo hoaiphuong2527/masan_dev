@@ -1,9 +1,9 @@
 .invesmentNewsList {
   .name{
     p.card-text{
-      max-height: (24/16) * 5em;
+      height: (24/16) * 9em !important;
       display: -webkit-box;
-      -webkit-line-clamp: 5;
+      -webkit-line-clamp: 9 !important;
       -webkit-box-orient: vertical;
       text-overflow: ellipsis;
       overflow: hidden;
@@ -20,15 +20,19 @@
     }
     padding-bottom: 70px;
     .gridNews--2 .itemNew .info .title{
-        height: unset;
+        // height: unset;
+        -webkit-line-clamp: 1;
         margin-bottom: 10px;
+        font-size: 22px;
+        height: (24/16) * 1em;
+
     }
   .itemNew {
     .title {
       display: block;
       font-size: rem(26);
       color: #7b7c7e;
-      font-weight: 900;
+      font-weight: bold;
       letter-spacing: 0.75px;
       line-height: (24/16);
       max-height: (24/16) * 3em;
@@ -303,7 +307,7 @@
     span.lbl {
       font-size: rem(16);
       font-family: $font-custom;
-      font-weight: 800;
+      font-weight: bold;
       display: inline-block;
       vertical-align: middle;
       margin-right: rem(13);
@@ -338,6 +342,17 @@
     border-top-right-radius: 10px !important;
 }    
 .ourNewsList{
+  .name{
+    p.card-text{
+      height: (24/16) * 7em;
+      display: -webkit-box;
+      -webkit-line-clamp: 7;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      text-decoration: none;
+    }
+  }
     .gridNews--2 .itemNew .image.image.first-post > a{
         @include bg-box(843,390); 
 
@@ -484,6 +499,15 @@
           height: (24/16) * 2em;
           max-height: unset;
         }
+        p{
+          height: (24/16) * 7em;
+          display: -webkit-box;
+          -webkit-line-clamp: 7;
+          -webkit-box-orient: vertical;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          text-decoration: none;
+      }
       }
       &:hover {
         background: rgba(#fff, 1);
@@ -782,7 +806,7 @@
   span.lbl {
     font-size: rem(16);
     font-family: $font-custom;
-    font-weight: 800;
+    font-weight: bold;
     display: inline-block;
     vertical-align: middle;
     margin-right: rem(13);

@@ -21,14 +21,14 @@
                     @else
                         <li><a
                                 href="{{ route('media.news.category', ['parent_slug' => 'news', 'slug' => 'press-release']) }}">Press
-                                Release</a></li>
+                                Releases</a></li>
                         <li class=""><a
                                 href="{{ route('media.news.category', ['parent_slug' => 'news', 'slug' => 'mht-in-the-news']) }}">MHT
-                                in the news</a>
+                                in The News</a>
                         </li>
                     @endif
 
-                    <li class="active"><a href="{{ getPageUrlByCode('MEDIA-GALLERY-VIDEO') }}">Media Library</a></li>
+                    <li class="active"><a href="{{ getPageUrlByCode('MEDIA-GALLERY-VIDEO') }}">{{ $title = getPageUrlByCode('MEDIA-GALLERY-VIDEO', 'title') }}</a></li>
                 </ul>
                 <div class="row">
                     @foreach ($media_gallery_video as $item)

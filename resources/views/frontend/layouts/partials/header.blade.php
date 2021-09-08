@@ -1,6 +1,6 @@
 <header class="header">
     <div class="container">
-        <div class="row">
+        <div class="row mt-xs-3">
             <div class="col-lg-3 col-12"><a class="logo" href="{{ route('page.home') }}"><img
                         src="/assets/images/masan-logo.svg" alt=""></a></div>
             <div class="col-lg-9 col-12"><a class="header__toggle"
@@ -24,11 +24,11 @@
                                                             cáo báo chí</span></a></li>
                                                 <li class=""><a
                                                         href="{{ route('media.news.category', ['parent_slug' => 'tin-tuc', 'slug' => 'ban-tin-mht']) }}">
-                                                        <span>Bản
+                                                        <span>Điểm
                                                             tin MHT</span></a>
                                                 </li>
                                                 <li><a href="{{ getPageUrlByCode('MEDIA-GALLERY-VIDEO') }}"
-                                                        title="{{ $title = getPageUrlByCode('MEDIA-CENTER', 'title') }}"><span>{{ trans('frontend.media_center_menu') }}</span></a>
+                                                        title="{{ $title = getPageUrlByCode('MEDIA-GALLERY-VIDEO', 'title') }}"><span>{{ $title }}</span></a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -46,10 +46,10 @@
                                                 <li class=""><a
                                                         href="{{ route('media.news.category', ['parent_slug' => 'news', 'slug' => 'mht-in-the-news']) }}">
                                                         <span>MHT
-                                                            in the News</span></a>
+                                                            In The News</span></a>
                                                 </li>
                                                 <li><a href="{{ getPageUrlByCode('MEDIA-GALLERY-VIDEO') }}"
-                                                        title="{{ $title = getPageUrlByCode('MEDIA-CENTER', 'title') }}"><span>{{ trans('frontend.media_center_menu') }}</span></a>
+                                                        title="{{ $title = getPageUrlByCode('MEDIA-GALLERY-VIDEO', 'title') }}"><span>{{ $title }}</span></a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -70,20 +70,20 @@
                                 @if ($composer_locale == 'vi')
                                     <ul class="nav-menu" id="main-menu">
                                         <li class="nav-item hasChild"><a class="nav-link"
-                                                href="{{ route('media.investments.category', ['parent_slug' => 'thong-tin-dau-tu', 'slug' => 'bao-cao-thuong-nien']) }}"
+                                                href="{{ route('media.investments.category', ['parent_slug' => 'quan-he-co-dong', 'slug' => 'bao-cao-thuong-nien']) }}"
                                                 title="{{ $title = getPageUrlByCode('INVESTER-CENTER', 'title') }}"><span>{{ $title }}</span></a><span
                                                 class="expand"><i class="fa fa-angle-down"></i></span>
                                             <ul id="">
-                                                <li><a href="{{ route('media.investments.category', ['parent_slug' => 'thong-tin-dau-tu', 'slug' => 'bao-cao-thuong-nien']) }}"
+                                                <li><a href="{{ route('media.investments.category', ['parent_slug' => 'quan-he-co-dong', 'slug' => 'bao-cao-thuong-nien']) }}"
                                                         title="{{ $title = getPageUrlByCode('MEDIA-CENTER', 'title') }}"><span>{{ trans('frontend.annual_reports') }}</span></a>
                                                 </li>
-                                                <li><a href="{{ route('media.investments.category', ['parent_slug' => 'thong-tin-dau-tu', 'slug' => 'tai-lieu-cong-ty']) }}"
+                                                <li><a href="{{ route('media.investments.category', ['parent_slug' => 'quan-he-co-dong', 'slug' => 'tai-lieu-cong-ty']) }}"
                                                         title="{{ $title = getPageUrlByCode('MEDIA-CENTER', 'title') }}"><span>{{ trans('frontend.corporate_documents') }}</span></a>
                                                 </li>
-                                                <li><a href="{{ route('media.investments.category', ['parent_slug' => 'thong-tin-dau-tu', 'slug' => 'thong-tin-tai-chinh']) }}"
+                                                <li><a href="{{ route('media.investments.category', ['parent_slug' => 'quan-he-co-dong', 'slug' => 'thong-tin-tai-chinh']) }}"
                                                         title="{{ $title = getPageUrlByCode('MEDIA-CENTER', 'title') }}"><span>{{ trans('frontend.financial_information') }}</span></a>
                                                 </li>
-                                                <li><a href="{{ route('media.investments.category', ['parent_slug' => 'thong-tin-dau-tu', 'slug' => 'thong-bao-cong-ty']) }}"
+                                                <li><a href="{{ route('media.investments.category', ['parent_slug' => 'quan-he-co-dong', 'slug' => 'thong-bao-cong-ty']) }}"
                                                         title="{{ $title = getPageUrlByCode('MEDIA-CENTER', 'title') }}"><span>{{ trans('frontend.corporate_announcements') }}</span></a>
                                                 </li>
                                         </li>
@@ -113,16 +113,6 @@
                                 <li class="nav-item hasChild"><a class="nav-link"
                                         href="{{ getPageUrlByCode('SUSTAINABILITY') }}"
                                         title="{{ $title = getPageUrlByCode('SUSTAINABILITY', 'title') }}"><span>{{ $title }}</span></a>
-                                    {{-- <ul id="">
-                                            <li><a href="{{getPageUrlByCode('CSR')}}" title="{{ $title = getPageUrlByCode('CSR', 'title') }}"><span>{{ $title }}</span></a>
-                                            </li>
-                                            <li><a href="{{getPageUrlByCode('ECONOMIC-RESTORERATION')}}" title="{{ $title = getPageUrlByCode('ECONOMIC-RESTORERATION', 'title') }}"><span>{{ $title }}</span></a>
-                                            </li>
-                                            <li><a href="{{getPageUrlByCode('COMMUNITY-DEVELOPMENT')}}" title="{{ $title = getPageUrlByCode('COMMUNITY-DEVELOPMENT', 'title') }}"><span>{{ $title }}</span></a>
-                                            </li>
-                                            <li><a href="{{getPageUrlByCode('SUSTAINABILITY-THROUGH-INOVATION')}}" title="{{ $title = getPageUrlByCode('SUSTAINABILITY-THROUGH-INOVATION', 'title') }}"><span>{{ $title }}</span></a>
-                                            </li>
-                                        </ul> --}}
                                 </li>
                                 <li class="nav-item hasChild"><a class="nav-link"
                                         href="{{ getPageUrlByCode('SUBSIDAIRY') }}"
@@ -217,7 +207,6 @@
                         <div class="innerSearch navbar-search">
                             <input class="form-control" type="text" name="q" value="{{ request()->get('q') }}"
                                 placeholder="{{ trans('frontend.looking_for') }}?">
-
                             <button class="btn-search-close">
                                 <i class="fa fa-search"></i></button>
                         </div>

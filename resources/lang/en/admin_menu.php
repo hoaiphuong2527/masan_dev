@@ -2,7 +2,7 @@
 return [
     'sign_out' => 'Sign Out',
     'profile' => 'Profile',
-    'dashboard' => 'Dashboard',
+    // 'dashboard' => 'Dashboard',
     'news' => 'News',
     'news_list' => 'News list',
     'news_create' => 'Create news',
@@ -63,7 +63,7 @@ return [
     'book_spaces' => 'Reservation register',
     'visit_registration' => 'Visit registration',
     'faq_question' => 'Customer\'s question',
-    'gallery' => 'Photo/Video-Library',
+    'gallery' => 'Video-Library',
     'catalogue' => 'Catalogue',
     'catalogue_list' => 'Catalogue list',
     'create_catalogue' => 'Create catalogue',

@@ -23,8 +23,8 @@ $title = getPageUrlByCode('ABOUT', 'title');
                     @if (!empty($blocks['OVERVIEW']) && ($overviewBlock = $blocks->get('OVERVIEW')->first()))
 
                         <div class="block-item overview-bg" style=" background-image:url('{{ $overviewBlock->photo }}');
-                                                              
-                                                                ">
+                                                                  
+                                                                    ">
                             <div class="row ">
                                 <div class="col-md-7 col-sm-7 col-xs-12 py-4 px-2">
                                     <div class="card text-white over-view-bg">
@@ -40,7 +40,7 @@ $title = getPageUrlByCode('ABOUT', 'title');
                     <section id="strategy">
                         @if (!empty($blocks['DEVELOPMENT-STRATEGY']) && ($devBlock = $blocks->get('DEVELOPMENT-STRATEGY')->first()))
                             {!! $devBlock->content !!}
-                           
+
                         @endif
                     </section>
 
@@ -88,6 +88,13 @@ $title = getPageUrlByCode('ABOUT', 'title');
                                                 href="javascript:void(0);">{{ $operationBlock->name }}</a>
                                         </li>
                                     @endif
+                                    @if (!empty($blocks['LEGAL']) && ($operationBlock = $blocks->get('LEGAL')->first()))
+
+                                        <li class="nav-item" data-target="{{ $operationBlock->code }}-slide"><a
+                                                class="nav-link"
+                                                href="javascript:void(0);">{{ $operationBlock->name }}</a>
+                                        </li>
+                                    @endif
                                     @if (!empty($blocks['SUPERVISOR']) && ($operationBlock = $blocks->get('SUPERVISOR')->first()))
 
                                         <li class="nav-item" data-target="{{ $operationBlock->code }}-slide"><a
@@ -95,6 +102,7 @@ $title = getPageUrlByCode('ABOUT', 'title');
                                                 href="javascript:void(0);">{{ $operationBlock->name }}</a>
                                         </li>
                                     @endif
+
                                 </ul>
                             </nav>
                         </div>
@@ -167,6 +175,22 @@ $title = getPageUrlByCode('ABOUT', 'title');
                                 </div>
                             @endforeach
                         @endif
+                        @if (!empty($blocks['LEGAL']) && ($operationBlock = $blocks->get('LEGAL')->first()))
+                            @foreach ($operationBlock->children as $index => $person)
+                                <div class="sliderManager__item ">
+                                    <div class="sliderManager__item__image manager">
+                                        <div class="image "><a style="background-image:url('{{ $person->photo }}')"> <img
+                                                    alt="ceo" src="{{ $person->photo }}" /> </a></div>
+                                    </div>
+
+                                    <div class="info info-manager"><a class="title"
+                                            href="javascript:void(0);">{{ $person->name }}</a>
+
+                                        <div class="name">{{ $person->description }}</div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        @endif
                         @if (!empty($blocks['SUPERVISOR']) && ($operationBlock = $blocks->get('SUPERVISOR')->first()))
                             @foreach ($operationBlock->children as $index => $person)
                                 <div class="sliderManager__item ">
@@ -183,6 +207,7 @@ $title = getPageUrlByCode('ABOUT', 'title');
                                 </div>
                             @endforeach
                         @endif
+
                     </div>
                     @if (!empty($blocks['MANAGERMENT']) && ($operationBlock = $blocks->get('MANAGERMENT')->first()))
                         <div class="sliderManager " id="{{ $operationBlock->code }}-slide">
@@ -262,6 +287,25 @@ $title = getPageUrlByCode('ABOUT', 'title');
 
 
                     @if (!empty($blocks['SUPERVISOR']) && ($operationBlock = $blocks->get('SUPERVISOR')->first()))
+                        <div class="sliderManager " id="{{ $operationBlock->code }}-slide">
+                            @foreach ($operationBlock->children as $index => $person)
+                                <div class="sliderManager__item ">
+                                    <div class="sliderManager__item__image manager">
+                                        <div class="image "><a style="background-image:url('{{ $person->photo }}')"> <img
+                                                    alt="ceo" src="{{ $person->photo }}" /> </a></div>
+                                    </div>
+
+                                    <div class="info info-manager"><a class="title"
+                                            href="javascript:void(0);">{{ $person->name }}</a>
+
+                                        <div class="name">{{ $person->description }}</div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    @endif
+
+                    @if (!empty($blocks['LEGAL']) && ($operationBlock = $blocks->get('LEGAL')->first()))
                         <div class="sliderManager " id="{{ $operationBlock->code }}-slide">
                             @foreach ($operationBlock->children as $index => $person)
                                 <div class="sliderManager__item ">

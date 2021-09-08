@@ -49,7 +49,7 @@
   .titleHeading--content {
     margin-bottom: rem(60);
     h1 {
-      font-weight: 800;
+      font-weight: bold;
     }
   }
   .career-link {
@@ -203,7 +203,7 @@
     .title {
       > a {
         color: $color-title;
-        font-weight: 800;
+        font-weight: bold;
         font-size: rem(18);
         display: -webkit-box;
         -webkit-line-clamp: 2;
@@ -224,7 +224,7 @@
     }
     .btn-view-2 {
       color: $color-hover;
-      font-weight: 800;
+      font-weight: bold;
       border: 1px solid #e8e8e9;
       font-size: rem(16);
       padding: rem(5) rem(10);
@@ -298,6 +298,8 @@
     color: #7b7c7e;
     font-weight: 300;
     padding: rem(20) 0;
+    -webkit-line-clamp: 2;
+    height: 4em;
     &:hover {
       color: #55ade2;
     }
@@ -566,7 +568,7 @@ h4.list-title {
     margin: 0 0px 0px 1050px;
     line-height: 100px;
     font-size: 32px;
-    font-weight: 800;
+    font-weight: bold;
     color: white;
   }
 
@@ -577,7 +579,7 @@ h4.list-title {
     margin: 0px 0px 0px 800px;
     line-height: 45px;
     font-size: 32px;
-    font-weight: 800;
+    font-weight: bold;
     color: white;
   }
 
@@ -588,7 +590,7 @@ h4.list-title {
     margin: 0px 0px 0px 550px;
     line-height: 100px;
     font-size: 32px;
-    font-weight: 800;
+    font-weight: bold;
     color: white;
   }
 
@@ -599,7 +601,7 @@ h4.list-title {
     margin: 0px 0px 0px 300px;
     line-height: 100px;
     font-size: 32px;
-    font-weight: 800;
+    font-weight: bold;
     color: white;
   }
 
@@ -610,7 +612,7 @@ h4.list-title {
     margin: 0px 0px 0px 50px;
     line-height: 100px;
     font-size: 32px;
-    font-weight: 800;
+    font-weight: bold;
     color: white;
   }
 

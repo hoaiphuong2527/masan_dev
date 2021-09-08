@@ -9,6 +9,10 @@ return [
     'r_name'=>'Họ tên không được để trống',
     'r_email'=>'Email không được để trống',
     'e_valid'=>'Email không hợp lệ',
+    'r_company'=>'Tên công ty không được để trống',
+    'r_message'=>'Nội dung không được để trống',
+    'r_department'=>'Vui lòng chọn một bộ phận để liên lạc',
+    
     'r_phone'=>'Số điện thoại không được để trống',
     'min_phone'=>'The phone must be at least {0}',
     'max_phone'=>'The phone may not be greater than {0}',
@@ -51,7 +55,7 @@ return [
       '2019.2' => 'MTC obtained the Certificate of High-Tech Enterprise',
       '2020' => "6/2020, Company's name changed into Masan High Tech Materials",
       
-      'product' => 'Sản Phẩm',
+      'product' => 'Sản phẩm',
       'subTitle_product' => 'With the exceptional features, our products played an
       important role in the global heavy industry.',
 
@@ -68,16 +72,16 @@ return [
       'bismuth' => 'Bismuth',
       'des_bismuth' => "Bismuth là kim loại có tính kháng khuẩn tốt, được sử dụng rộng rãi trong các ứng dụng y tế, để điều trị các bệnh dạ dày, bỏng, và rối loạn đường ruột. Màu sắc óng ánh và các chất tạo màu của Bismut là đặc tính lý tưởng cho ngành sản xuất mỹ phẩm và gốm sứ.",
 
-      'news' => 'Tin Tức',
+      'news' => 'Tin tức',
       'show_all_news' => 'Các tin tức khác',
       'new_news' => 'Tin mới',
 
 
-      'business' => 'Đôi Nét Về Công Ty',
+      'business' => 'Đôi nét về Công Ty',
       'about' => 'Giới thiệu',
-      'products' => 'Sản Phẩm',
+      'products' => 'Sản phẩm',
       'sustainability' => 'Phát triển bền vững',
 
-      'media' => 'Tư Liệu Truyền Thông',
+      'media' => 'Tư liệu truyền thông',
     ],
 ];

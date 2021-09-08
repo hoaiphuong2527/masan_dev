@@ -34,7 +34,7 @@ return [
     'book' => 'Reservation register',
     'register' => 'Register',
     'view_more' => 'Xem thêm',
-    'view_and_download' => 'Xem & tải',
+    'view_and_download' => 'Xem & Tải',
     'read_more' => 'Đọc thêm',
     'contact' => 'Contact',
     'contact_to_buy' => 'Contact to buy',

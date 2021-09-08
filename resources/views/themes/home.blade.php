@@ -286,9 +286,9 @@
                     @endforeach
                 </div>
                 <div class="row py-lg-5 mt-lg-5 ">
-                    <h5 class="text-uppercase text-center col-12">
-                        <a href="{{ route('page.show', ['slug' => 'media-center/gallery/photos']) }}"
-                            class="btn btn-gray btn-xs ">{{ trans('home.viewAllDown') }}
+                    <h5 class="text-center col-12">
+                        <a href="{{ getPageUrlByCode('MEDIA-GALLERY-VIDEO') }}"
+                            class="btn button2 btn-xs ml-0 s">{{ trans('home.viewAllDown') }}
                         </a>
                     </h5>
                 </div>

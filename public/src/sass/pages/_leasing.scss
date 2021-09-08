@@ -140,7 +140,7 @@
             @include transition();
             .title{
                 font-family: "Arial";
-                font-weight: 800;
+                font-weight: bold;
                 font-size: rem(22);
                 color: #11396F;
                 letter-spacing: (75/1000)*1rem;
@@ -247,7 +247,7 @@
             @include transition();
             .title{
                 font-family: "Arial";
-                font-weight: 800;
+                font-weight: bold;
                 font-size: rem(18);
                 color: #58595B;
                 letter-spacing: (75/1000)*1rem;

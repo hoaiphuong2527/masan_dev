@@ -10,6 +10,10 @@ return [
     'r_email'=>'The email is required',
     'e_valid'=>'The email is invalid',
     'r_phone'=>'The phone is required',
+    'r_company'=>'The company name is required',
+    'r_message'=>'The message is required',
+    'r_department'=>'The department is required',
+
     'min_phone'=>'The phone must be at least {0}',
     'max_phone'=>'The phone may not be greater than {0}',
     'r_content'=>'The message is required',

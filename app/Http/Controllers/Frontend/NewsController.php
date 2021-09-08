@@ -43,9 +43,9 @@ class NewsController extends Controller
 
         $news_category = $this->news_category->findBySlug($slug);
         Breadcrumb::add($news_category->name, route('media.news.category',['parent_slug'=>$news_category_parent->slug,'slug'=>$news_category->slug]));
-        $news = $news_category->news()->where('is_top', 0)->paginate(9);
+        $news = $news_category->news()->orderByDesc('publish_at')->where('is_top', 0)->paginate(9);
         $top_news = $news_category->news()->where('is_top', 1)->first();
-        $news_press_release = $news_category->news()->get()->groupBy(function($val) {
+        $news_press_release = $news_category->news()->orderByDesc('publish_at')->get()->groupBy(function($val) {
             return Carbon::parse($val->publish_at)->format('Y');
       })->toArray();
         foreach ($news_category_parent->translations as $translation) {

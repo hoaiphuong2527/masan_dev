@@ -67,7 +67,8 @@ $title = getPageUrlByCode('CONTACT', 'title');
                                                 <select name="department_contact" class="selectpicker show-tick "
                                                     title="{{ trans('frontend.department_contact') }}">
                                                     @foreach ($block->children as $index => $item)
-                                                        <option value="{!! strip_tags($item->content) !!}">{{ $item->description }}
+                                                    <option value="{!!strip_tags($item->content)!!}">
+                                                        {{ $item->description }}
                                                         </option>
                                                     @endforeach
                                                 </select>
@@ -156,10 +157,17 @@ $title = getPageUrlByCode('CONTACT', 'title');
                         required: true,
                         email: true
                     },
+                    company: "required",
+                    company_profile: "required",
+                    department_contact:"required",
+                 
 
                 },
                 messages: {
                     name: "{{ trans('home.r_name') }}",
+                    company: "{{ trans('home.r_company') }}",
+                    company_profile: "{{ trans('home.r_message') }}",
+                    department_contact: "{{ trans('home.r_department') }}",
                     email: {
                         required: "{{ trans('home.r_email') }}",
                         email: "{{ trans('home.e_valid') }}"

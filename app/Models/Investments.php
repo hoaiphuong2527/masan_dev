@@ -24,7 +24,12 @@ class Investments extends Model implements Transformable
         'is_top',
         'publish_at',
         'code',
-        'vi_file'
+        'en_file',
+        'vi_file',
+        'en_thumb',
+        'vi_thumb'
+
+
     ];
 
     public function scopeActive($query)

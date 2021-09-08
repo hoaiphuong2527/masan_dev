@@ -14,19 +14,21 @@ class Search
     public $title;
     public $description;
 
-    public static $TYPE_OUR_BUSINESS = 1;
-    public static $TYPE_PROPERTY = 2;
-    public static $TYPE_MEDIA = 3;
-    public static $TYPE_CAREER = 4;
+    public static $TYPE_PAGE = 1;
+    public static $TYPE_NEWS = 2;
+    public static $TYPE_MEDIA = 4;
+    public static $TYPE_INVEST = 3;
 
     public function getTypeName()
     {
         switch ($this->type)
         {
-            case self::$TYPE_PROPERTY : return trans('frontend.property_leasing');
+            case self::$TYPE_PAGE : return trans('frontend.page');
+            case self::$TYPE_INVEST : return trans('frontend.investment');
+            case self::$TYPE_NEWS : return trans('frontend.news');
             case self::$TYPE_MEDIA : return trans('frontend.media_center');
-            case self::$TYPE_CAREER : return trans('frontend.careers');
-            default: return trans('frontend.our_businesses');
+
+            default: return trans('frontend.page');
         }
     }
 }

@@ -30,9 +30,34 @@
         </div>
     </div>
 </div>
+
+<div id="choose_img" @if(!empty($news) && $news->news_category_id != 11) class="hidden" @else class="row"  @endif>
+    <div class="col-md-4">
+        <div class="font-bold col-green">Image(EN)</div>
+        <div class="form-group">
+            @component('admin.layouts.components.upload_photo', [
+                'image' => $news->en_thumb ?? null,
+                'name' => 'en_thumb',
+                ])
+            @endcomponent
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="font-bold col-green">Image(VI)</div>
+        <div class="form-group">
+            @component('admin.layouts.components.upload_photo', [
+                'image' => $news->vi_thumb ?? null,
+                'name' => 'vi_thumb',
+                ])
+            @endcomponent
+        </div>
+    </div>
+</div>
+
+
 <div class="row">
     <div class="col-md-8">
-        <div class="font-bold col-green">Image or pdf(EN)</div>
+        <div class="font-bold col-green">File to download(EN)</div>
         <div class="form-group form-float">
             <div class="form-line">
                 <input type="text" id="link_download_input" class="form-control"
@@ -43,7 +68,7 @@
         </div>
     </div>
     <div class="col-md-8">
-        <div class="font-bold col-green">Image or pdf(VN)</div>
+        <div class="font-bold col-green">File to download(VI)</div>
         <div class="form-group form-float">
             <div class="form-line">
                 <input type="text" id="link_download_input_vi" class="form-control"

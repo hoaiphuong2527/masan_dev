@@ -22,77 +22,70 @@
                     @if ($news_category->slug === 'annual-reports' || $news_category->slug === 'bao-cao-thuong-nien')
                         @if (count($annual_report) > 0 && !empty($top_news))
                             @if ((!empty($top_news) && empty($_GET['page'])) || $_GET['page'] == 1)
-                                <div class="col-md-12 col-12 break360 mb-4"> 
+                                <div class="col-md-12 col-12 break360 mb-4">
                                     @if ($composer_locale == 'vi')
-                                    <div class="itemNew"> 
-                                        <div class="image effectImg first-post"><a 
-                                                style="background-image:url('{{ getLocalFile($top_news->image) }}')" 
-                                                href="{{ getLocalFile($top_news->vi_file) }}"><img 
-                                                    src="{{ getLocalFile($top_news->image) }}"></a></div> 
-                                        <div class="info"> 
-                                            <a class="title" 
-                                                href="{{ getLocalFile($top_news->vi_file) }}">{{ summary($top_news->title, 140) }} 
-                                            </a> 
-                                            <div class="name"> 
-                                                <p class="card-text"> 
-                                                    {{ $top_news->shortdesc }} 
-                                                </p> 
-                                            </div> 
-                                            <div class="row pt-3"> 
-                                                <div class="col-12 text-right"> 
-                                                    <a class="btn-link" 
-                                                        href="{{ getLocalFile($top_news->vi_file) }}"> 
-                                                        {{ trans('button.view_and_download') }} 
-                                                    </a> 
-                                                </div> 
- 
-                                            </div> 
- 
-                                        </div> 
- 
- 
-                                    </div> 
-                                @else
-                                <div class="itemNew"> 
-                                    <div class="image effectImg first-post"><a 
-                                            style="background-image:url('{{ getLocalFile($top_news->image) }}')" 
-                                            href="{{ getLocalFile($top_news->banner) }}"><img 
-                                                src="{{ getLocalFile($top_news->image) }}"></a></div> 
-                                    <div class="info"> 
-                                        <a class="title" 
-                                            href="{{ getLocalFile($top_news->banner) }}">{{ summary($top_news->title, 140) }} 
-                                        </a> 
-                                        <div class="name"> 
-                                            <p class="card-text"> 
-                                                {{ $top_news->shortdesc }} 
-                                            </p> 
-                                        </div> 
-                                        <div class="row pt-3"> 
-                                            <div class="col-12 text-right"> 
-                                                <a class="btn-link" 
-                                                    href="{{ getLocalFile($top_news->banner) }}"> 
-                                                    {{ trans('button.view_and_download') }} 
-                                                </a> 
-                                            </div> 
-
-                                        </div> 
-
-                                    </div> 
-                                </div> 
-                                @endif
-                                    
-                                </div> 
+                                        <div class="itemNew">
+                                            <div class="image effectImg first-post"><a
+                                                    style="background-image:url('{{ getLocalFile($top_news->vi_thumb) }}')"
+                                                    href="{{ getLocalFile($top_news->vi_file) }}"><img
+                                                        src="{{ getLocalFile($top_news->vi_thumb) }}"></a></div>
+                                            <div class="info">
+                                                <a class="title"
+                                                    href="{{ getLocalFile($top_news->vi_file) }}">{{ summary($top_news->title, 140) }}
+                                                </a>
+                                                <div class="name">
+                                                    <p class="card-text">
+                                                        {{ $top_news->shortdesc }}
+                                                    </p>
+                                                </div>
+                                                <div class="row pt-3">
+                                                    <div class="col-12 text-right">
+                                                        <a class="btn-link"
+                                                            href="{{ getLocalFile($top_news->vi_file) }}">
+                                                            {{ trans('button.view_and_download') }}
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @else
+                                        <div class="itemNew">
+                                            <div class="image effectImg first-post"><a
+                                                    style="background-image:url('{{ getLocalFile($top_news->en_thumb) }}')"
+                                                    href="{{ getLocalFile($top_news->en_file) }}"><img
+                                                        src="{{ getLocalFile($top_news->en_thumb) }}"></a></div>
+                                            <div class="info">
+                                                <a class="title"
+                                                    href="{{ getLocalFile($top_news->en_file) }}">{{ summary($top_news->title, 140) }}
+                                                </a>
+                                                <div class="name">
+                                                    <p class="card-text">
+                                                        {{ $top_news->shortdesc }}
+                                                    </p>
+                                                </div>
+                                                <div class="row pt-3">
+                                                    <div class="col-12 text-right">
+                                                        <a class="btn-link" href="{{ getLocalFile($top_news->en_file) }}">
+                                                            {{ trans('button.view_and_download') }}
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endif
+                                </div>
                             @endif
                             @foreach ($annual_report as $index => $item)
+                            @if ($composer_locale == 'vi')
                                 <div class="col-md-4 break360">
                                     <div class="itemNew">
                                         <div class="image effectImg"><a
-                                                style="background-image:url('{{ getLocalFile($item->image) }}')"
-                                                href="{{ getLocalFile($item->banner) }}"><img
-                                                    src="{{ getLocalFile($item->image) }}"></a></div>
+                                                style="background-image:url('{{ getLocalFile($item->vi_thumb) }}')"
+                                                href="{{ getLocalFile($item->vi_file) }}"><img
+                                                    src="{{ getLocalFile($item->vi_thumb) }}"></a></div>
                                         <div class="info">
                                             <a class="title"
-                                                href="{{ getLocalFile($item->banner) }}">{{ summary($item->title, 140) }}
+                                                href="{{ getLocalFile($item->vi_file) }}">{{ summary($item->title, 140) }}
                                             </a>
                                             <div class="name">
                                                 <p class="card-text">
@@ -101,7 +94,7 @@
                                             </div>
                                             <div class="row pt-3">
                                                 <div class="col-12 text-right">
-                                                    <a class="btn-link" href="{{ getLocalFile($item->banner) }}">
+                                                    <a class="btn-link" href="{{ getLocalFile($item->vi_file) }}">
                                                         {{ trans('button.view_and_download') }}
                                                     </a>
                                                 </div>
@@ -111,6 +104,36 @@
                                         </div>
                                     </div>
                                 </div>
+                                @else
+                                
+                                <div class="col-md-4 break360">
+                                    <div class="itemNew">
+                                        <div class="image effectImg"><a
+                                                style="background-image:url('{{ getLocalFile($item->en_thumb) }}')"
+                                                href="{{ getLocalFile($item->en_file) }}"><img
+                                                    src="{{ getLocalFile($item->en_thumb) }}"></a></div>
+                                        <div class="info">
+                                            <a class="title"
+                                                href="{{ getLocalFile($item->en_file) }}">{{ summary($item->title, 140) }}
+                                            </a>
+                                            <div class="name">
+                                                <p class="card-text">
+                                                    {{ $item->shortdesc }}
+                                                </p>
+                                            </div>
+                                            <div class="row pt-3">
+                                                <div class="col-12 text-right">
+                                                    <a class="btn-link" href="{{ getLocalFile($item->en_file) }}">
+                                                        {{ trans('button.view_and_download') }}
+                                                    </a>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                @endif
                             @endforeach
 
 
@@ -143,11 +166,11 @@
                                                         </strong>
                                                     </div>
                                                 </a>
-                                                <p class="card-text">
+                                                {{-- <p class="card-text">
                                                     {{ $news['translations'][1]['description'] ? $news['translations'][1]['description'] : $news['translations'][0]['description'] }}
-                                                </p>
+                                                </p> --}}
                                             @else
-                                                <a class="text-gray" href="{{ $news['image'] }}">
+                                                <a class="text-gray" href="{{ $news['en_file'] }}">
                                                     <div class="name">
                                                         <strong class="card-text">
 
@@ -155,10 +178,10 @@
                                                         </strong>
                                                     </div>
                                                 </a>
-                                                <p class="card-text">
+                                                {{-- <p class="card-text">
 
                                                     {{ $news['translations'][0]['description'] }}
-                                                </p>
+                                                </p> --}}
                                             @endif
 
 
@@ -173,9 +196,14 @@
                 @endif
                 @endif
             </div>
-            <nav class="text-center news-navigation">
-                {{ $annual_report->links() }}
-            </nav>
+            @if ($news_category->slug === 'annual-reports' || $news_category->slug === 'bao-cao-thuong-nien')
+                <nav class="text-center news-navigation">
+                    {{ $annual_report->links() }}
+                </nav>
+            @else
+
+            @endif
+
         </div>
     </section>
 @endsection

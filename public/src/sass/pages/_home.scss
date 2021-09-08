@@ -215,7 +215,7 @@
   .timeline > ol {
     display: inline-block;
     font-size: 0;
-    width: 100vw;
+    width: 93vw;
     padding-bottom: 20rem;
     padding-top: 15rem;
     transition: all 0.5s;
@@ -235,6 +235,8 @@
     background-size: cover;
     &:last-child {
       background-image: url($image-path + "time-line-bg-last.svg");
+      
+      .timeline-content{width: 130%;}
     }
   }
 
@@ -588,7 +590,7 @@ section.mainContent {
       color: $color-title;
       margin: 0;
       padding-bottom: rem(18);
-      font-weight: 800;
+      font-weight: bold;
       font-family: "Arial";
       @include media-breakpoint-down(xs) {
         text-align: center;
@@ -648,14 +650,14 @@ section.mainContent {
 .deep-blue {
   color: #013b71 !important;
 }
-.media-center h5 a {
-  color: #e6e6e6;
-}
-.media-center h5 a:hover {
-  color: #e6e6e6;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-}
+// .media-center h5 a {
+//   color: #e6e6e6;
+// }
+// .media-center h5 a:hover {
+//   color: #e6e6e6;
+//   text-decoration: none;
+//   transition: all 0.2s ease-in-out;
+// }
 
 .gridPartner {
   .slidePartnerBox {
@@ -700,7 +702,7 @@ section.mainContent {
     color: $color-title;
     margin: 0;
     padding-bottom: rem(18);
-    font-weight: 800;
+    font-weight: bold;
     font-family: "Arial";
   }
 }
@@ -959,7 +961,7 @@ section.mainContent {
   .popup {
     .title {
       font-size: 30px;
-      font-weight: 900;
+      font-weight: 300;
     }
     color: #fff;
     display: inline-block;
@@ -968,6 +970,9 @@ section.mainContent {
     background-color: #013b71;
     border-radius: 5px;
     display: flex;
+    bottom: 0;
+    right: 10%;
+    position: absolute;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
@@ -999,6 +1004,7 @@ section.mainContent {
     text-transform: uppercase;
     font-family: sans-serif;
     margin-right: 1rem;
+    margin-top: 10px;
     margin-bottom: 25px;
     &:last-of-type {
       margin-right: 0;

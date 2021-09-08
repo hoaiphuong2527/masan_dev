@@ -36,12 +36,12 @@
         <div class="menu">
             <ul class="list">
                 <!-- <li class="header"></li> -->
-                <li class="{!! currentPageMenu(['*admin']) !!}">
+                {{-- <li class="{!! currentPageMenu(['*admin']) !!}">
                     <a href="/admin">
                         <i class="material-icons">dashboard</i>
                         <span>{!! trans('admin_menu.dashboard') !!}</span>
                     </a>
-                </li>
+                </li> --}}
 
 
                 @if (in_array('admin.page.index', $composer_auth_permissions))
@@ -86,11 +86,11 @@
                                     <span>{!! trans('admin_menu.news_create') !!}</span>
                                 </a>
                             </li>
-                            <li class="{!! currentPageMenu(['*admin/news-categories*']) !!}">
+                            {{-- <li class="{!! currentPageMenu(['*admin/news-categories*']) !!}">
                                 <a href="{!! route('admin.news_category.index') !!}">
                                     <span>{!! trans('admin_menu.categories') !!}</span>
                                 </a>
-                            </li>
+                            </li> --}}
                         </ul>
                     </li>
                 @endif
@@ -113,11 +113,11 @@
                                     <span>Create News</span>
                                 </a>
                             </li>
-                            <li class="{!! currentPageMenu(['*admin/investments-categories*']) !!}">
+                            {{-- <li class="{!! currentPageMenu(['*admin/investments-categories*']) !!}">
                                 <a href="{!! route('admin.invest_category.index') !!}">
                                     <span>Categories</span>
                                 </a>
-                            </li>
+                            </li> --}}
                         </ul>
                     </li>
                     {{-- Custom invest news --}}

@@ -16,15 +16,7 @@
                             <a href="{{ route('media.news.category', ['parent_slug' => $news_category_parent->slug, 'slug' => $child->slug]) }}">{{ $child->name }}</a>
                         </li>
                     @endforeach
-                    <li class="">
-                        <a href="{{ getPageUrlByCode('MEDIA-GALLERY-VIDEO') }}">
-                            @if ($composer_locale == 'vi')
-                                Tư Liệu Truyền Thông
-                            @else
-                                Media Library
-                            @endif
-                        </a>
-                    </li>
+                    <li class=""><a href="{{ getPageUrlByCode('MEDIA-GALLERY-VIDEO') }}">{{ $title = getPageUrlByCode('MEDIA-GALLERY-VIDEO', 'title') }}</a></li>
                 </ul>
 
                 @if ($news_category->slug === 'press-release' || $news_category->slug === 'thong-cao-bao-chi')
@@ -65,7 +57,6 @@
                                                     </div>
                                                 </a>
                                                 <p class="card-text">
-
                                                     {{ $news['translations'][0]['description'] }}
                                                 </p>
                                             @endif
@@ -83,14 +74,25 @@
                                 <div class="col-md-12 break360 mb-4">
                                     <div class="itemNew bd-tr-r-10">
                                         <div class="news-list-item row">
+                                            @if ($composer_locale == 'vi')
                                             <div class="col-md-8 col-sm-8 col-xs-6">
                                                 <div class="image effectImg first-post"><a
-                                                        style="background-image:url('{{ getLocalFile($top_news->image) }}')"
+                                                        style="background-image:url('{{ getLocalFile($top_news->vi_thumb) }}')"
                                                         href="{{ route('media.news.detail', ['slug' => $top_news->slug]) }}"><img
                                                             class="img-responsive"
-                                                            src="{{ getLocalFile($top_news->image) }}"></a>
+                                                            src="{{ getLocalFile($top_news->vi_thumb) }}"></a>
                                                 </div>
                                             </div>
+                                            @else
+                                            <div class="col-md-8 col-sm-8 col-xs-6">
+                                                <div class="image effectImg first-post"><a
+                                                        style="background-image:url('{{ getLocalFile($top_news->en_thumb) }}')"
+                                                        href="{{ route('media.news.detail', ['slug' => $top_news->slug]) }}"><img
+                                                            class="img-responsive"
+                                                            src="{{ getLocalFile($top_news->en_thumb) }}"></a>
+                                                </div>
+                                            </div>
+                                            @endif
                                             <div class="col-md-4 col-sm-4 col-xs-6">
                                                 <div class="info">
                                                     <div class="date">

@@ -16,7 +16,7 @@
                             href="{{ route('media.news.category', ['parent_slug' => 'news', 'slug' => 'mht-in-the-news']) }}">MHT
                             in the news</a>
                     </li>
-                    <li class="active"><a href="{{ getPageUrlByCode('MEDIA-GALLERY-VIDEO') }}">Media Library</a></li>
+                    <li class="active"><a href="{{ getPageUrlByCode('MEDIA-GALLERY-VIDEO') }}">{{ $title = getPageUrlByCode('MEDIA-CENTER', 'title') }}</a></li>
                 </ul>
                 <div class="row">
                     @foreach ($media_gallery_video as $item)
