@@ -30,19 +30,13 @@ $title = getPageUrlByCode('H-C-STARCK', 'title');
             <div class="homeSlider__image">
                 <div class="image" style="background-image:url('/assets/images/hcs/1.jpg')"><img
                         src="/assets/images/hcs/1.jpg" alt=""></div>
-                <div class="imageFull" style="background-image:url('/assets/images/hcs/1.jpg')"><img
-                        src="/assets/images/hcs/1.jpg" alt=""></div>
             </div>
             <div class="homeSlider__image">
                 <div class="image" style="background-image:url('/assets/images/hcs/2.jpg')"><img
                         src="/assets/images/hcs/2.jpg" alt=""></div>
-                <div class="imageFull" style="background-image:url('/assets/images/hcs/2.jpg')"><img
-                        src="/assets/images/hcs/2.jpg" alt=""></div>
             </div>
             <div class="homeSlider__image">
                 <div class="image" style="background-image:url('/assets/images/hcs/3.jpg')"><img
-                        src="/assets/images/hcs/3.jpg" alt=""></div>
-                <div class="imageFull" style="background-image:url('/assets/images/hcs/3.jpg')"><img
                         src="/assets/images/hcs/3.jpg" alt=""></div>
             </div>
         </div>

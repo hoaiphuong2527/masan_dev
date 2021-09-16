@@ -50,7 +50,7 @@
 
     </div>
     <section class=" mainContent--home">
-        <div class="container pt-lg-4">
+        <div class="container  pt-3 pt-lg-4">
             <div class="page-content">
                 @if (!empty($blocks['OUR-STORY']) && ($ourStoryBlock = $blocks->get('OUR-STORY')->first()))
                     {!! $ourStoryBlock->content !!}
@@ -192,7 +192,7 @@
                 {!! $block->content !!}
             </div>
         @endif
-        <div class="news pb-lg-5">
+        <div class="news pb-lg-5 pb-4">
             <div class="container-fluid p-0 image" style="background-image:url('/assets/images/bg-news.png')">
                 <div class="container">
                     <div class="titleHeading pt-lg-5" data-waypoint="100%">{{ trans('home.CONTENT.news') }}</div>
@@ -226,7 +226,7 @@
                 </div>
             </div>
         </div>
-        <div class="our-business pb-lg-5">
+        <div class="our-business pb-lg-5 pb-4">
             <div class="container">
                 <div class="titleHeading" data-waypoint="100%">{{ trans('home.CONTENT.business') }}</div>
                 <div id="our-businness-carousel" class="carousel slide" data-ride="carousel">
@@ -269,7 +269,7 @@
                 </div>
             </div>
         </div>
-        <div class="media-center pb-lg-5">
+        <div class="media-center pb-lg-5 pb-4">
             <div class="container">
                 <div class="titleHeading" data-waypoint="100%">{{ trans('home.CONTENT.media') }}</div>
                 <div class="sliderCase">

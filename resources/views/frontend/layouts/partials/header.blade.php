@@ -1,7 +1,7 @@
 <header class="header">
     <div class="container">
-        <div class="row mt-xs-3">
-            <div class="col-lg-3 col-12"><a class="logo" href="{{ route('page.home') }}"><img
+        <div class="row ">
+            <div class="col-lg-3 col-12 mt-xs-3"><a class="logo" href="{{ route('page.home') }}"><img
                         src="/assets/images/masan-logo.svg" alt=""></a></div>
             <div class="col-lg-9 col-12"><a class="header__toggle"
                     href="#"><span></span><span></span><span></span><span></span></a>
@@ -10,8 +10,18 @@
                         <div class="wrapMenu">
                             <div class="menuMain">
                                 <ul class="nav-menu" id="sub-menu">
-                                    <li class="nav-item"><a class="nav-link" href="{{ getPageUrlByCode('CONTACT') }}"
-                                            title="{{ $title = getPageUrlByCode('CONTACT', 'title') }}"><span>{{ $title }}</span></a>
+                                    <li class="nav-item hasChild"><a class="nav-link"
+                                        href="{{ getPageUrlByCode('ABOUT') }}"
+                                        title="{{ $title = getPageUrlByCode('ABOUT', 'title') }}"><span>{{ $title }}</span></a>
+                                </li>
+                                <li class="nav-item hasChild"><a class="nav-link"
+                                        href="{{ getPageUrlByCode('CAREER') }}"
+                                        title="{{ $title = getPageUrlByCode('CAREER', 'title') }}"><span>{{ $title }}</span></a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link"
+                                        href="{{ getPageUrlByCode('CONTACT') }}"
+                                        title="{{ $title = getPageUrlByCode('CONTACT', 'title') }}"><span>{{ $title }}</span></a>
+                                </li>
                                     @if ($composer_locale == 'vi')
                                         <li class="nav-item hasChild"><a class="nav-link"
                                                 href="{{ route('media.news.category', ['parent_slug' => 'tin-tuc', 'slug' => 'thong-cao-bao-chi']) }}"
@@ -53,19 +63,7 @@
                                                 </li>
                                             </ul>
                                         </li>
-
                                     @endif
-                                    <li class="nav-item hasChild"><a class="nav-link"
-                                            href="{{ getPageUrlByCode('CAREER') }}"
-                                            title="{{ $title = getPageUrlByCode('CAREER', 'title') }}"><span>{{ $title }}</span></a>
-                                            
-                                       
-                                    </li>
-                                    <li class="nav-item hasChild"><a class="nav-link"
-                                            href="{{ getPageUrlByCode('ABOUT') }}"
-                                            title="{{ $title = getPageUrlByCode('ABOUT', 'title') }}"><span>{{ $title }}</span></a>
-                                    </li>
-
                                 </ul>
                                 @if ($composer_locale == 'vi')
                                     <ul class="nav-menu" id="main-menu">

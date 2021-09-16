@@ -10,10 +10,7 @@ $title = getPageUrlByCode('ABOUT', 'title');
 
     <section class="mainContact">
         <div class="container">
-            @if (!empty($blocks['INTRODUCE']) && ($block = $blocks->get('INTRODUCE')->first()))
-                {{-- <h1 class="titleHeading" data-waypoint="100%">{{ $block->name }}</h1> --}}
-                {{-- <div class="document" data-waypoint="100%"> --}}
-                {{-- {!! $block->content !!} --}}
+
 
                 <div>&nbsp;</div>
 
@@ -46,7 +43,7 @@ $title = getPageUrlByCode('ABOUT', 'title');
 
                     <div class="row">
                         <div class="col-md-6"><strong><span
-                                    style="font-size:36px;">{{ trans('frontend.management_team') }}</span></strong>
+                                    style="font-size:26px;">{{ trans('frontend.management_team') }}</span></strong>
                         </div>
                         <div class="col-md-6 manager-nav">
                             <nav class="navbar navbar-expand ">
@@ -341,7 +338,6 @@ $title = getPageUrlByCode('ABOUT', 'title');
 
 
 
-            @endif
 
         </div>
     </section>
@@ -349,25 +345,6 @@ $title = getPageUrlByCode('ABOUT', 'title');
         {!! $modal->content !!}
     @endif
 
-    @if (count($block->children))
-        <div class="listFund" data-waypoint="100%">
-            @foreach ($block->children as $item)
-                <div class="listFund__item">
-                    <div class="row">
-                        <div class="col-md-2 col-sm-3 col-4 break480">
-                            <a target="_blank" href="{{ $item->url }}">
-                                <img src="{{ $item->icon }}" alt="{{ $item->name }}">
-                            </a>
-                        </div>
-                        <div class="col-md-10 col-sm-9 col-8 break480">
-                            <h5>{{ $item->name }}</h5>
-                            {!! $item->content !!}
-                        </div>
-                    </div>
-                </div>
-            @endforeach
-        </div>
-    @endif
     </div>
     </section>
 @endsection

@@ -33,7 +33,7 @@
                                                 <a class="title"
                                                     href="{{ getLocalFile($top_news->vi_file) }}">{{ summary($top_news->title, 140) }}
                                                 </a>
-                                                <div class="name">
+                                                <div class="first-post name">
                                                     <p class="card-text">
                                                         {{ $top_news->shortdesc }}
                                                     </p>
@@ -58,7 +58,7 @@
                                                 <a class="title"
                                                     href="{{ getLocalFile($top_news->en_file) }}">{{ summary($top_news->title, 140) }}
                                                 </a>
-                                                <div class="name">
+                                                <div class=" first-post name">
                                                     <p class="card-text">
                                                         {{ $top_news->shortdesc }}
                                                     </p>

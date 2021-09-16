@@ -478,7 +478,7 @@ function responheight() {
     var height = $(window).height();
     $('.menuMain').css({ top: hheader - 1 });
     $('.menuMain').css({ paddingBottom: hheader });
-    $('.imageFull').css({ height: height - hheader });
+    $('.imageFull').css({ height: height - hheader + 15 });
 }
 
 

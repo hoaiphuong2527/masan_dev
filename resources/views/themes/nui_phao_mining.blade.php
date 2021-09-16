@@ -29,19 +29,15 @@
             <div class="homeSlider__image">
                 <div class="image" style="background-image:url('/assets/images/nuiphao/1.jpg')"><img
                         src="/assets/images/nuiphao/1.jpg" alt=""></div>
-                <div class="imageFull" style="background-image:url('/assets/images/nuiphao/1.jpg')"><img
-                        src="/assets/images/nuiphao/1.jpg" alt=""></div>
+                
             </div>
             <div class="homeSlider__image">
                 <div class="image" style="background-image:url('/assets/images/nuiphao/2.jpg')"><img
                         src="/assets/images/nuiphao/2.jpg" alt=""></div>
-                <div class="imageFull" style="background-image:url('/assets/images/nuiphao/2.jpg')"><img
-                        src="/assets/images/nuiphao/2.jpg" alt=""></div>
+            
             </div>
             <div class="homeSlider__image">
                 <div class="image" style="background-image:url('/assets/images/nuiphao/3.jpg')"><img
-                        src="/assets/images/nuiphao/3.jpg" alt=""></div>
-                <div class="imageFull" style="background-image:url('/assets/images/nuiphao/3.jpg')"><img
                         src="/assets/images/nuiphao/3.jpg" alt=""></div>
             </div>
         </div>

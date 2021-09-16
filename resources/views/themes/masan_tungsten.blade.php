@@ -29,20 +29,17 @@ $title = getPageUrlByCode('MASAN-TUNGSTEN', 'title');
             <div class="homeSlider__image">
                 <div class="image" style="background-image:url('/assets/images/mtc/1.jpg')"><img
                         src="/assets/images/mtc/1.jpg" alt=""></div>
-                <div class="imageFull" style="background-image:url('/assets/images/mtc/1.jpg')"><img
-                        src="/assets/images/mtc/1.jpg" alt=""></div>
+               
             </div>
             <div class="homeSlider__image">
                 <div class="image" style="background-image:url('/assets/images/mtc/2.jpg')"><img
                         src="/assets/images/mtc/2.jpg" alt=""></div>
-                <div class="imageFull" style="background-image:url('/assets/images/mtc/2.jpg')"><img
-                        src="/assets/images/mtc/2.jpg" alt=""></div>
+    
             </div>
             <div class="homeSlider__image">
                 <div class="image" style="background-image:url('/assets/images/mtc/3.jpg')"><img
                         src="/assets/images/mtc/3.jpg" alt=""></div>
-                <div class="imageFull" style="background-image:url('/assets/images/mtc/3.jpg')"><img
-                        src="/assets/images/mtc/3.jpg" alt=""></div>
+    
             </div>
         </div>
     </div>

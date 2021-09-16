@@ -10102,9 +10102,10 @@ button.close {
     position: absolute;
     right: 0;
     top: -5px; }
-  .nav-menu#sub-menu li.nav-item:first-child::after {
+  .nav-menu#sub-menu li.nav-item:last-child::after {
     content: ""; }
   .nav-menu#sub-menu .nav-item {
+    float: left;
     padding-left: 1.5rem;
     padding-right: 1.5rem; }
     .nav-menu#sub-menu .nav-item .nav-link {
@@ -18022,8 +18023,7 @@ html[lang="vi"] .ourPresenceLocation__item {
   color: #7b7c7e;
   font-weight: 300;
   padding: 1.25rem 0;
-  -webkit-line-clamp: 2;
-  height: 4em; }
+  margin-bottom: 0px !important; }
   #subsidiary .listLease__item .info .title:hover {
     color: #55ade2; }
 
@@ -18176,11 +18176,13 @@ h4.list-title {
 #vacancies .nav {
   display: block; }
 
-#vacancies .tabs-left, #vacancies .tabs-right {
+#vacancies .tabs-left,
+#vacancies .tabs-right {
   border-bottom: none;
   padding-top: 2px; }
 
-#vacancies .tabs-left > li, #vacancies .tabs-right > li {
+#vacancies .tabs-left > li,
+#vacancies .tabs-right > li {
   float: none;
   margin-bottom: 2px; }
 
@@ -18679,9 +18681,32 @@ h4.list-title {
   height: 3em !important;
   max-height: unset; }
 
+.first-post.name p.card-text {
+  height: 4.5em !important;
+  -webkit-line-clamp: 3 !important; }
+
 @media (max-width: 991.98px) {
+  .nav-menu#sub-menu li.nav-item:after {
+    content: ""; }
+  .first-post.name p.card-text {
+    height: 13.5em !important;
+    -webkit-line-clamp: 9 !important; }
+  .header__toggle {
+    top: 15px; }
   .mt-xs-3 {
-    margin-top: 1rem !important; }
+    margin-top: 15px; }
+  #shareholders .card-image img {
+    margin-bottom: 30px; }
+  .plan-css .loader .col-bar:last-child .loader__bar {
+    padding-bottom: 0px; }
+  .nav-menu#sub-menu .nav-item {
+    float: none; }
+  .invesmentNewsList .gridNews--2 .itemNew .info .title {
+    font-size: 15px; }
+  #time-line .timeline ol > li:last-child .timeline-content {
+    width: 100%; }
+  .button2 {
+    margin-left: 0; }
   .nav-menu#sub-menu .nav-item .nav-link {
     font-size: 1.125rem; }
   .nav-menu#sub-menu > .nav-item {
@@ -18722,9 +18747,10 @@ h4.list-title {
     width: 100%;
     display: block; }
   #award {
-    background-position: bottom right; }
+    background-position: bottom left; }
   .mit img {
-    padding: 30px 0px; }
+    padding: 30px 0px;
+    margin-bottom: 0px !important; }
   #shareholders .col-md-6:last-child {
     padding-left: 10px; }
   .mobile-none {
@@ -18750,7 +18776,8 @@ h4.list-title {
   .plan-css .loader__bar {
     padding: 20px;
     position: relative; }
-  #vacancies .tabs-left, #vacancies .tabs-right {
+  #vacancies .tabs-left,
+  #vacancies .tabs-right {
     text-align: center; }
   .bd-footer .text-right {
     text-align: left !important; }

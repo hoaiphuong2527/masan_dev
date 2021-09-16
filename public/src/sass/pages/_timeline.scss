@@ -64,17 +64,67 @@
 .gridNews--2 .itemNew .info .card-text {
 }
 
-  .gridNews--2 .itemNew.relatedNews .info .title {
-    -webkit-line-clamp: 2 !important;
-    font-size: rem(18) !important;
-    height: (24/16) * 2em !important;
-    max-height: unset;
+.gridNews--2 .itemNew.relatedNews .info .title {
+  -webkit-line-clamp: 2 !important;
+  font-size: rem(18) !important;
+  height: (24/16) * 2em !important;
+  max-height: unset;
+}
+
+  .first-post.name{
+    p.card-text{
+      height: (24/16) * 3em !important;
+      -webkit-line-clamp: 3 !important;
+ 
+    }
+  
+}
+@include media-breakpoint-down(md) {
+  .nav-menu#sub-menu li.nav-item:after{
+    content: "";
+  }
+  .first-post.name{
+    p.card-text{
+      height: (24/16) * 9em !important;
+      -webkit-line-clamp: 9 !important;
+ 
+    }
+  
+}
+  .header__toggle{
+    top:15px;
+  }
+  .mt-xs-3{
+    margin-top: 15px;
+  }
+  #shareholders{
+    .card-image{
+      img{
+        margin-bottom: 30px;
+
+      }
+    }
+  }
+  .plan-css .loader .col-bar:last-child{
+    .loader__bar{
+      padding-bottom: 0px;
+
+    }
+  }
+  .nav-menu#sub-menu .nav-item{
+    float: none;
+  }
+  .invesmentNewsList .gridNews--2 .itemNew .info .title{
+    font-size: 15px;
   }
 
-@include media-breakpoint-down(md) {
-  .mt-xs-3{
-    margin-top: 1rem !important;
+  #time-line .timeline ol > li:last-child .timeline-content{
+    width: 100%;
   }
+  .button2 {
+    margin-left: 0;
+  }
+
   .nav-menu#sub-menu .nav-item .nav-link {
     font-size: 1.125rem;
   }
@@ -138,13 +188,16 @@
     display: block;
   }
   #award {
-    background-position: bottom right;
+    background-position: bottom left;
   }
   .mit {
     img {
       padding: 30px 0px;
+      margin-bottom: 0px !important;
+
     }
   }
+  
   #shareholders .col-md-6:last-child {
     padding-left: 10px;
   }

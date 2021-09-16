@@ -30,20 +30,17 @@ $title = getPageUrlByCode('CHEMILYTICS', 'title');
             <div class="homeSlider__image">
                 <div class="image" style="background-image:url('/assets/images/chem/1.jpg')"><img
                         src="/assets/images/chem/1.jpg" alt=""></div>
-                <div class="imageFull" style="background-image:url('/assets/images/chem/1.jpg')"><img
-                        src="/assets/images/chem/1.jpg" alt=""></div>
+      
             </div>
             <div class="homeSlider__image">
                 <div class="image" style="background-image:url('/assets/images/chem/2.jpg')"><img
                         src="/assets/images/chem/2.jpg" alt=""></div>
-                <div class="imageFull" style="background-image:url('/assets/images/chem/2.jpg')"><img
-                        src="/assets/images/chem/2.jpg" alt=""></div>
+
             </div>
             <div class="homeSlider__image">
                 <div class="image" style="background-image:url('/assets/images/chem/3.jpg')"><img
                         src="/assets/images/chem/3.jpg" alt=""></div>
-                <div class="imageFull" style="background-image:url('/assets/images/chem/3.jpg')"><img
-                        src="/assets/images/chem/3.jpg" alt=""></div>
+     
             </div>
         </div>
     </div>

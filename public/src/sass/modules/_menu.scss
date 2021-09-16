@@ -85,10 +85,11 @@
       right: 0;
       top: -5px;
     }
-    li.nav-item:first-child::after {
+    li.nav-item:last-child::after {
       content: "";
     }
     .nav-item {
+      float: left;
       padding-left: rem(24);
       padding-right: rem(24);
       
