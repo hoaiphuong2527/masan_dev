@@ -1,5 +1,7 @@
 //Menu
 $(function ($) {
+
+
     $toggleMenu = $('.header__toggle');
     $toggleHeader = $('.header');
     $toggleMenu.bind('click', function (e) {
@@ -872,13 +874,13 @@ jQuery(document).ready(function ($) {
     $('a.close').click(function () {
         $('.popup-overlay').fadeOut();
         //sets the coookie to one minute if the popup is closed (whole numbers = days)
-        setCookie('popupCookie', 'closed', .00069444444);
+        // setCookie('popupCookie', 'closed', .00069444444);
     });
 
     $('a.submit').click(function () {
         $('.popup-overlay').fadeOut();
         //sets the coookie to five minutes if the popup is submited (whole numbers = days)
-        setCookie('popupCookie', 'submited', .0034722222);
+        // setCookie('popupCookie', 'submited', .0034722222);
     });
 
     function getCookie(cname) {
@@ -897,9 +899,9 @@ jQuery(document).ready(function ($) {
     }
 
     function setCookie(cname, cvalue, exdays) {
-        var d = new Date();
-        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-        var expires = "expires=" + d.toUTCString();
-        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        // var d = new Date();
+        // d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        // var expires = "expires=" + d.toUTCString();
+        // document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
     }
 });

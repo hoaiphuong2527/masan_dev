@@ -21,18 +21,16 @@
     <link rel="apple-touch-icon" sizes="144x144" href="/frontend/assets/images/icons/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="/frontend/assets/images/icons/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/frontend/assets/images/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="144x144" href="/frontend/assets/images/icons/android-icon-144x144.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/frontend/assets/images/icons/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/frontend/assets/images/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/frontend/assets/images/icons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/frontend/assets/images/icons/favicon-16x16.png">
-    <link rel="shortcut icon" href="/assets/images/icons/favicon.ico">
-    <link rel="manifest" href="frontend/assets/manifest.json">
+    <link rel="shortcut icon" href="frontend/assets/images/icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#f05b28">
     <meta name="msapplication-TileImage" content="/frontend/assets/images/icons/ms-icon-144x144.png">
     <meta name="theme-color" content="#f05b28">
     <link href="{{getAssetResourceVersion('frontend/assets/css/styles.css?v=1')}}" rel="stylesheet">
-    <link href="{{getAssetResourceVersion('assets/css/custom.css')}}" rel="stylesheet">
-    <link href="{{getAssetResourceVersion('assets/css/hadesker.css')}}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,900" rel="stylesheet">
     @yield('style')
 

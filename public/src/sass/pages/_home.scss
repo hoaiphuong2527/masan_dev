@@ -432,10 +432,10 @@
 }
 section.mainContent {
   padding-top: rem(50);
-  &--home {
-    background: url($image-path + "bg-project.png") no-repeat bottom left,
-      url($image-path + "bg-project-2.png") no-repeat bottom right;
-  }
+  // &--home {
+  //   background: url($image-path + "bg-project.png") no-repeat bottom left,
+  //     url($image-path + "bg-project-2.png") no-repeat bottom right;
+  // }
   @include media-breakpoint-down(md) {
     padding-top: rem(20);
     padding-bottom: rem(20);

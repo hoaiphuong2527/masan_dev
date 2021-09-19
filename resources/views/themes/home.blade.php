@@ -175,10 +175,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"
-                                                        integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g=="
-                                                        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
                         </div>
                     </div>
                 </div>
@@ -265,7 +261,6 @@
                             <img src="/assets/images/sustainability.png" width="100%" alt="">
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

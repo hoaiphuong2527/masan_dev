@@ -160,7 +160,7 @@ class PageController extends Controller
             $metadata = (object)[
                 'title' => $page->title,
                 'description' => $page->description,
-                'key_word' => '3forcom'
+                'key_word' => 'uva'
             ];
         }
 
@@ -414,7 +414,7 @@ class PageController extends Controller
         //                //Send to admin
         //                \Mail::to($system_email)->send(new SendContactEmail($input, $locale));
         //            }
-        // }
+        // }    
 
         session()->flash('success', trans('message.contact_sent_success'));
         if ($locale == 'en') {
