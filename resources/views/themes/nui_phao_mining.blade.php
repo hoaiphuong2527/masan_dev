@@ -3,7 +3,7 @@
 @section('style')
 @endsection
 @php
-    $title = getPageUrlByCode('NUI-PHAO-MINING', 'title')
+$title = getPageUrlByCode('NUI-PHAO-MINING', 'title');
 @endphp
 @section('content')
 
@@ -13,11 +13,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10">
-                <h3 class="titleHeading titleHeading--medium sus-title">{{$title}}</h3>
+                <h3 class="titleHeading titleHeading--medium sus-title">{{ $title }}</h3>
             </div>
             <div class="col-md-2 text-right">
                 <a class="text-gray" href="{{ getPageUrlByCode('SUBSIDAIRY') }}">
-                    {{trans('frontend.back')}}
+                    {{ trans('frontend.back') }}
                 </a>
             </div>
         </div>
@@ -26,20 +26,22 @@
 
     <div class="homeSliderWrapper">
         <div class="homeSlider">
-            <div class="homeSlider__image">
-                <div class="image" style="background-image:url('/assets/images/nuiphao/1.jpg')"><img
-                        src="/assets/images/nuiphao/1.jpg" alt=""></div>
-                
-            </div>
-            <div class="homeSlider__image">
-                <div class="image" style="background-image:url('/assets/images/nuiphao/2.jpg')"><img
-                        src="/assets/images/nuiphao/2.jpg" alt=""></div>
-            
-            </div>
-            <div class="homeSlider__image">
-                <div class="image" style="background-image:url('/assets/images/nuiphao/3.jpg')"><img
-                        src="/assets/images/nuiphao/3.jpg" alt=""></div>
-            </div>
+            @if (!empty($blocks['BANNER']))
+                @foreach ($blocks['BANNER'][0]->children as $banner)
+                    @if (!empty($banner))
+                        <div class="homeSlider__image">
+                            <div class="overplay">
+                                @if ($banner->code == 'BANNER-SLIDE')
+                                    <div class="image" style="background-image:url('{{ $banner->photo }}')">
+                                        <div class="container">
+                                        </div>
+                                    </div>
+                                @endif
+                            </div>
+                        </div>
+                    @endif
+                @endforeach
+            @endif
         </div>
     </div>
     <section class="mainContact">

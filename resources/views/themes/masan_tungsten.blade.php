@@ -26,21 +26,23 @@ $title = getPageUrlByCode('MASAN-TUNGSTEN', 'title');
 
     <div class="homeSliderWrapper blueDots">
         <div class="homeSlider">
-            <div class="homeSlider__image">
-                <div class="image" style="background-image:url('/assets/images/mtc/1.jpg')"><img
-                        src="/assets/images/mtc/1.jpg" alt=""></div>
-               
-            </div>
-            <div class="homeSlider__image">
-                <div class="image" style="background-image:url('/assets/images/mtc/2.jpg')"><img
-                        src="/assets/images/mtc/2.jpg" alt=""></div>
-    
-            </div>
-            <div class="homeSlider__image">
-                <div class="image" style="background-image:url('/assets/images/mtc/3.jpg')"><img
-                        src="/assets/images/mtc/3.jpg" alt=""></div>
-    
-            </div>
+            @if (!empty($blocks['BANNER']))
+                @foreach ($blocks['BANNER'][0]->children as $banner)
+                    @if (!empty($banner))
+                        <div class="homeSlider__image">
+                            <div class="overplay">
+                                @if ($banner->code == 'BANNER-SLIDE')
+                                    <div class="image" style="background-image:url('{{ $banner->photo }}')">
+                                        <div class="container">
+                                        </div>
+                                    </div>
+                                @endif
+                            </div>
+                        </div>
+                    @endif
+                @endforeach
+            @endif
+          
         </div>
     </div>
     <section class="mainContact">

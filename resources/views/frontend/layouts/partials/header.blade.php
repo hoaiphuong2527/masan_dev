@@ -56,7 +56,7 @@
                                                 <li class=""><a
                                                         href="{{ route('media.news.category', ['parent_slug' => 'news', 'slug' => 'mht-in-the-news']) }}">
                                                         <span>MHT
-                                                            In The News</span></a>
+                                                            in the News</span></a>
                                                 </li>
                                                 <li><a href="{{ getPageUrlByCode('MEDIA-GALLERY-VIDEO') }}"
                                                         title="{{ $title = getPageUrlByCode('MEDIA-GALLERY-VIDEO', 'title') }}"><span>{{ $title }}</span></a>

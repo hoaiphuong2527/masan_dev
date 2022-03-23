@@ -48,17 +48,18 @@ $title = getPageUrlByCode('ABOUT', 'title');
                         <div class="col-md-6 manager-nav">
                             <nav class="navbar navbar-expand ">
                                 <ul class="nav navbar-nav">
-                                    <li class="nav-item active" data-target="all-slide"><a class="nav-link"
+                                    <li class="nav-item " data-target="all-slide"><a class="nav-link"
                                             href="javascript:void(0);">
                                             {{ trans('frontend.all') }}
                                         </a></li>
                                     @if (!empty($blocks['MANAGERMENT']) && ($operationBlock = $blocks->get('MANAGERMENT')->first()))
 
-                                        <li class="nav-item" data-target="{{ $operationBlock->code }}-slide"><a
+                                        <li class="nav-item active" data-target="{{ $operationBlock->code }}-slide"><a
                                                 class="nav-link"
                                                 href="javascript:void(0);">{{ $operationBlock->name }}</a>
                                         </li>
                                     @endif
+                                   
                                     @if (!empty($blocks['OPERATION']) && ($operationBlock = $blocks->get('OPERATION')->first()))
 
                                         <li class="nav-item" data-target="{{ $operationBlock->code }}-slide"><a
@@ -66,19 +67,20 @@ $title = getPageUrlByCode('ABOUT', 'title');
                                                 href="javascript:void(0);">{{ $operationBlock->name }}</a>
                                         </li>
                                     @endif
-                                    @if (!empty($blocks['SALE-MARKETING']) && ($operationBlock = $blocks->get('SALE-MARKETING')->first()))
+                                    @if (!empty($blocks['FINANCE']) && ($operationBlock = $blocks->get('FINANCE')->first()))
 
-                                        <li class="nav-item" data-target="{{ $operationBlock->code }}-slide"><a
-                                                class="nav-link"
-                                                href="javascript:void(0);">{{ $operationBlock->name }}</a>
-                                        </li>
+                                    <li class="nav-item" data-target="{{ $operationBlock->code }}-slide"><a
+                                            class="nav-link"
+                                            href="javascript:void(0);">{{ $operationBlock->name }}</a>
+                                    </li>
                                     @endif
+                                   
                                 </ul>
                             </nav>
 
                             <nav class="navbar navbar-expand">
                                 <ul class="nav navbar-nav">
-                                    @if (!empty($blocks['FINANCE']) && ($operationBlock = $blocks->get('FINANCE')->first()))
+                                    @if (!empty($blocks['SALE-MARKETING']) && ($operationBlock = $blocks->get('SALE-MARKETING')->first()))
 
                                         <li class="nav-item" data-target="{{ $operationBlock->code }}-slide"><a
                                                 class="nav-link"

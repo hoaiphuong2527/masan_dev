@@ -130,14 +130,15 @@ $title = getPageUrlByCode('CAREER', 'title');
                                                         {{ $blocksNPMN->name }}
                                                     @endif
                                                 </a></li>
-                                            <li role="presentation"><a href="#messages" aria-controls="messages" role="tab"
-                                                    data-toggle="tab">
+                                            <li role="presentation"><a href="https://www.hcstarck.com/karriere/jobs/"
+                                                    target="_blank">
                                                     @if (!empty($blocks['HSTP']) && ($blocksNPMN = $blocks->get('HSTP')->first()))
                                                         {{ $blocksNPMN->name }}
                                                     @endif
                                                 </a></li>
-                                            <li role="presentation"><a href="#settings" aria-controls="settings" role="tab"
-                                                    data-toggle="tab">
+                                            <li role="presentation"><a
+                                                    href="https://www.chemilytics.com/home/company/jobs~1f.en.html"
+                                                    target="_blank">
                                                     @if (!empty($blocks['CC']) && ($blocksNPMN = $blocks->get('CC')->first()))
                                                         {{ $blocksNPMN->name }}
                                                     @endif
@@ -163,7 +164,8 @@ $title = getPageUrlByCode('CAREER', 'title');
                                                                                 <div>
                                                                                     <div><i class="fa fa-map-marker"
                                                                                             aria-hidden="true"></i>
-                                                                                        {{ $blocksVacancies->name }}</div>
+                                                                                        {{ $blocksVacancies->name }}
+                                                                                    </div>
                                                                                     <div>
                                                                                         <div>
                                                                                             <div>
@@ -209,7 +211,8 @@ $title = getPageUrlByCode('CAREER', 'title');
                                                                                 <div>
                                                                                     <div><i class="fa fa-map-marker"
                                                                                             aria-hidden="true"></i>
-                                                                                        {{ $blocksVacancies->name }}</div>
+                                                                                        {{ $blocksVacancies->name }}
+                                                                                    </div>
                                                                                     <div>
                                                                                         <div>
                                                                                             <div>
@@ -257,7 +260,8 @@ $title = getPageUrlByCode('CAREER', 'title');
                                                                                 <div>
                                                                                     <div><i class="fa fa-map-marker"
                                                                                             aria-hidden="true"></i>
-                                                                                        {{ $blocksVacancies->name }}</div>
+                                                                                        {{ $blocksVacancies->name }}
+                                                                                    </div>
                                                                                     <div>
                                                                                         <div>
                                                                                             <div>
@@ -305,7 +309,8 @@ $title = getPageUrlByCode('CAREER', 'title');
                                                                                 <div>
                                                                                     <div><i class="fa fa-map-marker"
                                                                                             aria-hidden="true"></i>
-                                                                                        {{ $blocksVacancies->name }}</div>
+                                                                                        {{ $blocksVacancies->name }}
+                                                                                    </div>
                                                                                     <div>
                                                                                         <div>
                                                                                             <div>
@@ -349,11 +354,41 @@ $title = getPageUrlByCode('CAREER', 'title');
 
                 </div>
             @endif
+            <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal teamModal none-arrow fade" id="teamModal"
+                role="dialog" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content"><button aria-label="Close" class="close btn-close" data-dismiss="modal"
+                            type="button">x</button>
+                        <div class="modal-body">
+                            <div class="teamSlide">
+                                @if (!empty($blocks['MODAL']) && ($modal = $blocks->get('MODAL')->first()))
+                                    <div class="teamSlide__item">
+                                        <div class="info">
+                                            {!! $modal->content !!}
+                                        </div>
+                                    </div>
+                                @endif
+                                @if (!empty($blocks['MODAL-FRESH']) && ($modal = $blocks->get('MODAL-FRESH')->first()))
+                                    <div class="teamSlide__item">
+                                        <div class="info">
+                                            {!! $modal->content !!}
+                                        </div>
+                                    </div>
+                                @endif
+                                @if (!empty($blocks['MODAL-EXPERIENCED']) && ($modal = $blocks->get('MODAL-EXPERIENCED')->first()))
+                                    <div class="teamSlide__item">
+                                        <div class="info">
+                                            {!! $modal->content !!}
+                                        </div>
+                                    </div>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
-            @if (!empty($blocks['MODAL']) && ($modal = $blocks->get('MODAL')->first()))
-                {!! $modal->content !!}
-            @endif
 
             @if (count($block->children))
                 <div class="listFund" data-waypoint="100%">

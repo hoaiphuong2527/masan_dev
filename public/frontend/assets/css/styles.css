@@ -16684,7 +16684,6 @@ label.error {
       max-width: 506px;
       height: 163px;
       font-family: "Arial";
-      text-transform: uppercase;
       padding: 0.3125rem 1.5625rem;
       margin: 0 auto;
       text-align: left;
@@ -18031,7 +18030,7 @@ html[lang="vi"] .ourPresenceLocation__item {
   margin-bottom: 15px; }
 
 .sus-title {
-  color: #11396f;
+  color: #7B7C7E;
   font-weight: bold; }
 
 .office-css .loader {
@@ -19432,6 +19431,10 @@ table.tableFaci p {
 .itemNew .new-label {
   vertical-align: middle; }
 
+.elisis-2-row {
+  height: 4em !important;
+  -webkit-line-clamp: 2 !important; }
+
 .gridNews--2 .itemNew.relatedNews .info .title {
   -webkit-line-clamp: 2 !important;
   font-size: 1.125rem !important;
@@ -19441,6 +19444,9 @@ table.tableFaci p {
 .first-post.name p.card-text {
   height: 4.5em !important;
   -webkit-line-clamp: 3 !important; }
+
+.none-arrow .slick-arrow {
+  display: none !important; }
 
 @media (max-width: 991.98px) {
   .nav-menu#sub-menu li.nav-item:after {

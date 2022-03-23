@@ -63,7 +63,10 @@
 }
 .gridNews--2 .itemNew .info .card-text {
 }
-
+.elisis-2-row{
+  height: (32/16) * 2em !important;
+  -webkit-line-clamp: 2 !important;
+}
 .gridNews--2 .itemNew.relatedNews .info .title {
   -webkit-line-clamp: 2 !important;
   font-size: rem(18) !important;
@@ -78,6 +81,11 @@
  
     }
   
+}
+.none-arrow{
+  .slick-arrow{
+    display: none !important;
+  }
 }
 @include media-breakpoint-down(md) {
   .nav-menu#sub-menu li.nav-item:after{
