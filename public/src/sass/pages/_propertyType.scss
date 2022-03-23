@@ -47,8 +47,8 @@ $color-text: #393939;
             margin: 0;
         }
         &__title{
-            font-family: "Futura";
-            font-weight: 800;
+            font-family: "Arial";
+            font-weight: bold;
             font-size: rem(20);
             color: $color-text;
             letter-spacing: (75/1000)*1rem;
@@ -107,8 +107,8 @@ $color-text: #393939;
             }
             a{
                 font-size: rem(18);
-                font-family: "Futura";
-                font-weight: 800;
+                font-family: "Arial";
+                font-weight: bold;
                 color: #ffffff;
                 line-height:(24/18);
                 max-height: (24/17)*2em;

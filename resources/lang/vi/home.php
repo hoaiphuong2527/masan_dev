@@ -9,6 +9,10 @@ return [
     'r_name'=>'Họ tên không được để trống',
     'r_email'=>'Email không được để trống',
     'e_valid'=>'Email không hợp lệ',
+    'r_company'=>'Tên công ty không được để trống',
+    'r_message'=>'Nội dung không được để trống',
+    'r_department'=>'Vui lòng chọn một bộ phận để liên lạc',
+    
     'r_phone'=>'Số điện thoại không được để trống',
     'min_phone'=>'The phone must be at least {0}',
     'max_phone'=>'The phone may not be greater than {0}',
@@ -27,7 +31,7 @@ return [
       'banner_text2' => 'công nghệ cao hàng đầu thế giới',
       'banner_btn' => 'Khám phá',
       
-      'ourStory' => 'Câu chuyện của MHT',
+      'ourStory' => 'Câu Chuyện Của MHT',
       'subTitle_story_1' => 'TỪ TÀI NGUYÊN CHIẾN LƯỢT VIỆT NAM',
       'subTitle_story_2' => 'ĐẾN VẬT LIỆU CÔNG NGHỆ CAO TOÀN CẦU',
 
@@ -70,11 +74,13 @@ return [
 
       'news' => 'Tin tức',
       'show_all_news' => 'Các tin tức khác',
+      'new_news' => 'Tin mới',
 
-      'business' => 'Đôi nét về công ty',
-      'about' => 'About Us',
-      'products' => 'Products',
-      'sustainability' => 'Sustainability',
+
+      'business' => 'Đôi nét về Công Ty',
+      'about' => 'Giới thiệu',
+      'products' => 'Sản phẩm',
+      'sustainability' => 'Phát triển bền vững',
 
       'media' => 'Tư liệu truyền thông',
     ],

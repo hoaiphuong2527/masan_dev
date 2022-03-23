@@ -16,6 +16,24 @@ jQuery(function ($) {
         }
     }
 
+    $('select[name=invest_category_id]').change(function() {
+        if (this.value == 2) {
+            $('#choose_img').removeClass('hidden');
+        }
+        else {
+            $('#choose_img').addClass('hidden');
+        }
+    });
+
+    $('select[name=news_category_id]').change(function() {
+        if (this.value == 11) {
+            $('#choose_img').removeClass('hidden');
+        }
+        else {
+            $('#choose_img').addClass('hidden');
+        }
+    });
+
     $('#form-form').validate({
         focusInvalid: true,
         ignore: "",

@@ -12,7 +12,7 @@
     <div style="text-align: justify;margin-bottom: 22px;border: 1px solid beige;padding: 5px;border-radius: 5px;">
         <p>Vừa có một khách hàng đăng ký nhận tin từ website {{url('')}}: <span style="color:blue">{{ $email or 'example@gmail.com'}}</span></p>
     </div>
-    <span> <a href="#" style="text-decoration:none;font-family: 'Helvetica Neue Light',Helvetica,Arial,sans-serif;color:#8899a6;font-size:12px;font-weight:normal;">Copyright © bwidjsc.com 2018 • All rights reserved.</a> </span>
+    <span> <a href="#" style="text-decoration:none;font-family: 'Helvetica Neue Light',Helvetica,Arial,sans-serif;color:#8899a6;font-size:12px;font-weight:normal;">Copyright © MHT Masan.com 2021 • All rights reserved.</a> </span>
 </div>
 
 </body>

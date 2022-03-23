@@ -1,17 +1,16 @@
-$color-title-heading: #a6b4ac;
+$color-title-heading: #7B7C7E;
 $color-sub-title-heading: #4b3905;
 
 $bg-title-before: #00a8df;
 $bg-title-after: #d7d7d7;
 .sub-title{
-color: $color-sub-title-heading;
+color: #013B71;
 font-size: rem(24);
-font-family: 'Futura';
-font-weight: 400;
-
+font-family: 'Arial';
+font-weight: 500;
 }
 .titleHeading{
-    font-family: 'Futura';
+    font-family: 'Arial';
     font-weight: 500;
     // text-transform: uppercase;
     font-size: rem(48);
@@ -57,7 +56,7 @@ font-weight: 400;
         font-size:rem(20);
         font-family:$font-custom;
         text-transform: uppercase;
-        font-weight: 800;
+        font-weight: bold;
         letter-spacing: 0.75px;
         padding-left: rem(20);
         @include media-breakpoint-up(sm) {
@@ -97,12 +96,12 @@ font-weight: 400;
 }
 
 .titleHeadingDetail{
-    font-family: "Futura";
-    font-weight: 800;
-    font-size: rem(20);
+    font-family: "Arial";
+    font-weight: 500;
+    font-size: 1.125rem;
     letter-spacing: (75/1000)*1rem;
-    color: $color-title-heading;
-    // margin-bottom: rem(70);
+    color: black;
+    margin-bottom: 0.625rem;
     position: relative;
     // &::before, &::after{
     //     content: "";
@@ -131,8 +130,8 @@ font-weight: 400;
 }
 
 .titleIcon{
-    font-family: 'Futura';
-    font-weight: 800;
+    font-family: 'Arial';
+    font-weight: bold;
     text-transform: capitalize;
     font-size: rem(20); 
     color: $color-title-heading;

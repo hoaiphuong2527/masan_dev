@@ -2,38 +2,52 @@
 
 @section('style')
 @endsection
-
+@php
+$title = getPageUrlByCode('SUBSIDAIRY', 'title');
+@endphp
 @section('content')
-    
+    @include('themes.partials.base',['banner'=>'/assets/images/subsidiary-banner.png','text'=> $title ])
+
     <section class="mainContact">
         <div class="container">
-            @if(!empty($blocks['INTRODUCE']) && $block = $blocks->get('INTRODUCE')->first())
-            <h1 class="titleHeading" data-waypoint="100%">{{$block->name}}</h1>
-            <div class="document" data-waypoint="100%">
-                {!! $block->content !!}
-            </div>
-            @endif
-    
+                <div class="document" data-waypoint="100%">
+                    <section id="subsidiary">
+                        <div>&nbsp;</div>
+                        <div>&nbsp;</div>
+                        <article>
+                            <div class="row ">
+                                @if (!empty($blocks['SUBSIDIARY']) && ($operationBlock = $blocks->get('SUBSIDIARY')->first()))
+                                @foreach ($operationBlock->children as $index => $conpany)
+                                <div class="col-md-6 ">
+                                    <div class="listLease__item">
+                                        <div class="listLease__item__image">
+                                            <div class="image effectImg"><a href="{{$conpany->url}}"
+                                                    style="background-image:url('{{$conpany->photo}}')"><img alt=""
+                                                        src="{{$conpany->photo}}" /> </a></div>
+                                        </div>
 
-            @if(count($block->children))
-            <div class="listFund" data-waypoint="100%">
-                @foreach($block->children as $item)
-                    <div class="listFund__item">
-                        <div class="row">
-                            <div class="col-md-2 col-sm-3 col-4 break480">
-                                <a target="_blank" href="{{ $item->url }}">
-                                    <img src="{{$item->icon}}" alt="{{$item->name}}">
-                                </a>
+                                        <div class="info "><a class="title elisis-2-row" href="{{$conpany->url}}">{{$conpany->name}}</a>
+
+                                            <div class="name">
+                                                <p style="text-align: justify;">{!!$conpany->content!!}</p>
+                                            </div>
+                                            <a class="btn-link btn-gray" href="{{$conpany->url}}">
+                                                {{ trans('button.read_more') }}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                @endforeach
+                            @endif
                             </div>
-                            <div class="col-md-10 col-sm-9 col-8 break480">
-                                <h4>{{$item->name}}</h4>
-                                {!! $item->content !!}
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-            @endif
+                        </article>
+
+                        <div>&nbsp;</div>
+
+                        <div>&nbsp;</div>
+                    </section>
+                </div>
+
+
         </div>
     </section>
 @endsection

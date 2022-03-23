@@ -1,23 +1,23 @@
 module.exports = grunt => {
   grunt.initConfig({
     // pug task
-    pug: {
-      compile: {
-        options: {
-          data: {
-            debug: true
-          },
-          pretty: true
-        },
-        files: [{
-          src: '**/[^_]*.pug',
-          cwd: 'src/pug/',
-          dest: 'frontend',
-          expand: true,
-          ext: '.html'
-        }]
-      }
-    },
+    // pug: {
+    //   compile: {
+    //     options: {
+    //       data: {
+    //         debug: true
+    //       },
+    //       pretty: true
+    //     },
+    //     files: [{
+    //       src: '**/[^_]*.pug',
+    //       cwd: 'src/pug/',
+    //       dest: 'frontend',
+    //       expand: true,
+    //       ext: '.html'
+    //     }]
+    //   }
+    // },
 
     // sass task
     sass: {
@@ -37,26 +37,26 @@ module.exports = grunt => {
     },
 
     // copy task (copy src/libraries to frontend/libraries)
-    copy: {
-      public: {
-        expand: true,
-        cwd: 'src/public',
-        src: ['**'],
-        dest: 'frontend/assets'
-      }
-    },
+    // copy: {
+    //   public: {
+    //     expand: true,
+    //     cwd: 'src/public',
+    //     src: ['**'],
+    //     dest: 'frontend/assets'
+    //   }
+    // },
 
     // image compress task (compress all image src/images to frontend/images)
-    imagemin : {
-      dynamic: {
-          files: [{
-              expand: true,
-              cwd: 'src/',
-              src: ['images/**/*.{png,jpg,gif,svg}'],
-              dest: 'frontend/'
-          }]
-      }
-    },
+    // imagemin : {
+    //   dynamic: {
+    //       files: [{
+    //           expand: true,
+    //           cwd: 'src/',
+    //           src: ['images/**/*.{png,jpg,gif,svg}'],
+    //           dest: 'frontend/'
+    //       }]
+    //   }
+    // },
 
     // CSS task: fallbacks for rem units - vendor prefixes - minify the result
     // postcss: {
@@ -90,10 +90,10 @@ module.exports = grunt => {
 
     // watch change inside directory to run task
     watch: {
-      pug: {
-        files: ['src/pug/**/*.pug'],
-        tasks: ['pug']
-      },
+      // pug: {
+      //   files: ['src/pug/**/*.pug'],
+      //   tasks: ['pug']
+      // },
       sass: {
         files: ['src/sass/**/*.scss'],
         tasks: ['sass']
@@ -110,14 +110,14 @@ module.exports = grunt => {
          files: ['src/js/**/*.js'],
          tasks: ['babel']
        },
-      copy: {
-        files: ['src/public/**'],
-        tasks: ['copy']
-      },
-      imagemin: {
-        files: ['src/images/**'],
-        tasks: ['imagemin']
-      }
+      // copy: {
+      //   files: ['src/public/**'],
+      //   tasks: ['copy']
+      // },
+      // imagemin: {
+      //   files: ['src/images/**'],
+      //   tasks: ['imagemin']
+      // }
     },
 
     // babel

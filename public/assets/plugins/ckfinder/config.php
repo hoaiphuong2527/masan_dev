@@ -37,7 +37,7 @@ $config['authentication'] = function () {
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_licenseKey
 
 $config['licenseName'] =  getenv('CKFINDER_DOMAIN');//'cms.co';
-$config['licenseKey']  = getenv('CKFINDER_KEY');//'J4T4TMCXJD5QDK16AH1EEY9T6MMGW';
+$config['licenseKey']  = 'J4T4TMCXJD5QDK16AH1EEY9T6MMGW';//'J4T4TMCXJD5QDK16AH1EEY9T6MMGW';
 
 /*============================ CKFinder Internal Directory ============================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_privateDir
@@ -70,7 +70,7 @@ $config['images'] = array(
 $config['backends'][] = array(
     'name'         => 'default',
     'adapter'      => 'local',
-    'baseUrl'      => '/upload/',
+    'baseUrl'      => '/public/upload/',
 //  'root'         => '', // Can be used to explicitly set the CKFinder user files directory.
     'chmodFiles'   => 0777,
     'chmodFolders' => 0755,

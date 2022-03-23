@@ -58,7 +58,7 @@ BW provides high-quality ready-built factory for rent in Vietnam
 </div>
 <div>&nbsp;</div>
 
-<div style="text-align:center;"><strong><a class="btnLink" href="https://www.bwidjsc.com/property-leasing/property-for-lease
+<div style="text-align:center;"><strong><a class="btnLink" href="https://www.MHT Masan.com/property-leasing/property-for-lease
 "> Our property for lease 
 </a></strong></div>
                 

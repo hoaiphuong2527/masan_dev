@@ -1,26 +1,4 @@
-<div class="row">
-    <div class="col-md-4">
-        <div class="font-bold col-green">{!! trans("admin_news.form.image") !!}</div>
-        <div class="form-group">
-            @component('admin.layouts.components.upload_photo', [
-                'image' => $news->image ?? null,
-                'name' => 'image',
-            ])
-            @endcomponent
-        </div>
-    </div>
 
-    <div class="col-md-4">
-        <div class="font-bold col-green">{!! trans("admin_news.form.banner") !!}</div>
-        <div class="form-group">
-            @component('admin.layouts.components.upload_photo', [
-                'image' => $news->banner ?? null,
-                'name' => 'banner',
-            ])
-            @endcomponent
-        </div>
-    </div>
-</div>
 
 <div class="row">
     <div class="col-md-4">
@@ -53,6 +31,78 @@
     </div>
 </div>
 
+<div id="choose_img" @if(!empty($news) && $news->news_category_id != 11) class="hidden" @else class="row"  @endif>
+    <div class="col-md-4">
+        <div class="font-bold col-green">Image(EN)</div>
+        <div class="form-group">
+            @component('admin.layouts.components.upload_photo', [
+                'image' => $news->en_thumb ?? null,
+                'name' => 'en_thumb',
+                ])
+            @endcomponent
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="font-bold col-green">Image(VI)</div>
+        <div class="form-group">
+            @component('admin.layouts.components.upload_photo', [
+                'image' => $news->vi_thumb ?? null,
+                'name' => 'vi_thumb',
+                ])
+            @endcomponent
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="font-bold col-green">File to download(EN)</div>
+        <div class="form-group form-float">
+            <div class="form-line">
+                <input type="text" id="link_download_input" class="form-control"
+                       name="image"
+                       value="{!! !empty($news->image)  ? $news->image : old("image") !!}">
+                <button type="button" class="btn btn-primary btn_select_a_file" data-append="#link_download_input" style="position: absolute; top: 2px; right:2px">{{ trans('button.or_select_a_file') }}</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="font-bold col-green">File to download(VI)</div>
+        <div class="form-group form-float">
+            <div class="form-line">
+                <input type="text" id="link_download_input_vi" class="form-control"
+                       name="vi_file"
+                       value="{!! !empty($news->vi_file)  ? $news->vi_file : old("vi_file") !!}">
+                <button type="button" class="btn btn-primary btn_select_a_file" data-append="#link_download_input_vi" style="position: absolute; top: 2px; right:2px">{{ trans('button.or_select_a_file') }}</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{-- <div class="row">
+    <div class="col-md-4">
+        <div class="font-bold col-green">{!! trans("admin_news.form.image") !!}</div>
+        <div class="form-group">
+            @component('admin.layouts.components.upload_photo', [
+                'image' => $news->image ?? null,
+                'name' => 'image',
+            ])
+            @endcomponent
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="font-bold col-green">{!! trans("admin_news.form.banner") !!}</div>
+        <div class="form-group">
+            @component('admin.layouts.components.upload_photo', [
+                'image' => $news->banner ?? null,
+                'name' => 'banner',
+            ])
+            @endcomponent
+        </div>
+    </div>
+</div> --}}
 <div class="row">
     <div class="col-md-4">
         <div class="form-group">

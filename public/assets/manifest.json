@@ -1,6 +1,6 @@
 {
-  "name": "3Forcom.Com",
-  "short_name": "3forcom",
+  "name": "Uva.Com",
+  "short_name": "uva",
   "theme_color": "#008be4",
   "background_color": "#ffffff",
   "display": "browser",
@@ -30,12 +30,6 @@
      "sizes": "96x96",
      "type": "image\/png",
      "density": "2.0"
-    },
-    {
-     "src": "\/android-icon-144x144.png",
-     "sizes": "144x144",
-     "type": "image\/png",
-     "density": "3.0"
     },
     {
      "src": "\/android-icon-192x192.png",

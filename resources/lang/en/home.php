@@ -10,6 +10,10 @@ return [
     'r_email'=>'The email is required',
     'e_valid'=>'The email is invalid',
     'r_phone'=>'The phone is required',
+    'r_company'=>'The company name is required',
+    'r_message'=>'The message is required',
+    'r_department'=>'The department is required',
+
     'min_phone'=>'The phone must be at least {0}',
     'max_phone'=>'The phone may not be greater than {0}',
     'r_content'=>'The message is required',
@@ -25,11 +29,11 @@ return [
     'CONTENT' => [
       'banner_text1' => 'The global leading integrated supplier',
       'banner_text2' => 'of high-tech advanced materials',
-      'banner_btn' => 'Discovery',
+      'banner_btn' => 'Explore',
 
       'ourStory' => 'Our Story',
-      'subTitle_story_1' => 'FROM STRATEGIC RESOURCES',
-      'subTitle_story_2' => 'TO GLOBAL HIGH-TECH MATERIALS',
+      'subTitle_story_1' => 'From Strategic Resources',
+      'subTitle_story_2' => 'to Global High-tech  Materials',
       
       'desc_story_1' => 'Masan High-Tech Materials (MHT) is a leading glebal supplier of
       midstream tungsten products across critical industries such as,
@@ -59,7 +63,7 @@ return [
       '2019.2' => 'MTC obtained the Certificate of High-Tech Enterprise',
       '2020' => "6/2020, Company's name changed into Masan High Tech Materials",
 
-      'product' => 'Product',
+      'product' => 'Products',
       'subTitle_product' => 'With the exceptional features, our products played an
       important role in the global heavy industry.',
 
@@ -67,7 +71,7 @@ return [
       'des_tungsten' => "Tungsten is a strategically important rare metal. With the unigue
       physical and chemical properties, Tungsten is applied in traditionally
       heavy industries such as mechanical engineering and toolmaking, oil
-      and gas industry. medical technology. aerospace, chemical industry,
+      and gas industry, medical technology, aerospace, chemical industry,
       and electrical industry.",
 
       'fluorspar' => 'Fluorspar',
@@ -88,6 +92,7 @@ return [
 
       'news' => 'News',
       'show_all_news' => 'Show All News',
+      'new_news' => 'New',
 
       'business' => 'Our Business',
       'about' => 'About Us',
@@ -95,6 +100,5 @@ return [
       'sustainability' => 'Sustainability',
 
       'media' => 'Media Library',
-      
     ],
 ];

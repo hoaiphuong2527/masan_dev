@@ -17,9 +17,27 @@ footer.bd-footer {
         }
     }
 	
-    background: #efefef;
+    background: #58595B;
     padding-top: rem(35);
     padding-bottom: rem(35);
+    .list-inline{
+        text-align: center;
+
+        li{
+            width: 33.33%;
+            a {
+                color: #E6E6E6;
+                font-size: 24px;
+                @include transition();
+                &:hover {
+                    color: $color-hover;
+                    text-decoration: none;
+                    @include transition();
+                }
+            }
+        }
+      
+    }
     .nav-footer {
         padding: 0;
         list-style: none;
@@ -34,9 +52,20 @@ footer.bd-footer {
             display: inline-block;
             vertical-align: middle;
             position: relative;
-            padding-left: rem(0);
-            padding-right: rem(48);
+            padding: 0 1.8rem 0 1.3rem;
             letter-spacing: 0.25px;
+            &:after {
+                content: "|";
+                position: absolute;
+                right: 0;
+                top: 0px;
+            }
+            &:last-child::after {
+                content: "";
+            }
+            &:first-child {
+                padding-left: 0;
+            }
             @include media-breakpoint-down(md) {
                 padding-left: rem(11);
                 padding-right: rem(3);
@@ -44,10 +73,10 @@ footer.bd-footer {
             
     
             >a {
-                color: $color-title;
+                color: #E5E5E5;
                 @include transition();
                 &:hover {
-                    color: $color-hover;
+                    color: #55ade2;
                     text-decoration: none;
                     @include transition();
                 }
@@ -59,24 +88,26 @@ footer.bd-footer {
 }
 
 .copyright,.note {
+    .lb-any{
+        line-break: anywhere;
+    }
     &.note{
-        color: #8b8b8b;
+        color: #E6E6E6;
         text-align: right;
     }
-    color: $black;
-    text-align: center;
-    padding-top: rem(20);
+    color: #E6E6E6;
+    padding-top: rem(0);
     margin-top: rem(10);
     font-size: rem(14);
     font-weight: 500;
-    text-align:left;
+
     p {
         margin: 0;
     }
     @include media-breakpoint-down(md) {
-        span{
-            display:block
-        }
+        // span{
+        //     display:block
+        // }
     }
 }
 
@@ -94,7 +125,7 @@ footer.bd-footer {
     cursor: pointer;
     display: none;
     font-size:rem(15);
-    //font-weight: 800;
+    //font-weight: bold;
     box-shadow: 1px 4px 16px 0px rgba(50, 50, 50, 0.13);
     z-index: 9999;
     @include media-breakpoint-down(md) {

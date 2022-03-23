@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build:dev",
-    "build:dev": "npm run clear:build && grunt",
+    "build:dev": "npm run clear:build && grunt --force",
     "build:prod": "npm run clear:build && NODE_ENV=production grunt",
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "standard-version",

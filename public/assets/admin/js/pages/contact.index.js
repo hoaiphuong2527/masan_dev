@@ -14,7 +14,6 @@ jQuery(function ($) {
         columns: [
             {data: 'id', name: 'id'},
             {data: 'name', name: 'name', orderable: false},
-            {data: 'phone', name: 'phone', orderable: false},
             {data: 'email', name: 'email', orderable: false},
             {data: 'created_at', name: 'created_at', orderable: false},
             {data: 'action', name: 'action', orderable: false, searchable: false}

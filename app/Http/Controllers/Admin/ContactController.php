@@ -45,7 +45,7 @@ class ContactController extends Controller
                 )->render();
                 }
             )
-            ->escapeColumns(['name', 'phone', 'email', 'address', 'content'])
+            ->escapeColumns(['name',  'email', 'address', 'content'])
             ->make(true);
     }
 

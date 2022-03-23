@@ -34,7 +34,7 @@ class BrochuresController extends Controller
             $metadata = (object)[
                 'title' => $page->title,
                 'description' => $page->description,
-                'key_word' => '3forcom'
+                'key_word' => 'uva'
             ];
         }
 

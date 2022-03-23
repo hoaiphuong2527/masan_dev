@@ -144,8 +144,8 @@ input[type="button"] {
 }
 
 .btn-submit{
-  font-family: 'Futura';
-  font-weight: 800;
+  font-family: 'Arial';
+  font-weight: 300;
   //height: rem(50);
   width: 100%;
   border-radius: 0;
@@ -173,57 +173,3 @@ input[type="button"] {
   }
 
 }
-
-// effect
-// .btn-submit{
-//   font-family: 'Futura';
-//   font-weight: 800;
-//   height: rem(50);
-//   width: 100%;
-//   background: none;
-//   border-radius: 0;
-//   color: $color-btnsubmit;
-//   border: 1px solid $color-btnsubmit;
-//   // background-color: $white;
-//   letter-spacing: (75/1000)*1rem;
-//   font-size: rem(14);
-//   text-transform: uppercase;
-//   padding-left: rem(20);
-//   text-align: left;
-//   position: relative;
-//   &::before{
-//     position: absolute;
-//     content: '';
-//     top:0;
-//     left: 0;
-//     width: 0;
-//     height: 100%;
-//     background-color: $color-btnsubmit;
-//     transform-origin:left;
-//     transition:width 0.25s ease;
-//     z-index:-1;
-//     @include transition(0.3s all);
-//   }
-//   &:hover{
-//     @include transition(0.3s all);
-//     color: $white;
-//     &::before{
-//       width: 100%;
-//     }
-//     .icon{
-//       color: $white;
-//     }
-//   }
-//   .icon{
-//     @include transition(0.3s all);
-//     position: absolute;
-//     top: 50%;
-//     transform: translate(0, -50%);
-//     right: 20px;
-//     font-size: rem(20);
-//     color: $color-btnsubmit;
-//   }
-//   @media (max-width: 991.98px){
-//     margin-top: rem(20);
-//   }
-// }

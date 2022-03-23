@@ -68,7 +68,7 @@
                                         <li><div class="icon icon-map-marker"><strong>Address:</strong> Floor 17, Becamex Building, 230 Binh Duong Boulevard, Phu Hoa Ward, Thu Dau Mot City, Binh Duong Province, Vietnam.</div></li>
                                         <li><div class="icon icon-phone"><strong>Tel:</strong> (+84) 274 7300 472</div></li>
                                         <li><div class="icon icon-phone"><strong>Hotline:</strong> (+84) 28 710 29 000</div></li>
-                                        <li><div class="icon icon-email"><strong>Email:</strong> enquiry@bwidjsc.com</div></li>
+                                        <li><div class="icon icon-email"><strong>Email:</strong> enquiry@MHT Masan.com</div></li>
                                     </ul>
                                 </div>
                             </div>
@@ -83,7 +83,7 @@
                                         <li><div class="icon icon-map-marker"><strong>Address:</strong> 8th Floor, Pearl Plaza, 561A Dien Bien Phu, Ward 25, Binh Thanh District, Ho Chi Minh City, Vietnam.</div></li>
                                         <li><div class="icon icon-phone"><strong>Tel:</strong> (+84) 274 7300 468</div></li>
                                         <li><div class="icon icon-phone"><strong>Hotline:</strong> (+84) 28 710 29 000</div></li>
-                                        <li><div class="icon icon-email"><strong>Email:</strong> enquiry@bwidjsc.com</div></li>
+                                        <li><div class="icon icon-email"><strong>Email:</strong> enquiry@MHT Masan.com</div></li>
                                     </ul>
                                 </div>
                             </div>
@@ -97,7 +97,7 @@
                                     <ul class="information-list">
                                         <li><div class="icon icon-map-marker"><strong>Address:</strong> Floor 9, Vinaconex Building, 34 Lang Ha, Lang Ha Ward, Dong Da District, Hanoi, Vietnam..</div></li>
                                         <li><div class="icon icon-phone"><strong>Hotline:</strong> (+84) 28 710 29 000</div></li>
-                                        <li><div class="icon icon-email"><strong>Email:</strong> enquiry@bwidjsc.com</div></li>
+                                        <li><div class="icon icon-email"><strong>Email:</strong> enquiry@MHT Masan.com</div></li>
                                     </ul>
                                 </div>
                             </div>

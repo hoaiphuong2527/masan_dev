@@ -23,21 +23,27 @@
                                             <p style="text-align: left">
                                                 Hello,
                                             </p>
-
+                                            <p style="text-align: left">
+                                                This is a new enquiry we have received in Masan High-Tech Materials website.
+                                            </p>
+                                            <p style="text-align: left">
+                                                Please kindly check the below details and arrange to reply as soon as possible.
+                                            </p>
                                             <p style="text-align: left">
                                                 You just received new contact from {{ $input['name'] ?? '[name]' }}
                                             </p>
                                             <div style="text-align: left">- Name: {{ $input['name'] ?? '[name]' }}</div>
-                                            <div style="text-align: left">- Phone: {{ $input['phone'] ?? '[phone]' }}</div>
                                             <div style="text-align: left">- E-mail: {{ $input['email'] ?? '[email]' }}</div>
                                             <div style="text-align: left">- Company: {{ $input['company'] ?? '[company]' }}</div>
-                                            <div style="text-align: left">- Subject: {{ $input['subject'] ?? '[subject]' }}</div>
-                                            <div style="text-align: left">- Company profile:
+                                            <div style="text-align: left">- Message:
                                                 <p>{{ $input['company_profile'] ?? '[company_profile]' }}</p>
                                             </div>
-                                            <div style="text-align: left">- Information:
-                                                <p>{{ $input['information'] ?? '[information]' }}</p>
-                                            </div>
+                                            <p style="text-align: left">
+                                                Thanks,
+                                            </p>
+                                            <p style="text-align: left">
+                                                MHT Web Admin
+                                            </p>
                                         </td>
                                     </tr>
                                 </table>

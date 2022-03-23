@@ -4,7 +4,6 @@ a:focus {
 
 .btn-link {
     font-size: rem(16);
-    text-transform: uppercase;
     color: #fff;
     font-family: $font-family-sans-serif;
     text-decoration: none;
@@ -184,10 +183,11 @@ a:focus {
             transform: scale(1.25);
         }
     }
+    
 }
 
 .bgBanner {
-    @include bg-box(1920, 350);
+    @include bg-box(1920, 700);
     position: relative;
 
     &--news {

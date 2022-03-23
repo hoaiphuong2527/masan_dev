@@ -26,6 +26,7 @@ return [
         'company' => 'Company',
         'subject' => 'Subject',
         'company_profile' => 'Company profile',
+        'message' => 'Message',
         'information' => 'Information',
         'country' => 'Country',
         'solution' => 'Solution',

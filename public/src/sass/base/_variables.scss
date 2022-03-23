@@ -25,7 +25,7 @@ $color-hover: #00a8df!default;
 $color-link: #696969!default;
 $color-active: #104d7f!default;
 $color-title:#393939!default; 
-$font-custom:'Lato'!default;
+$font-custom:'Arial'!default;
 $grays: () !default;
 $grays: map-merge((
   "100": $gray-100,
@@ -49,7 +49,7 @@ $yellow:  #ffc107 !default;
 $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
-$body-color: #393939!default;
+$body-color: #7B7C7E!default;
 $colors: () !default;
 $colors: map-merge((
   "blue":       $blue,
@@ -236,7 +236,7 @@ $transition-collapse:         height .35s ease !default;
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      Lato, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-sans-serif:      Arial, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case

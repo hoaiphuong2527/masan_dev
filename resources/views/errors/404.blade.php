@@ -5,7 +5,7 @@
         <div class="container">
             <div class="boxComming">
                 <div class="info">
-                    <h4>Not found!</h4>
+                    <h4>Page Not found!</h4>
                 </div>
         </div>
     </section>

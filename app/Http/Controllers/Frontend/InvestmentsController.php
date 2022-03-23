@@ -13,6 +13,7 @@ use App\Repositories\InvestCategoryRepository;
 use Breadcrumb;
 use DB;
 use App;
+use Carbon\Carbon;
 
 class InvestmentsController extends Controller
 {
@@ -27,8 +28,6 @@ class InvestmentsController extends Controller
         $this->investments = $investments;
         $this->investments_category = $investments_category;
 
-        $link = getPageUrlByCode('WHY-CHOOSE-VIETNAM');
-        Breadcrumb::add(trans('invest.INVEST_IN_VIETNAM'), $link);
 
     }
 
@@ -36,23 +35,34 @@ class InvestmentsController extends Controller
     {
         $news_category_parent = $this->investments_category->findBySlug($parent_slug);
         Breadcrumb::add($news_category_parent->name, route('media.investments.category',['parent_slug'=>$news_category_parent->slug]));
-        
         if($slug){
             $slug = $slug ?? $news_category_parent->child()->first()->slug;
             $news_category = $this->investments_category->findBySlug($slug);
             Breadcrumb::add($news_category->name, route('media.investments.category',['parent_slug'=>$news_category_parent->slug,'slug'=>$news_category->slug]));  
-            $news = $news_category->news()->paginate(5);
+            $annual_report = $news_category->news()->orderByDesc('publish_at')->where('is_top', 0)->paginate(9);
+            $news = $news_category->news()->orderByDesc('publish_at')->get()->groupBy(function($val) {
+                return Carbon::parse($val->publish_at)->format('Y');
+          })->toArray();
+            $top_news = $news_category->news()->where('is_top', 1)->first();
         }
         else{
-            $news_category = $news_category_parent;
-            $news = $news_category->newsByCategoryParentId($news_category_parent->id)->paginate(5);
+
+            $slug = $slug ?? $news_category_parent->child()->first()->slug;
+            $news_category = $this->investments_category->findBySlug($slug);            
+            $top_news = $news_category->news()->where('is_top', 1)->first();
+            $annual_report = $news_category->news()->orderByDesc('publish_at')->where('is_top', 0)->paginate(9);
+            $news = $news_category->news()->orderByDesc('publish_at')->get()->groupBy(function($val) {
+                return Carbon::parse($val->publish_at)->format('Y');
+          })->toArray();
+        //   var_dump($news_category_parent);die;
+
         }
 
         foreach ($news_category_parent->translations as $translation) {
             TranslateUrl::addWithLink($translation->locale, \LaravelLocalization::getURLFromRouteNameTranslated($translation->locale, 'routes.invest_category', ['parent_slug'=>$translation->slug]));
         }
         $metadata = $news_category->meta;
-        return view('themes.media_invest_list',compact('news_category_parent','news_category','news','metadata'));
+        return view('themes.media_invest_list',compact('news_category_parent','news_category','news','metadata','top_news','annual_report'));
     }
 
     public function getNewsDetail($slug)

@@ -13,7 +13,7 @@ return [
     'send_us_message'=>'SEND US A MESSAGE',
     'send_us_message_description'=>'If you have any suggestions or support, please leave a message here!',
     'company'=>'Tên công ty',
-    'company_profile'=>'Liên hệ với chúng tôi để có thêm nhiều thông tin',
+    'company_profile'=>'Liên hệ với chúng tôi để tìm hiểu thêm thông tin',
     'information'=>'Thông tin liên hệ',
     'anlacgiao_company'=>'An Lac Giao Service Company Limited',
     'enter_name'=>'Enter name',

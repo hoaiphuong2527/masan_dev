@@ -6,9 +6,7 @@
         <div class="user-info" style="height: 100px;">
             <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .3)"></div>
             <div class="info-container">
-                <!-- <div class="image pull-left">
-                    <img src="/assets/admin/images/user.png" width="48" height="48" alt="User"/>
-                </div> -->
+       
                 <div class="name" data-toggle="dropdown" aria-haspopup="true"
                      aria-expanded="false">{{ Auth::user()->name }}</div>
                 <div class="email">{{ Auth::user()->email }}</div>
@@ -32,68 +30,7 @@
         <div class="menu">
             <ul class="list">
                 <li class="header"></li>
-                <li class="{!! currentPageMenu(["*admin"]) !!}">
-                    <a href="/admin">
-                        <i class="material-icons">dashboard</i>
-                        <span>{!! trans("admin_menu.dashboard") !!}</span>
-                    </a>
-                </li>
-
-                {{--@if(in_array('admin.product.index', $composer_auth_permissions))--}}
-                    {{--<li class="{!! currentPageMenu([--}}
-                    {{--"*admin/products*",--}}
-                    {{--"*admin/product-categories*"--}}
-                    {{--]) !!}">--}}
-                        {{--<a href="javascript:void(0);" class="menu-toggle">--}}
-                            {{--<i class="material-icons">assignment</i>--}}
-                            {{--<span>{!! trans("admin_menu.products") !!}</span>--}}
-                        {{--</a>--}}
-                        {{--<ul class="ml-menu">--}}
-                            {{--<li class="{!! currentPageMenu(["*admin/products"]) !!}">--}}
-                                {{--<a href="{!! route("admin.product.index") !!}">--}}
-                                    {{--<span>{!! trans("admin_menu.products_list") !!}</span>--}}
-                                {{--</a>--}}
-                            {{--</li>--}}
-                            {{--<li class="{!! currentPageMenu(["*admin/products/create"]) !!}">--}}
-                                {{--<a href="{!! route("admin.product.create") !!}">--}}
-                                    {{--<span>{!! trans("admin_menu.create_product") !!}</span></a>--}}
-                            {{--</li>--}}
-
-                            {{--@if(in_array('admin.product_category.index', $composer_auth_permissions))--}}
-                                {{--<li class="{!! currentPageMenu(["*admin/product-categories*"]) !!}">--}}
-                                    {{--<a href="{!! route("admin.product_category.index") !!}">--}}
-                                        {{--<span>{!! trans("admin_menu.categories") !!}</span>--}}
-                                    {{--</a>--}}
-                                {{--</li>--}}
-                            {{--@endif--}}
-                        {{--</ul>--}}
-                    {{--</li>--}}
-                {{--@endif--}}
-<!-- 
-                @if(in_array('admin.project.category.index', $composer_auth_permissions) || in_array('admin.project.index', $composer_auth_permissions))
-                    <li class="{!! currentPageMenu(["*admin/project*"]) !!}">
-                        <a href="javascript:void(0);" class="menu-toggle">
-                            <i class="material-icons">wallpaper</i>
-                            <span>{!! trans("admin_menu.projects") !!}</span>
-                        </a>
-                        <ul class="ml-menu">
-                            @if(in_array('admin.project.index', $composer_auth_permissions))
-                                <li class="{!! currentPageMenu(["*admin/projects*"]) !!}">
-                                    <a href="{!! route("admin.project.index") !!}">
-                                        <span>{!! trans("admin_menu.project_list") !!}</span>
-                                    </a>
-                                </li>
-                            @endif
-                            @if(in_array('admin.project.category.index', $composer_auth_permissions))
-                                <li class="{!! currentPageMenu(["*admin/project-categories*"]) !!}">
-                                    <a href="{!! route("admin.project_category.index") !!}">
-                                        <span>{!! trans("admin_menu.project_category_list") !!}</span>
-                                    </a>
-                                </li>
-                            @endif
-                        </ul>
-                    </li>
-                @endif -->
+       
 
                 @if(in_array('admin.page.index', $composer_auth_permissions))
                     <li class="{!! currentPageMenu(["*admin/pages*", '*admin/themes*']) !!}">

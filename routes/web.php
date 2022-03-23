@@ -28,6 +28,11 @@ Route::group(
         Route::get(trans('routes.media_center_news_category'), 'NewsController@getNewsCategory')->name('media.news.category');
         Route::get('media-center/news/detail/{slug}', 'NewsController@getNewsDetail')->name('media.news.detail');
 
+                // Custom Investments news
+        Route::get(trans('routes.invest_category'), 'InvestmentsController@getNewsCategory')->name('media.investments.category');
+        Route::get(trans('routes.invest_detail'), 'InvestmentsController@getNewsDetail')->name('media.investments.detail');
+        // end Custom Investments news
+
         Route::get(LaravelLocalization::transRoute('routes.coming_soon'), function (){
             return view('frontend.coming');
         })->name('page.coming_soon');

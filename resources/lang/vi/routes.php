@@ -68,7 +68,7 @@ return [
     'media_center_news_category'=>'media-center/news-category/{parent_slug}/{slug?}',
     'media_center_news_detail'=>'media-center/news/detail/{slug}',
 
-    'invest_category'=>'dau-tu-vao-viet-nam/{parent_slug}/{slug?}',
+    'invest_category'=>'dau-tu/{parent_slug}/{slug?}',
     'invest_detail'=>'investments/detail/{slug}',
 
     'property_customer'=>'property-leasing/our-customer/{slug}',

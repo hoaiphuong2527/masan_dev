@@ -28,7 +28,6 @@
                         <tr>
                             <th width="40">{!! trans("admin_contact.table.id") !!}</th>
                             <th>{!! trans("admin_contact.table.name") !!}</th>
-                            <th>{!! trans("admin_contact.table.phone") !!}</th>
                             <th>{!! trans("admin_contact.table.email") !!}</th>
                             <th>{!! trans("admin_contact.table.created_at") !!}</th>
                             <th width="150">{!! trans("admin_contact.table.action") !!}</th>
@@ -45,14 +44,11 @@
     @include("admin.layouts.partials.modal-delete")
 
     <custtom id="details-template" class="hidden">
-        <p><strong>{!! trans("admin_contact.table.subject") !!}:</strong></p>
-        <p> CONTACT_SUBJECT </p>
+  
         <p><strong>{!! trans("admin_contact.table.company") !!}:</strong></p>
         <p> CONTACT_COMPANY </p>
-        <p><strong>{!! trans("admin_contact.table.company_profile") !!}:</strong></p>
+        <p><strong>{!! trans("admin_contact.table.message") !!}:</strong></p>
         <p> CONTACT_COMPANY_PROFILE </p>
-        <p><strong>{!! trans("admin_contact.table.information") !!}:</strong></p>
-        <p> CONTACT_INFORMATION </p>
     </custtom>
 
     <!--dataTables plugin-->

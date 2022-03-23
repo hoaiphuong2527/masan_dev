@@ -3,7 +3,7 @@ $bg-project-features: #e5ebed;
 $color-features-title: #104d7f;
 .projectFeatures{
     padding: rem(50) 0;
-    background: url($image-path + "bg-project.png") no-repeat bottom left,url($image-path + "bg-project-2.png") no-repeat bottom right $bg-project-features;
+    // background: url($image-path + "bg-project.png") no-repeat bottom left,url($image-path + "bg-project-2.png") no-repeat bottom right $bg-project-features;
     //background-image: 
     &__item{
         &__icon{

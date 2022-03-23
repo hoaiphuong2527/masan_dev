@@ -23,7 +23,11 @@ class News extends Model implements Transformable
         'active',
         'is_top',
         'publish_at',
-        'code'
+        'code',
+        'en_file',
+        'vi_file',
+        'en_thumb',
+        'vi_thumb'    
     ];
 
     public function scopeActive($query)
